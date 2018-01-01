@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter Blog",
-    author: "Kyle Mathews",
+    title: "Mike Herchel | 8th Grade Geography Bee Champion",
+    author: "Mike Herchel",
   },
   plugins: [
     {
