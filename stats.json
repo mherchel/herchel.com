@@ -1,28 +1,36 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-8ad5f5fdb4cbfc3a4348.js",
-      "component---src-pages-index-js-8ad5f5fdb4cbfc3a4348.js.map"
+      "component---src-pages-index-js-804226fd98fd55872dd4.js",
+      "component---src-pages-index-js-804226fd98fd55872dd4.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-contact-js": [
+      "component---src-pages-contact-js-8dbe57a70e6109857167.js",
+      "component---src-pages-contact-js-8dbe57a70e6109857167.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-4e0681de42b6dcddc30b.js",
-      "component---src-templates-blog-post-js-4e0681de42b6dcddc30b.js.map"
+      "component---src-templates-blog-post-js-f7be66fcb796e5c949cf.js",
+      "component---src-templates-blog-post-js-f7be66fcb796e5c949cf.js.map"
     ],
     "path---reflections-on-2017": [
       "path---reflections-on-2017-5189cd7016f384b18d4b.js",
       "path---reflections-on-2017-5189cd7016f384b18d4b.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-d1100bf28fca9c0c3f39.js",
-      "component---src-layouts-index-js-d1100bf28fca9c0c3f39.js.map"
+      "component---src-layouts-index-js-ca71437233fa46aebf48.js",
+      "component---src-layouts-index-js-ca71437233fa46aebf48.js.map"
+    ],
+    "path---philosophy": [
+      "path---philosophy-a0e39f21c11f6a62c5ab.js",
+      "path---philosophy-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
       "path---index-cd0d8bad74f5c8db6782.js",
@@ -32,21 +40,29 @@
       "commons-e978d9b9fc860e3e8867.js",
       "commons-e978d9b9fc860e3e8867.js.map"
     ],
+    "path---contact": [
+      "path---contact-a0e39f21c11f6a62c5ab.js",
+      "path---contact-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-philosophy-js": [
+      "component---src-pages-philosophy-js-899b4858cc41080f17ef.js",
+      "component---src-pages-philosophy-js-899b4858cc41080f17ef.js.map"
+    ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-afb1cc6aeb7fc0a63e98.js",
-      "app-afb1cc6aeb7fc0a63e98.js.map"
+      "app-ddb23b88ae4bc857d9ba.js",
+      "app-ddb23b88ae4bc857d9ba.js.map"
     ],
     "path---hello-2018": [
       "path---hello-2018-c9291fc807bfb4f40ca8.js",
       "path---hello-2018-c9291fc807bfb4f40ca8.js.map"
     ],
     "component---src-pages-about-js": [
-      "component---src-pages-about-js-215b19a032d81af031fe.js",
-      "component---src-pages-about-js-215b19a032d81af031fe.js.map"
+      "component---src-pages-about-js-e0f33c180c4dafe85042.js",
+      "component---src-pages-about-js-e0f33c180c4dafe85042.js.map"
     ],
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
