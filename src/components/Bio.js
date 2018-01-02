@@ -10,10 +10,7 @@ class Bio extends React.Component {
           src={profilePic}
           alt={`Mike herchel`}
         />
-        Written by <strong>Mike herchel</strong> who lives and works in Gainesville FL building useful things.{' '}
-        <a href="https://twitter.com/mikeherchel">
-          You should follow him on Twitter
-        </a>
+        Hi, I'm Mike Herchel, and I use Drupal, JavaScript, and other technologies to kick various asses throughout cyberspace.
       </p>
     )
   }

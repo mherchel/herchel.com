@@ -9,6 +9,8 @@ class Template extends React.Component {
         <h3>
           <Link to={'/'}>Home</Link>
           <Link to={'/about'}>About</Link>
+          <Link to={'/philosophy'}>Philosophy</Link>
+          <Link to={'/contact'}>Contact</Link>
         </h3>
         {children()}
       </div>
