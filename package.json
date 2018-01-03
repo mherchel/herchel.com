@@ -7,8 +7,11 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "emotion": "^8.0.12",
+    "emotion-server": "^8.0.12",
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
+    "gatsby-plugin-emotion": "^1.1.10",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.4",
     "gatsby-plugin-offline": "^1.0.4",
