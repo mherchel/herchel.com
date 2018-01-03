@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Mike Herchel",
+    description: "Mike Herchel is an 8th Grade Geography Bee champion that specializes in Drupal and JavaScript front-end development.",
     author: "Mike Herchel",
   },
   plugins: [

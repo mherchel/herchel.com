@@ -14,7 +14,10 @@ class BlogIndex extends React.Component {
 
     return (
       <div>
-        <Helmet title={siteTitle} />
+        <Helmet>
+          <title>{siteTitle }</title>
+          <meta name="description" content={get(this, 'props.data.site.siteMetadata.description')} />
+        </Helmet>
         <Bio />
         {posts.map(post => {
           if (post.node.path !== '/404/') {
@@ -48,6 +51,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
