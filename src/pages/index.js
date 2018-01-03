@@ -5,14 +5,16 @@ import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 
+const pageName = '8th Grade Geography Bee Champion'
+
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteTitle = `${get(this, 'props.data.site.siteMetadata.title')} | ${pageName}`
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <div>
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+        <Helmet title={siteTitle} />
         <Bio />
         {posts.map(post => {
           if (post.node.path !== '/404/') {

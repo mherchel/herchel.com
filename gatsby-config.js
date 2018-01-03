@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Mike Herchel | 8th Grade Geography Bee Champion",
+    title: "Mike Herchel",
     author: "Mike Herchel",
   },
   plugins: [

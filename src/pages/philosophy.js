@@ -1,9 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
-export default () =>
+const pageName = 'Philosophy'
+
+export default ({ data }) =>
   <div>
-    <h1>Philosophy</h1>
+    <Helmet title={`${pageName} | ${data.site.siteMetadata.title}`} />
+    <h1>{pageName}</h1>
     <p><em>These ideas mostly serve as a public reality check for myself. They're intended to be in constant flux.</em></p>
     <h2>Surround myself with good people</h2>
     <p><em>Recognize good people when they come into your life and make them a part of it (if possible).</em></p>
@@ -20,3 +23,13 @@ export default () =>
     <h2>Don’t be afraid to say no</h2>
     <p><em>...and don’t overextend yourself</em></p>
   </div>
+
+export const query = graphql`
+  query PhilosphyQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
