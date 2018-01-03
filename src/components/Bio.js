@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { css } from 'emotion'
 import profilePic from './herchelshead.jpg'
 
 class Bio extends React.Component {
   render() {
     return (
-      <p>
+      <p className={bioStyles}>
         <img
           src={profilePic}
           alt={`Mike herchel`}
@@ -15,5 +15,11 @@ class Bio extends React.Component {
     )
   }
 }
+
+const bioStyles = css`
+  img {
+    border-radius: 50%
+  }
+`
 
 export default Bio

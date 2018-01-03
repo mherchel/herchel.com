@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from 'emotion'
 import Link from 'gatsby-link'
 
 class Template extends React.Component {
@@ -6,17 +7,25 @@ class Template extends React.Component {
     const { location, children } = this.props
     return (
       <div>
-        <h3>
+        <header className={headerStyles}>
           <Link to={'/'}>Home</Link>
           <Link to={'/about'}>About</Link>
           <Link to={'/philosophy'}>Philosophy</Link>
           <Link to={'/contact'}>Contact</Link>
-        </h3>
+        </header>
         {children()}
       </div>
     )
   }
 }
+
+const headerStyles = css`
+  font-size: 1.5rem;
+
+  a:not(:last-child) {
+    margin-right: 10px;
+  }
+`
 
 Template.propTypes = {
   children: React.PropTypes.func,
