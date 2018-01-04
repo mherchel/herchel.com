@@ -1,6 +1,7 @@
 ---
 title: Advice for Newbie Front-end Developer
 date: "2015-06-09T00:00:00.000Z"
+subtitle: "Critique and advice on getting started"
 path: "/advice-newbie-frontend-developer/"
 ---
 

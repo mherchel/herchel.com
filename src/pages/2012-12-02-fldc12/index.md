@@ -1,6 +1,7 @@
 ---
 title: Florida Drupalcamp 2012 Session Notes
 date: "2012-02-12T00:00:00.000Z"
+subtitle: "Notes from SEO and Drupal: Best Practices and Tools"
 path: "/florida-drupalcamp-2012-session-notes/"
 ---
 

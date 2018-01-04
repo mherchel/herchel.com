@@ -1,6 +1,7 @@
 ---
 title: Development Tips for Internet Explorer
 date: "2014-04-02T00:00:00.000Z"
+subtitle: "How not to hate on IE8"
 path: "/tips-developing-ie/"
 ---
 

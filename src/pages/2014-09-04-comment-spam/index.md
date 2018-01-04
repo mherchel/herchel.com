@@ -1,6 +1,7 @@
 ---
 title: A New Method for Dealing with Comment Spam
 date: "2014-09-04T00:00:00.000Z"
+subtitle: "Hit the spammers where it hurts..."
 path: "/new-method-comment-spam/"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Making Scroll Animations on Syfy.com Not Suck
 date: "2015-04-19T00:00:00.000Z"
+subtitle: "A deep dive into browser rendering and devTools"
 path: "/making-syfy-animations-not-suck/"
 ---
 

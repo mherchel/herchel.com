@@ -1,6 +1,7 @@
 ---
 title: Notes on Developing with Drupal 8 (Alpha 10)
 date: "2014-04-29T00:00:00.000Z"
+subtitle: "Trials, tribulations, and lots of beer..."
 path: "/notes-on-developing-drupal-8-alpha13/"
 ---
 
