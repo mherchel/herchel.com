@@ -22,15 +22,16 @@ class BlogIndex extends React.Component {
         {posts.map(post => {
           if (post.node.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path
+            const subtitle = get(post, 'node.frontmatter.subtitle')
             return (
               <div key={post.node.frontmatter.path}>
                 <h3>
                   <Link to={post.node.frontmatter.path} >
-                    {post.node.frontmatter.title}
+                    {title}
                   </Link>
                 </h3>
                 <small>{post.node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                <p>{subtitle}</p>
               </div>
             )
           }
@@ -64,6 +65,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            subtitle
           }
         }
       }
