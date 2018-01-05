@@ -11,8 +11,6 @@ export default ({ data }) =>
     <p>Email me at <a href="mailto:mike@herchel.com" target="_blank">mike@herchel.com</a></p>
     <h2>Tweet me on Twitter</h2>
     <p>Follow me at <a href="http://twitter.com/mikeherchel" target="_blank">@mikeherchel</a></p>
-    <h2>Find out where I'll be speaking next</h2>
-    <p>I'm on Lanyrd at <a href="http://lanyrd.com/profile/mherchel/" target="_blank">lanyrd.com/profile/mherchel/</a></p>
     <h2>Git me on Github</h2>
     <p>I'm on github at <a href="https://github.com/mherchel" target="_blank">github.com/mherchel</a></p>
     <h2>Friend me on Facebook</h2>
