@@ -4,35 +4,32 @@ module.exports = {
     description: "Mike Herchel is an 8th Grade Geography Bee champion that specializes in Drupal and JavaScript front-end development.",
     author: "Mike Herchel",
     events: [{
-      title: "Florida Drupalcamp 2010",
+      title: "Florida Drupalcamp",
       date: "2010-02-20",
       status: "attending",
       location: "Orlando"
     }, {
       title: "DrupalCon San Francisco",
       date: "2010-04-19",
-      status: "attending"
+      status: "attending",
+      location: "San Franscisco"
     }, {
-      title: "Florida Drupalcamp 2012",
-      date: "2011-02-11",
-      status: "speaking",
+      title: "Florida Drupalcamp",
+      date: "2012-02-11",
+      status: "attending",
       location: "Orlando"
     }, {
-      title: "Florida Drupalcamp 2011",
+      title: "Florida Drupalcamp",
       date: "2011-02-12",
       status: "attending",
       location: "Orlando"
     }, {
-      title: "DrupalCon Chicago 2011",
+      title: "DrupalCon Chicago",
       date: "2011-03-07",
       status: "attending",
       location: "Chicago"
     }, {
-      title: "FL Drupal Camp",
-      date: "2012-02-11",
-      status: "speaking"
-    }, {
-      title: "DrupalCon Denver 2012",
+      title: "DrupalCon Denver",
       date: "2012-03-19",
       status: "attending",
       location: "Denver"
@@ -42,29 +39,29 @@ module.exports = {
       status: "speaking",
       location: "Atlanta"
     }, {
-      title: "Florida Drupalcamp 2013",
+      title: "Florida Drupalcamp",
       date: "2013-04-20",
       location: "Orlando"
     }, {
-      title: "DrupalCon Portland 2013",
+      title: "DrupalCon Portland",
       date: "2013-05-20",
       status: "speaking",
       location: "Portland"
     }, {
-      title: "Frontend Design Conference 2013",
+      title: "Frontend Design Conference",
       date: "2013-06-02",
       status: "attending"
     }, {
-      title: "Florida Drupalcamp 2014",
+      title: "Florida Drupalcamp",
       date: "2014-03-08",
       location: "Orlando"
     }, {
-      title: "DrupalCon Austin 2014",
+      title: "DrupalCon Austin",
       date: "2014-06-02",
       status: "speaking",
       location: "Austin"
     }, {
-      title: "Frontend Design Conference 2014",
+      title: "Frontend Design Conference",
       date: "2014-07-10",
       status: "attending"
     }, {
@@ -78,114 +75,146 @@ module.exports = {
       status: "speaking",
       location: "Chattanooga"
     }, {
-      title: "Gainesville BarCamp 2014",
+      title: "Gainesville BarCamp",
       date: "2014-11-08",
       status: "attending"
     }, {
       title: "DrupalCon Latin America",
       date: "2015-02-10",
       status: "attending",
-      location: "Colombia"
+      location: "Bogota, Colombia"
     }, {
-      title: "Florida Drupalcamp 2015",
+      title: "Florida Drupalcamp",
       date: "2015-04-11",
       location: "Orlando"
     }, {
-      title: "Orlando Barcamp 2015",
+      title: "Orlando Barcamp",
       date: "2015-04-18",
       status: "speaking",
       location: "Orlando"
     }, {
-      title: "DrupalCon 2015",
+      title: "DrupalCon Los Angelas",
       date: "2015-05-11",
-      status: "speaking"
+      status: "speaking",
+      location: "Los Angelas"
     }, {
-      title: "Frontend Design Conference 2015",
+      title: "Frontend Design Conference",
       date: "2015-05-21",
-      status: "attending"
+      status: "attending",
+      location: "St Petersburg"
     }, {
-      title: "DrupalCamp Colorado 2015",
+      title: "DrupalCamp Colorado",
       date: "2015-06-19",
       status: "speaking",
       location: "Denver"
     }, {
-      title: "DrupalCamp Costa Rica 2015",
+      title: "DrupalCamp Costa Rica",
       date: "2015-07-29",
       status: "speaking",
       location: "San Jose, Costa Rica"
     }, {
-      title: "DrupalCamp Atlanta 2015",
+      title: "DrupalCamp Atlanta",
       date: "2015-10-16",
       status: "speaking",
       location: "Atlanta"
     }, {
-      title: "Fossetcon 2015",
+      title: "Fossetcon",
       date: "2015-11-19",
       status: "speaking",
       location: "Orlando"
     }, {
-      title: "Florida Drupalcamp 2016",
+      title: "Florida Drupalcamp",
       date: "2016-03-05",
       status: "speaking",
       location: "Orlando"
     }, {
-      title: "Gainesville Barcamp 2016",
+      title: "Gainesville Barcamp",
       date: "2016-03-12"
     }, {
-      title: "Wordcamp Jacksonville 2016",
+      title: "Wordcamp Jacksonville",
       date: "2016-04-16",
-      status: "speaking"
+      status: "speaking",
+      location: "Jacksonville"
     }, {
-      title: "DrupalCon New Orleans 2016",
+      title: "DrupalCon New Orleans",
       date: "2016-05-09",
-      status: "speaking"
+      status: "speaking",
+      location: "New Orleans"
     }, {
       title: "Front End Design Conf",
       date: "2016-06-15",
-      status: "attending"
+      status: "attending",
+      location: "St Petersburg"
     }, {
-      title: "Web Design Day 2016",
+      title: "Web Design Day",
       date: "2016-06-23",
       status: "attending",
       location: "Pittsburgh"
     }, {
-      title: "NYCcamp 2016",
+      title: "NYCcamp",
       date: "2016-07-08",
-      status: "speaking"
+      status: "speaking",
+      location: "New York City"
     }, {
-      title: "Drupalcon Dublin 2016",
+      title: "Drupalcon Dublin",
       date: "2016-09-26",
       status: "attending",
       location: "Dublin, Ireland"
     }, {
-      title: "Drupalcamp Chattanooga 2016",
+      title: "Drupalcamp Chattanooga",
       date: "2016-11-05",
       status: "speaking",
       location: "Chattanooga"
     }, {
-      title: "Florida Drupalcamp 2016",
+      title: "Florida Drupalcamp",
       date: "2017-02-17",
+      status: "speaking",
       location: "Orlando"
     }, {
-      title: "WordCamp Miami 2017",
+      title: "WordCamp Miami",
       date: "2017-03-24",
       status: "speaking",
       location: "Miami"
+    }, {
+      title: "Frontend Design Conference",
+      date: "2017-04-20",
+      status: "attending",
+      location: "St Petersburg"
     }, {
       title: "DrupalCon Baltimore",
       date: "2017-04-24",
       status: "attending",
       location: "Baltimore"
     }, {
-      title: "Drupalcamp Spain 2017",
+      title: "Drupalcamp Spain",
       date: "2017-05-05",
       status: "speaking",
       location: "Madrid, Spain"
     }, {
-      title: "Design 4 Drupal 2017",
+      title: "Design 4 Drupal",
       date: "2017-06-23",
       status: "speaking",
       location: "Boston"
+    }, {
+      title: "Drupalcamp Asheville",
+      date: "2017-07-15",
+      status: "attending",
+      location: "Asheville"
+    }, {
+      title: "Drupalcamp Colorado",
+      date: "2017-07-28",
+      status: "speaking",
+      location: "Denver"
+    }, {
+      title: "BADCamp",
+      date: "2017-10-18",
+      status: "speaking",
+      location: "San Francisco"
+    }, {
+      title: "Drupalcamp Atlanta",
+      date: "2017-11-03",
+      status: "attending",
+      location: "Atlanta"
     }]
   },
   plugins: [
