@@ -11,6 +11,7 @@ class Template extends React.Component {
           <Link to={'/'}>Home</Link>
           <Link to={'/about'}>About</Link>
           <Link to={'/philosophy'}>Philosophy</Link>
+          <Link to={'/events'}>Events</Link>
           <Link to={'/contact'}>Contact</Link>
         </header>
         {children()}
