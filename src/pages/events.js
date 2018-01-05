@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import dateFormat from 'dateformat'
 
 const pageName = 'Events'
 
@@ -9,27 +10,18 @@ class EventIndex extends React.Component {
   render() {
     const siteTitle = `${get(this, 'props.data.site.siteMetadata.title')} | ${pageName}`
     const events = get(this, 'props.data.site.siteMetadata.events')
-console.log(events)
-    const sortedEvents = events.sort((a,b) => {
+
+    let sortedEvents = events.sort((a,b) => {
       const aDate = Date.parse(get(a, 'date'))
       const bDate = Date.parse(get(b, 'date'))
-      // console.log(aDate - bDate);
-      // debugger;
       return aDate - bDate
-
-      // if (aDate > bDate) {
-      //   return 1
-      // }
-      // else if (aDate < bDate) {
-      //   return -1
-      // }
-      // else {
-      //   return 0
-      // }
     })
 
-    console.log(sortedEvents)
-    
+    sortedEvents.forEach(event => {
+      const dateObj = new Date(get(event, 'date'))
+      event.formattedDate = dateFormat(dateObj, 'mmm d, yyyy')
+    })
+
     return (
       <div>
         <Helmet>
@@ -41,7 +33,7 @@ console.log(events)
         <div className="events">
           {sortedEvents.map(event => {
             const title = get(event, 'title')
-            const date = Date.parse(get(event, 'date'))
+            const date = get(event, 'formattedDate')
             const status = get(event, 'status')
             const location = get(event, 'location')
             return (
