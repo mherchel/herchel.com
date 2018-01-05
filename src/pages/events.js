@@ -9,7 +9,27 @@ class EventIndex extends React.Component {
   render() {
     const siteTitle = `${get(this, 'props.data.site.siteMetadata.title')} | ${pageName}`
     const events = get(this, 'props.data.site.siteMetadata.events')
+console.log(events)
+    const sortedEvents = events.sort((a,b) => {
+      const aDate = Date.parse(get(a, 'date'))
+      const bDate = Date.parse(get(b, 'date'))
+      // console.log(aDate - bDate);
+      // debugger;
+      return aDate - bDate
 
+      // if (aDate > bDate) {
+      //   return 1
+      // }
+      // else if (aDate < bDate) {
+      //   return -1
+      // }
+      // else {
+      //   return 0
+      // }
+    })
+
+    console.log(sortedEvents)
+    
     return (
       <div>
         <Helmet>
@@ -19,13 +39,13 @@ class EventIndex extends React.Component {
         <h1>{pageName}</h1>
 
         <div className="events">
-          {events.map(event => {
+          {sortedEvents.map(event => {
             const title = get(event, 'title')
-            const date = get(event, 'date')
+            const date = Date.parse(get(event, 'date'))
             const status = get(event, 'status')
             const location = get(event, 'location')
             return (
-              <div key={title}>
+              <div key={date}>
                 <h3>{title}</h3>
                 <div className="date">{date}</div>
                 <div className="status">{status}</div>
