@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-2463fd0fc51600d236a2.js",
-      "component---src-pages-index-js-2463fd0fc51600d236a2.js.map"
+      "component---src-pages-index-js-232e6409145a00374fb2.js",
+      "component---src-pages-index-js-232e6409145a00374fb2.js.map"
     ],
     "path---drupalcon-portland-session-notes": [
       "path---drupalcon-portland-session-notes-01d8db88c51a149d8373.js",
@@ -11,6 +11,10 @@
     "path---importing-css-breakpoints-js": [
       "path---importing-css-breakpoints-js-b3a09af044e93b2a7167.js",
       "path---importing-css-breakpoints-js-b3a09af044e93b2a7167.js.map"
+    ],
+    "path---events": [
+      "path---events-c233f7d478ad2908c62a.js",
+      "path---events-c233f7d478ad2908c62a.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -25,16 +29,16 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-849ecc47655d93a64d1f.js",
-      "component---src-templates-blog-post-js-849ecc47655d93a64d1f.js.map"
+      "component---src-templates-blog-post-js-c1b918aab55f1ae26571.js",
+      "component---src-templates-blog-post-js-c1b918aab55f1ae26571.js.map"
     ],
     "path---reflections-on-2017": [
       "path---reflections-on-2017-03c58abee97b81531024.js",
       "path---reflections-on-2017-03c58abee97b81531024.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-c23782282a6e1292f562.js",
-      "component---src-layouts-index-js-c23782282a6e1292f562.js.map"
+      "component---src-layouts-index-js-26e20a65b8b0bcc9b8b2.js",
+      "component---src-layouts-index-js-26e20a65b8b0bcc9b8b2.js.map"
     ],
     "path---philosophy": [
       "path---philosophy-f8f2f2235c0cec2b21e4.js",
@@ -53,8 +57,8 @@
       "path---tips-developing-ie-8616a37ee422af3ae246.js.map"
     ],
     "commons": [
-      "commons-e348a602fb07de18073c.js",
-      "commons-e348a602fb07de18073c.js.map"
+      "commons-2ac1454bd2f377e5e587.js",
+      "commons-2ac1454bd2f377e5e587.js.map"
     ],
     "path---contact": [
       "path---contact-f8f2f2235c0cec2b21e4.js",
@@ -85,8 +89,12 @@
       "path---drupalcamp-atlanta-session-notes-24dbbf99e23ce5450d37.js.map"
     ],
     "app": [
-      "app-de3321176135ee04d807.js",
-      "app-de3321176135ee04d807.js.map"
+      "app-b663699204cf012b2755.js",
+      "app-b663699204cf012b2755.js.map"
+    ],
+    "component---src-pages-events-js": [
+      "component---src-pages-events-js-cd54cc683044a6dbfd29.js",
+      "component---src-pages-events-js-cd54cc683044a6dbfd29.js.map"
     ],
     "path---hello-2018": [
       "path---hello-2018-ccf4f8f07a298a6066cb.js",
