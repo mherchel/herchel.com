@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import dateFormat from 'dateformat'
 
 const pageName = 'Events'
 
@@ -11,23 +10,11 @@ class EventIndex extends React.Component {
     const siteTitle = `${get(this, 'props.data.site.siteMetadata.title')} | ${pageName}`
     const events = get(this, 'props.data.allEventsJson.edges')
 
-
-    // let sortedEvents = events.sort((a,b) => {
-    //   const aDate = Date.parse(get(a, 'date'))
-    //   const bDate = Date.parse(get(b, 'date'))
-    //   return aDate - bDate
-    // })
-
-    // sortedEvents.forEach(event => {
-    //   const dateObj = new Date(get(event, 'date'))
-    //   event.formattedDate = dateFormat(dateObj, 'mmm d, yyyy')
-    // })
-
     return (
       <div>
         <Helmet>
           <title>{siteTitle }</title>
-          <meta name="description" content={get(this, 'props.data.site.siteMetadata.description')} />
+          <meta name="description" content={`Events and conferences that is going to, and has been to.`} />
         </Helmet>
         <h1>{pageName}</h1>
 
@@ -65,11 +52,11 @@ export const eventQuery = graphql`
         title
       }
     }
-    allEventsJson {
+    allEventsJson(sort: { fields: [date], order: ASC }) {
       edges {
         node {
           title
-          date
+          date(formatString: "MMM DD, YYYY")
           status
           location
         }
