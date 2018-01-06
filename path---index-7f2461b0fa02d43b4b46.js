@@ -1,2 +1,0 @@
-webpackJsonp([0x81b8806e4260],{350:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Gatsby Starter Blog"}},allMarkdownRemark:{edges:[{node:{excerpt:"Hello world. This is my new blog being developed on Gatsby.",frontmatter:{path:"/hello-world/",date:"31 December, 2017",title:"Hello World"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---index-7f2461b0fa02d43b4b46.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([0x81b8806e4260],{349:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Mike Herchel | 8th Grade Geography Bee Champion"}},allMarkdownRemark:{edges:[{node:{excerpt:"In the “micro sense” of the my life, 2017 has been really great to me.  I travelled  a lot  including Asheville, NC, Atlanta, Baltimore…",frontmatter:{path:"/reflections-on-2017/",date:"31 December, 2017",title:"Reflections on 2017"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---index-af381ba1c9ee25c08759.js.map
