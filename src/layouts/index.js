@@ -21,10 +21,13 @@ class Template extends React.Component {
 }
 
 const headerStyles = css`
+  max-width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   font-size: 1.5rem;
 
   a:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 0.6rem;
   }
 `
 
