@@ -1,0 +1,189 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/component---src-layouts-index-js-dd8a8a2a2990c9ece435.js" as="script"/><link rel="preload" href="/component---src-templates-blog-post-js-c1b918aab55f1ae26571.js" as="script"/><link rel="preload" href="/path---blog-2014-04-02-ie-dev-tips-b46bdc2fdd05f13daac0.js" as="script"/><link rel="preload" href="/app-c1d4a932197188a0ef6b.js" as="script"/><link rel="preload" href="/commons-2ac1454bd2f377e5e587.js" as="script"/><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-c1d4a932197188a0ef6b.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-c1b918aab55f1ae26571.js","263791100135453":"component---src-pages-about-js-6378334010cb8eb05840.js","70144966829960":"component---src-pages-contact-js-0e5db878379671e5c08b.js","246501157640856":"component---src-pages-events-js-fcd06ce5c0113229391b.js","35783957827783":"component---src-pages-index-js-758b205c71b6194689c6.js","201137348325247":"component---src-pages-philosophy-js-e97467f3f5edfa6a9c94.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","118346069046169":"path---blog-2012-12-02-florida-drupalcamp-2012-session-notes-dff5d80d275ed211fdd3.js","252661158721077":"path---blog-2013-05-21-drupalcon-portland-session-notes-65e7a78a406b344c8cbc.js","94796094036295":"path---blog-2013-10-20-drupalcamp-atlanta-session-notes-5223bee18ea37b7ffadd.js","52240893958169":"path---blog-2014-03-08-forida-drupalcamp-presentation-notes-95048445a26b94da5ec2.js","195949336201339":"path---blog-2014-04-02-ie-dev-tips-b46bdc2fdd05f13daac0.js","118902623882910":"path---blog-2014-04-29-notes-on-developing-drupal-8-alpha-13-e1805b5d21ca98120220.js","191263793958923":"path---blog-2014-09-04-new-method-comment-spam-98714e6ecc0497c8e99f.js","115742899561403":"path---blog-2015-04-19-making-syfy-animations-not-suck-59c9b3dda44033578830.js","244918800777272":"path---blog-2015-06-09-advice-newbie-frontend-developer-24eea6aa1d05c6d94d8e.js","233638888874429":"path---blog-2015-06-16-importing-css-breakpoints-js-915a12ce6aa066a7fb1e.js","254422703685840":"path---blog-2017-12-31-reflections-on-2017-04a8db221ae8ab6b9d5e.js","154033230682747":"path---blog-2018-01-01-hello-2018-286b936c7993b11be636.js","273950069227526":"path---about-f8f2f2235c0cec2b21e4.js","184662623972074":"path---contact-f8f2f2235c0cec2b21e4.js","44713349584700":"path---events-a561be8954cd74a6ad07.js","142629428675168":"path---index-2322bdd3823311d6ec1c.js","131048373002594":"path---philosophy-f8f2f2235c0cec2b21e4.js","114276838955818":"component---src-layouts-index-js-dd8a8a2a2990c9ece435.js"}/*]]>*/</script><script>window.__EMOTION_CRITICAL_CSS_IDS__ = ["1eisola","fax5li"];</script><style>.css-1eisola{max-width:100%;overflow:auto;-webkit-overflow-scrolling:touch;font-size:1.5rem;}.css-1eisola a:not(:last-child){margin-right:0.6rem;}.css-fax5li img{border-radius:50%;}</style><title data-react-helmet="true">Development Tips for Internet Explorer | Mike Herchel</title><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/commons-2ac1454bd2f377e5e587.js","/app-c1d4a932197188a0ef6b.js","/path---blog-2014-04-02-ie-dev-tips-b46bdc2fdd05f13daac0.js","/component---src-templates-blog-post-js-c1b918aab55f1ae26571.js","/component---src-layouts-index-js-dd8a8a2a2990c9ece435.js"])/*]]>*/</script><style id="gatsby-inlined-css"></style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="-1894416739"><header class="css-1eisola" data-reactid="2"><a href="/" data-reactid="3">Home</a><a href="/about" data-reactid="4">About</a><a href="/philosophy" data-reactid="5">Philosophy</a><a href="/events" data-reactid="6">Events</a><a href="/contact" data-reactid="7">Contact</a></header><div data-reactid="8"><!-- react-empty: 9 --><h1 data-reactid="10">Development Tips for Internet Explorer</h1><p data-reactid="11">April 02, 2014</p><div data-reactid="12"><p>At the time of this writing, somewhere around 13% of the world’s web traffic is from Internet Explorer 8 (IE8). This can be even worse in certain demographics. Windows XP (and therefore IE8) is dying a slow death. It’s now unsupported by Microsoft (or not), but will probably be around for years to come.</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/ie-2014-02_0-ceb32febf1d44b80886a7574fc59c4f0-69083.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 69.74483596597813%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAA6cAAAOnAEHlFPdAAACe0lEQVQ4y62T7UtTcRTH71+kbyJMfJE9gSVIOI3oRcznlZbTuwyRKHpEszTbk5bbcoljoiNnK9ZmZuF8mk5N7+7mtN3dubunNNBoMr7dbWgINt944MPv+zu/w+Fwzu8QalU3tNoeSOUKfDC9R19fH2QyOfR6PdQqFa+l0Ol0kMpk6H2rxcjIF6QzYmpyAp8sFsTjcRyFEeFwGDs7OzgqI7a3t8H4fIhEoggGw1gPcGD9AfjYdfzw+rDiWcPSsgsLiy445l2YnqExbqMxOuqB1erlW8DAYvEmcbl+gmBZFsMf3dDqKPQbxmAYMh2I0WTe73tngrLTDMktM0jSjKYmK4xGGkSiTN0Ah3tPY0kePIui5cUUnr/sRVuHcg+ZUrXvvktzqwJ378tBNkgxMPgtVaFC40WFZPMAIqggl1Bea0RZTTdKr7ejtFrOo+CRQih6BGHVHZRca02+6QfHQESjUWg6Z1FfaUdt+VwSUek8yoSLuMHrEuF3nCzyIu8qixwBkxZZz0ZqKKH+fsSfPP4vWw+bMXdbjqEaNcy13fgsfgWr+DUM1RroRD2w8Hqc7IR32AbC7/eD1ajxW0Kmp7Hx0JjYsDE1FKa9DZFiQVqiVy4fGrPFbxwRDAYx/aYdtnoBJuoEmCSLMVVXhOmbhZipvgi7qAD2snw4CnNBH8+AMysD1IlMUNmZWMw9BkdeFuwFOZjNz8Z6V0eqh2xXC35VXcBG5fkku3qz8p+Pa7gEh/gsFsTnsMyTOO31Z/CVPJXERp7G2pASRCz2BxRFgeM4+PiNWfV4wAUCoJxOhEIhJHpM85rjAvwmuLG2uorEV1txu8EwDJw0vReXyPMXDsxm1613VG4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="2014 Internet Explorer Market Share"
+        title=""
+        src="/static/ie-2014-02_0-ceb32febf1d44b80886a7574fc59c4f0-fb8a0.png"
+        srcset="/static/ie-2014-02_0-ceb32febf1d44b80886a7574fc59c4f0-1a291.png 148w,
+/static/ie-2014-02_0-ceb32febf1d44b80886a7574fc59c4f0-2bc4a.png 295w,
+/static/ie-2014-02_0-ceb32febf1d44b80886a7574fc59c4f0-fb8a0.png 590w,
+/static/ie-2014-02_0-ceb32febf1d44b80886a7574fc59c4f0-69083.png 823w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Most front end developers don’t touch IE8 till the very end. The workflow looks something like the following: 1) develop in Chrome because it’s dev tools freakin rock 2) occasionally test in Safari, Firefox 3) at the very end test in Internet Explorer 4) facepalm.</p>
+<p>At this point, most developers are turning red with rage and wishing a terrible death to Microsoft in the most cruel and inhuman manner. They’ll go to their PM and beg, “No one uses IE8- We don’t need it.”</p>
+<p>But, what if I told you there was a better way?</p>
+<h2>Step one: Test early. Test often.</h2>
+<p>Get out of the habit of waiting until the end to test. Testing needs to come early in the process. Often, you can easily make strategic decisions early in the process based on your testing:</p>
+<ul>
+<li>float, inline-block, or absolute positioning</li>
+<li>changing grid systems</li>
+<li>z-index issues</li>
+<li>javascript issues</li>
+</ul>
+<p>Finding these issues early in the process allows you to change around your layout code early, eg. switching from inline-block elements to floats. Doing something like this is usually pretty simple early in the project, but can be a total pain in the ass toward the end.</p>
+<h3>So, how do you test?</h3>
+<p>I personally use Remote Desktop to remote into a Windows XP machine that I have access to. This is the easiest situation for me. But, another great alternative is to use virtual machines (like <a href="http://www.parallels.com/products/desktop/">Parallels</a> or <a href="https://www.virtualbox.org/">VirtualBox</a>) to run Windows XP. You can download free (and legal) images from Microsoft’s <a href="http://modern.ie/en-us/virtualization-tools">Modern.ie</a> website. Thanks Microsoft!</p>
+<p>The key here is that you need to make testing easy. If it’s easy, it can be integrated into your workflow. I’ve tried services such as <a href="http://www.browserstack.com/">BrowserStack</a>, and for me they don’t work well enough. I need the browser to be responsive so I can test hover-states and get a general ‘feel’ for the webpage.</p>
+<h2>Step two: IE Conditional Statements.</h2>
+<p>In a time not-to-long ago, many developers would put ugly CSS hacks into their stylesheets.</p>
+<div class="gatsby-highlight">
+      <pre class="language-css"><code><span class="token comment">/* IE6 */</span>
+<span class="token selector">* html #selector</span>  <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">#selector</span> <span class="token punctuation">{</span> <span class="token property">_color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/* IE6-7 */</span>
+<span class="token selector">#selector</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">#selector</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green !ie<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/* IE7 */</span>
+<span class="token selector">*:first-child+html #selector</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">*+html #selector</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">/* IE7-8 */</span>
+<span class="token selector">#selector</span> <span class="token punctuation">{</span> color<span class="token comment">/*\**/</span><span class="token punctuation">:</span> green\9<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>The problem with this is 1) it makes your CSS invalid (who cares, right?), 2) because it’s invalid, it doesn’t always work with Sass and 3) its tough to maintain.</p>
+<p>The obvious solution here is to use IE conditional statements.</p>
+<div class="gatsby-highlight">
+      <pre class="language-html"><code><span class="token comment">&lt;!--[if lte IE 8]>
+  &lt;link type="text/css" rel="stylesheet" href="/css/ie-lte-8.css" media="all" />
+&lt;![endif]--></span>
+</code></pre>
+      </div>
+<p>I use this method to perform general ‘cleanup’ of the webpage. Adjust a margin here, padding over there. Maybe narrow the width on this div by 2px… And, definitely fix any RGBA transparency issues that IE8 doesn’t understand (you can use semi-transparent PNGs for this).</p>
+<h2>Step three: Dealing with Media Queries.</h2>
+<p>We’re all designing and developing our websites mobile-first, right? Right. With responsive website design (RWD), the styles nested under @media aren’t parsed by IE8. This means that all mobile-first RWD sites will look like the mobile version… which will probably be confusing as hell to the non-technical person driving that old Compaq PC.</p>
+<p>In years past, front-end devs dealt with this by splitting up stylesheets by media query, and dedicating one ‘full’ stylesheet to IE8.</p>
+<div class="gatsby-highlight">
+      <pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>all<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style language-css">
+<span class="token atrule"><span class="token rule">@import</span> <span class="token url">url("/css/global.css")</span><span class="token punctuation">;</span></span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style language-css">
+<span class="token atrule"><span class="token rule">@import</span> <span class="token url">url("/css/default.css")</span><span class="token punctuation">;</span></span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token url">url("/css/default-narrow.css")</span><span class="token punctuation">;</span></span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+</code></pre>
+      </div>
+<p>This is the wrong approach for a number of reasons:</p>
+<ol>
+<li>You end up writing code more than once. Good developers try to use DRY (don’t repeat yourself) principles as much as possible.</li>
+<li>You limit yourself to that specific number of breakpoints (typically 3 or so)</li>
+<li>Multiple HTTP requests to download the stylesheet, in addition to the browser’s effort to parse multiple CSS files leads to performance issues</li>
+</ol>
+<p>After that fad came to pass, many developers started using polyfils such as <a href="https://github.com/scottjehl/Respond">respond.js</a> to work with IE8 to parse media queries. This works, but can lead to a <a href="http://en.wikipedia.org/wiki/Flash_of_unstyled_content">FOUC</a> (flash of unstyled content) in your user’s malware-riddled circa 2001 Compaq PC.</p>
+<h3>The best scenario</h3>
+<p>The best way to deal with IE8 would be to somehow magically rewrite all of your nested media query selectors into a ‘new’ stylesheet that could be pulled in to IE8 via conditional statements.</p>
+<h2>Enter Breakpoint</h2>
+<p><a href="http://breakpoint-sass.com/">Breakpoint Sass</a> is magical. In addition to enabling a super-streamlined mobile-first workflow, it has options to rewrite all of your media query selectors into a different stylesheet!</p>
+<p>To do this using Breakpoint, first write your sass or scss like normal.</p>
+<div class="gatsby-highlight">
+      <pre class="language-scss"><code><span class="token comment">/* _layout.scss */</span>
+
+<span class="token selector">#selector </span><span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token keyword">@include</span> <span class="token function">breakpoint</span><span class="token punctuation">(</span><span class="token variable">$tablet_wide</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>Be sure you have defined the breakpoint definitions…</p>
+<div class="gatsby-highlight">
+      <pre class="language-scss"><code><span class="token comment">/* _breakpoints.scss */</span>
+
+<span class="token keyword">@import</span> <span class="token string">"breakpoint"</span><span class="token punctuation">;</span> <span class="token comment">// Required to use the gem</span>
+<span class="token property"><span class="token variable">$tablet_wide</span></span><span class="token punctuation">:</span> 768px, <span class="token string">'no-query'</span> <span class="token string">'.no-mq'</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>This is the no-mq.scss fallback file that will generate the media query fallback file…</p>
+<div class="gatsby-highlight">
+      <pre class="language-scss"><code><span class="token comment">/* no-mq.scss */</span>
+
+<span class="token property"><span class="token variable">$breakpoint-no-queries</span></span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$breakpoint-no-query-fallbacks</span></span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">'breakpoints'</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">'layout'</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>This is the regular styles.scss for all browsers…</p>
+<div class="gatsby-highlight">
+      <pre class="language-scss"><code><span class="token comment">/* styles.scss */</span>
+
+<span class="token property"><span class="token variable">$breakpoint-no-queries</span></span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$breakpoint-no-query-fallbacks</span></span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+<span class="token keyword">@import</span> <span class="token string">'breakpoints'</span><span class="token punctuation">;</span>
+<span class="token keyword">@import</span> <span class="token string">'layout'</span><span class="token punctuation">;</span>
+</code></pre>
+      </div>
+<p>This is the styles.css that gets generated and sent to all browsers…</p>
+<div class="gatsby-highlight">
+      <pre class="language-css"><code><span class="token comment">/* styles.css */</span>
+
+<span class="token selector">#selector</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">#selector</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>And, this is the magical no-mq.css to be included in the conditional statement!!! Woohoo!</p>
+<div class="gatsby-highlight">
+      <pre class="language-css"><code><span class="token comment">/* no-mq.css */</span>
+
+<span class="token selector">#selector</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.no-mq #selector</span> <span class="token punctuation">{</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>So, you’re probably thinking, “What’s up with the .no-mq selector?”</p>
+<p>Many people will use conditional IE statements to wrap around their HTML tags. Another option is to use something like <a href="http://modernizr.com/">Modernizr</a> and some custom JQuery to add a class to the HTML tag.</p>
+<div class="gatsby-highlight">
+      <pre class="language-js"><code><span class="token keyword">if</span><span class="token punctuation">(</span>Modernizr<span class="token punctuation">.</span><span class="token function">mq</span><span class="token punctuation">(</span><span class="token string">'only all'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'no-mq'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<h2>It doesn’t have to be that bad</h2>
+<p>If I can get one point across in this article, it’s that front-end developing for IE8 doesn’t have to be as bad as many make it out to be. Remember the first step: Test early and test often. You’ll save yourself heartache at the end.</p>
+<p>Now go grab yourself a beer.</p></div><hr data-reactid="13"/><p class="css-fax5li" data-reactid="14"><img src="/static/herchelshead.d39009c9.jpg" alt="Mike herchel" data-reactid="15"/><!-- react-text: 16 -->Hi, I&#x27;m Mike Herchel, and I use Drupal, JavaScript, and other technologies to kick various asses throughout cyberspace.<!-- /react-text --></p></div></div></div><script>
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'undefined', 'auto');
+  </script></body></html>
