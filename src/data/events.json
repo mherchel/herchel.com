@@ -3,219 +3,268 @@
     "title": "Florida Drupalcamp",
     "date": "2018-02-16",
     "status": "speaking",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "https://www.fldrupal.camp"
   },
   {
     "title": "Florida Drupalcamp",
     "date": "2010-02-20",
     "status": "attending",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "https://www.fldrupal.camp"
   }, {
     "title": "DrupalCon San Francisco",
     "date": "2010-04-19",
     "status": "attending",
-    "location": "San Franscisco"
+    "location": "San Franscisco",
+    "url": "https://sf2010.drupal.org/"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2012-02-11",
     "status": "attending",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2011.fldrupalcamp.org"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2011-02-12",
     "status": "attending",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2012.fldrupalcamp.org"
   }, {
     "title": "DrupalCon Chicago",
     "date": "2011-03-07",
     "status": "attending",
-    "location": "Chicago"
+    "location": "Chicago",
+    "url": "https://chicago2011.drupal.org"
   }, {
     "title": "DrupalCon Denver",
     "date": "2012-03-19",
     "status": "attending",
-    "location": "Denver"
+    "location": "Denver",
+    "url": "https://denver2012.drupal.org"
   }, {
     "title": "Drupalcamp Atlanta",
     "date": "2012-10-27",
     "status": "speaking",
-    "location": "Atlanta"
+    "location": "Atlanta",
+    "url": "https://www.drupalcampatlanta.com/"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2013-04-20",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2013.fldrupalcamp.org"
   }, {
     "title": "DrupalCon Portland",
     "date": "2013-05-20",
     "status": "speaking",
-    "location": "Portland"
+    "location": "Portland",
+    "url": "https://portland2013.drupal.org"
   }, {
     "title": "Frontend Design Conference",
     "date": "2013-06-02",
-    "status": "attending"
+    "status": "attending",
+    "location": "St Petersburg",
+    "url": "http://www.frontenddesignconference.com/2013.html"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2014-03-08",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2014.fldrupalcamp.org"
   }, {
     "title": "DrupalCon Austin",
     "date": "2014-06-02",
     "status": "speaking",
-    "location": "Austin"
+    "location": "Austin",
+    "url": "https://austin2014.drupal.org"
   }, {
     "title": "Frontend Design Conference",
     "date": "2014-07-10",
-    "status": "attending"
+    "status": "attending",
+    "location": "St Petersburg",
+    "url": "http://www.frontenddesignconference.com/2014-st-pete.html"
   }, {
     "title": "Drupalcamp Asheville",
     "date": "2014-08-23",
     "status": "speaking",
-    "location": "Asheville"
+    "location": "Asheville",
+    "url": "https://www.drupalasheville.com/"
   }, {
     "title": "Drupalcamp Chattanooga",
     "date": "2014-09-13",
     "status": "speaking",
-    "location": "Chattanooga"
+    "location": "Chattanooga",
+    "url": "https://www.drupalcampchattanooga.com/"
   }, {
     "title": "Gainesville BarCamp",
     "date": "2014-11-08",
-    "status": "attending"
+    "status": "attending",
+    "location": "Gainesville, FL",
+    "url": "http://2014.gainesvillebarcamp.com"
   }, {
     "title": "DrupalCon Latin America",
     "date": "2015-02-10",
     "status": "attending",
-    "location": "Bogota, Colombia"
+    "location": "Bogota, Colombia",
+    "url": "https://latinamerica2015.drupal.org"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2015-04-11",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2015.fldrupalcamp.org"
   }, {
     "title": "Orlando Barcamp",
     "date": "2015-04-18",
     "status": "speaking",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://barcamporlando.org/"
   }, {
     "title": "DrupalCon Los Angelas",
     "date": "2015-05-11",
     "status": "speaking",
-    "location": "Los Angelas"
+    "location": "Los Angelas",
+    "url": "https://events.drupal.org/losangeles2015"
   }, {
     "title": "Frontend Design Conference",
     "date": "2015-05-21",
     "status": "attending",
-    "location": "St Petersburg"
+    "location": "St Petersburg",
+    "url": "http://www.frontenddesignconference.com/2015/"
   }, {
     "title": "DrupalCamp Colorado",
     "date": "2015-06-19",
     "status": "speaking",
-    "location": "Denver"
+    "location": "Denver",
+    "url": "http://2015.drupalcampcolorado.org/"
   }, {
     "title": "DrupalCamp Costa Rica",
     "date": "2015-07-29",
     "status": "speaking",
-    "location": "San Jose, Costa Rica"
+    "location": "San Jose, Costa Rica",
+    "url": "http://"
   }, {
     "title": "DrupalCamp Atlanta",
     "date": "2015-10-16",
     "status": "speaking",
-    "location": "Atlanta"
+    "location": "Atlanta",
+    "url": "https://www.drupalcampatlanta.com/2015"
   }, {
     "title": "Fossetcon",
     "date": "2015-11-19",
     "status": "speaking",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://fossetcon.org/"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2016-03-05",
     "status": "speaking",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2016.fldrupalcamp.org"
   }, {
     "title": "Gainesville Barcamp",
-    "date": "2016-03-12"
+    "date": "2016-03-12",
+    "location": "Gainesville, FL",
+    "url": "http://2016.gainesvillebarcamp.com/"
   }, {
     "title": "Wordcamp Jacksonville",
     "date": "2016-04-16",
     "status": "speaking",
-    "location": "Jacksonville"
+    "location": "Jacksonville",
+    "url": "https://2016.jacksonville.wordcamp.org"
   }, {
     "title": "DrupalCon New Orleans",
     "date": "2016-05-09",
     "status": "speaking",
-    "location": "New Orleans"
+    "location": "New Orleans",
+    "url": "https://events.drupal.org/neworleans2016"
   }, {
     "title": "Front End Design Conf",
     "date": "2016-06-15",
     "status": "attending",
-    "location": "St Petersburg"
+    "location": "St Petersburg",
+    "url": "http://www.frontenddesignconference.com/2016/"
   }, {
     "title": "Web Design Day",
     "date": "2016-06-23",
     "status": "attending",
-    "location": "Pittsburgh"
+    "location": "Pittsburgh",
+    "url": "http://webdesignday.com/"
   }, {
     "title": "NYCcamp",
     "date": "2016-07-08",
     "status": "speaking",
-    "location": "New York City"
+    "location": "New York City",
+    "url": "https://nyccamp.org/"
   }, {
     "title": "Drupalcon Dublin",
     "date": "2016-09-26",
     "status": "attending",
-    "location": "Dublin, Ireland"
+    "location": "Dublin, Ireland",
+    "url": "https://events.drupal.org/dublin2016"
   }, {
     "title": "Drupalcamp Chattanooga",
     "date": "2016-11-05",
     "status": "speaking",
-    "location": "Chattanooga"
+    "location": "Chattanooga",
+    "url": "https://www.drupalcampchattanooga.com"
   }, {
     "title": "Florida Drupalcamp",
     "date": "2017-02-17",
     "status": "speaking",
-    "location": "Orlando"
+    "location": "Orlando",
+    "url": "http://2017.fldrupalcamp.org"
   }, {
     "title": "WordCamp Miami",
     "date": "2017-03-24",
     "status": "speaking",
-    "location": "Miami"
+    "location": "Miami",
+    "url": "https://2017.miami.wordcamp.org"
   }, {
     "title": "Frontend Design Conference",
     "date": "2017-04-20",
     "status": "attending",
-    "location": "St Petersburg"
+    "location": "St Petersburg",
+    "url": "http://www.frontenddesignconference.com/2017/"
   }, {
     "title": "DrupalCon Baltimore",
     "date": "2017-04-24",
     "status": "attending",
-    "location": "Baltimore"
+    "location": "Baltimore",
+    "url": "https://events.drupal.org/baltimore2017"
   }, {
     "title": "Drupalcamp Spain",
     "date": "2017-05-05",
     "status": "speaking",
-    "location": "Madrid, Spain"
+    "location": "Madrid, Spain",
+    "url": "https://2017.drupalcamp.es"
   }, {
     "title": "Design 4 Drupal",
     "date": "2017-06-23",
     "status": "speaking",
-    "location": "Boston"
+    "location": "Boston",
+    "url": "https://www.design4drupal.org"
   }, {
     "title": "Drupalcamp Asheville",
     "date": "2017-07-15",
     "status": "attending",
-    "location": "Asheville"
+    "location": "Asheville",
+    "url": "ttps://www.drupalasheville.com"
   }, {
     "title": "Drupalcamp Colorado",
     "date": "2017-07-28",
     "status": "speaking",
-    "location": "Denver"
+    "location": "Denver",
+    "url": "2017.drupalcampcolorado.org"
   }, {
     "title": "BADCamp",
     "date": "2017-10-18",
     "status": "speaking",
-    "location": "San Francisco"
+    "location": "San Francisco",
+    "url": "https://2017.badcamp.net"
   }, {
     "title": "Drupalcamp Atlanta",
     "date": "2017-11-03",
     "status": "attending",
-    "location": "Atlanta"
+    "location": "Atlanta",
+    "url": "https://www.drupalcampatlanta.com"
   }
 ]
