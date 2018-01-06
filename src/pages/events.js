@@ -9,18 +9,19 @@ const pageName = 'Events'
 class EventIndex extends React.Component {
   render() {
     const siteTitle = `${get(this, 'props.data.site.siteMetadata.title')} | ${pageName}`
-    const events = get(this, 'props.data.site.siteMetadata.events')
+    const events = get(this, 'props.data.allEventsJson.edges')
 
-    let sortedEvents = events.sort((a,b) => {
-      const aDate = Date.parse(get(a, 'date'))
-      const bDate = Date.parse(get(b, 'date'))
-      return aDate - bDate
-    })
 
-    sortedEvents.forEach(event => {
-      const dateObj = new Date(get(event, 'date'))
-      event.formattedDate = dateFormat(dateObj, 'mmm d, yyyy')
-    })
+    // let sortedEvents = events.sort((a,b) => {
+    //   const aDate = Date.parse(get(a, 'date'))
+    //   const bDate = Date.parse(get(b, 'date'))
+    //   return aDate - bDate
+    // })
+
+    // sortedEvents.forEach(event => {
+    //   const dateObj = new Date(get(event, 'date'))
+    //   event.formattedDate = dateFormat(dateObj, 'mmm d, yyyy')
+    // })
 
     return (
       <div>
@@ -31,11 +32,11 @@ class EventIndex extends React.Component {
         <h1>{pageName}</h1>
 
         <div className="events">
-          {sortedEvents.map(event => {
-            const title = get(event, 'title')
-            const date = get(event, 'formattedDate')
-            const status = get(event, 'status')
-            const location = get(event, 'location')
+          {events.map(event => {
+            const title = get(event, 'node.title')
+            const date = get(event, 'node.date')
+            const status = get(event, 'node.status')
+            const location = get(event, 'node.location')
             return (
               <div key={date}>
                 <h3>{title}</h3>
@@ -62,8 +63,11 @@ export const eventQuery = graphql`
     site {
       siteMetadata {
         title
-        description
-        events {
+      }
+    }
+    allEventsJson {
+      edges {
+        node {
           title
           date
           status
