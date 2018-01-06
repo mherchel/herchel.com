@@ -1,20 +1,16 @@
 {
   "assetsByChunkName": {
-    "path---2015-04-19-making-syfy-animations-not-suck": [
-      "path---2015-04-19-making-syfy-animations-not-suck-19b9247588412a302721.js",
-      "path---2015-04-19-making-syfy-animations-not-suck-19b9247588412a302721.js.map"
-    ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-758b205c71b6194689c6.js",
       "component---src-pages-index-js-758b205c71b6194689c6.js.map"
     ],
-    "path---2015-06-16-importing-css-breakpoints-js": [
-      "path---2015-06-16-importing-css-breakpoints-js-a50bb61e5c31dac790a9.js",
-      "path---2015-06-16-importing-css-breakpoints-js-a50bb61e5c31dac790a9.js.map"
-    ],
     "path---events": [
       "path---events-a561be8954cd74a6ad07.js",
       "path---events-a561be8954cd74a6ad07.js.map"
+    ],
+    "path---blog-2014-03-08-forida-drupalcamp-presentation-notes": [
+      "path---blog-2014-03-08-forida-drupalcamp-presentation-notes-95048445a26b94da5ec2.js",
+      "path---blog-2014-03-08-forida-drupalcamp-presentation-notes-95048445a26b94da5ec2.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -24,13 +20,9 @@
       "component---src-pages-contact-js-0e5db878379671e5c08b.js",
       "component---src-pages-contact-js-0e5db878379671e5c08b.js.map"
     ],
-    "path---2012-12-02-florida-drupalcamp-2012-session-notes": [
-      "path---2012-12-02-florida-drupalcamp-2012-session-notes-a5ad904f97cc44750cbe.js",
-      "path---2012-12-02-florida-drupalcamp-2012-session-notes-a5ad904f97cc44750cbe.js.map"
-    ],
-    "path---2013-10-20-drupalcamp-atlanta-session-notes": [
-      "path---2013-10-20-drupalcamp-atlanta-session-notes-8a710b2f59af08deb8ad.js",
-      "path---2013-10-20-drupalcamp-atlanta-session-notes-8a710b2f59af08deb8ad.js.map"
+    "path---blog-2013-10-20-drupalcamp-atlanta-session-notes": [
+      "path---blog-2013-10-20-drupalcamp-atlanta-session-notes-5223bee18ea37b7ffadd.js",
+      "path---blog-2013-10-20-drupalcamp-atlanta-session-notes-5223bee18ea37b7ffadd.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
@@ -44,41 +36,45 @@
       "component---src-layouts-index-js-dd8a8a2a2990c9ece435.js",
       "component---src-layouts-index-js-dd8a8a2a2990c9ece435.js.map"
     ],
-    "path---2014-04-29-notes-on-developing-drupal-8-alpha-13": [
-      "path---2014-04-29-notes-on-developing-drupal-8-alpha-13-9cbd6fed712a5e94d9a6.js",
-      "path---2014-04-29-notes-on-developing-drupal-8-alpha-13-9cbd6fed712a5e94d9a6.js.map"
+    "path---blog-2015-04-19-making-syfy-animations-not-suck": [
+      "path---blog-2015-04-19-making-syfy-animations-not-suck-59c9b3dda44033578830.js",
+      "path---blog-2015-04-19-making-syfy-animations-not-suck-59c9b3dda44033578830.js.map"
+    ],
+    "path---blog-2012-12-02-florida-drupalcamp-2012-session-notes": [
+      "path---blog-2012-12-02-florida-drupalcamp-2012-session-notes-dff5d80d275ed211fdd3.js",
+      "path---blog-2012-12-02-florida-drupalcamp-2012-session-notes-dff5d80d275ed211fdd3.js.map"
+    ],
+    "path---blog-2014-04-29-notes-on-developing-drupal-8-alpha-13": [
+      "path---blog-2014-04-29-notes-on-developing-drupal-8-alpha-13-e1805b5d21ca98120220.js",
+      "path---blog-2014-04-29-notes-on-developing-drupal-8-alpha-13-e1805b5d21ca98120220.js.map"
     ],
     "path---philosophy": [
       "path---philosophy-f8f2f2235c0cec2b21e4.js",
       "path---philosophy-f8f2f2235c0cec2b21e4.js.map"
     ],
     "path---index": [
-      "path---index-890629b4e718af3f7930.js",
-      "path---index-890629b4e718af3f7930.js.map"
+      "path---index-2322bdd3823311d6ec1c.js",
+      "path---index-2322bdd3823311d6ec1c.js.map"
     ],
-    "path---2013-05-21-drupalcon-portland-session-notes": [
-      "path---2013-05-21-drupalcon-portland-session-notes-f5fdfdc6e91b0f732348.js",
-      "path---2013-05-21-drupalcon-portland-session-notes-f5fdfdc6e91b0f732348.js.map"
-    ],
-    "path---2014-04-02-ie-dev-tips": [
-      "path---2014-04-02-ie-dev-tips-b58cdd66490d5f7df5a4.js",
-      "path---2014-04-02-ie-dev-tips-b58cdd66490d5f7df5a4.js.map"
-    ],
-    "path---2018-01-01-hello-2018": [
-      "path---2018-01-01-hello-2018-6869c77072a28c030909.js",
-      "path---2018-01-01-hello-2018-6869c77072a28c030909.js.map"
+    "path---blog-2018-01-01-hello-2018": [
+      "path---blog-2018-01-01-hello-2018-286b936c7993b11be636.js",
+      "path---blog-2018-01-01-hello-2018-286b936c7993b11be636.js.map"
     ],
     "commons": [
       "commons-2ac1454bd2f377e5e587.js",
       "commons-2ac1454bd2f377e5e587.js.map"
     ],
-    "path---2015-06-09-advice-newbie-frontend-developer": [
-      "path---2015-06-09-advice-newbie-frontend-developer-b9a9d75b2496f7e85312.js",
-      "path---2015-06-09-advice-newbie-frontend-developer-b9a9d75b2496f7e85312.js.map"
-    ],
     "path---contact": [
       "path---contact-f8f2f2235c0cec2b21e4.js",
       "path---contact-f8f2f2235c0cec2b21e4.js.map"
+    ],
+    "path---blog-2014-09-04-new-method-comment-spam": [
+      "path---blog-2014-09-04-new-method-comment-spam-98714e6ecc0497c8e99f.js",
+      "path---blog-2014-09-04-new-method-comment-spam-98714e6ecc0497c8e99f.js.map"
+    ],
+    "path---blog-2014-04-02-ie-dev-tips": [
+      "path---blog-2014-04-02-ie-dev-tips-b46bdc2fdd05f13daac0.js",
+      "path---blog-2014-04-02-ie-dev-tips-b46bdc2fdd05f13daac0.js.map"
     ],
     "component---src-pages-philosophy-js": [
       "component---src-pages-philosophy-js-e97467f3f5edfa6a9c94.js",
@@ -89,24 +85,28 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-82538993ef353105f3f7.js",
-      "app-82538993ef353105f3f7.js.map"
+      "app-82e944a63e19b6cbcc87.js",
+      "app-82e944a63e19b6cbcc87.js.map"
     ],
-    "path---2014-03-08-forida-drupalcamp-presentation-notes": [
-      "path---2014-03-08-forida-drupalcamp-presentation-notes-c56ac3b49ff88d9af7c3.js",
-      "path---2014-03-08-forida-drupalcamp-presentation-notes-c56ac3b49ff88d9af7c3.js.map"
+    "path---blog-2015-06-16-importing-css-breakpoints-js": [
+      "path---blog-2015-06-16-importing-css-breakpoints-js-915a12ce6aa066a7fb1e.js",
+      "path---blog-2015-06-16-importing-css-breakpoints-js-915a12ce6aa066a7fb1e.js.map"
+    ],
+    "path---blog-2015-06-09-advice-newbie-frontend-developer": [
+      "path---blog-2015-06-09-advice-newbie-frontend-developer-24eea6aa1d05c6d94d8e.js",
+      "path---blog-2015-06-09-advice-newbie-frontend-developer-24eea6aa1d05c6d94d8e.js.map"
     ],
     "component---src-pages-events-js": [
       "component---src-pages-events-js-fcd06ce5c0113229391b.js",
       "component---src-pages-events-js-fcd06ce5c0113229391b.js.map"
     ],
-    "path---2014-09-04-new-method-comment-spam": [
-      "path---2014-09-04-new-method-comment-spam-376c493732a4d359d0f6.js",
-      "path---2014-09-04-new-method-comment-spam-376c493732a4d359d0f6.js.map"
+    "path---blog-2013-05-21-drupalcon-portland-session-notes": [
+      "path---blog-2013-05-21-drupalcon-portland-session-notes-65e7a78a406b344c8cbc.js",
+      "path---blog-2013-05-21-drupalcon-portland-session-notes-65e7a78a406b344c8cbc.js.map"
     ],
-    "path---2017-12-31-reflections-on-2017": [
-      "path---2017-12-31-reflections-on-2017-26ff5c358315f201c189.js",
-      "path---2017-12-31-reflections-on-2017-26ff5c358315f201c189.js.map"
+    "path---blog-2017-12-31-reflections-on-2017": [
+      "path---blog-2017-12-31-reflections-on-2017-04a8db221ae8ab6b9d5e.js",
+      "path---blog-2017-12-31-reflections-on-2017-04a8db221ae8ab6b9d5e.js.map"
     ],
     "component---src-pages-about-js": [
       "component---src-pages-about-js-6378334010cb8eb05840.js",
