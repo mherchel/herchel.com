@@ -17,17 +17,55 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 
+// exports.createPages = ({ graphql, boundActionCreators }) => {
+//   const { createPage } = boundActionCreators
+
+//   return new Promise((resolve, reject) => {
+//     const pages = []
+//     const blogPost = path.resolve("./src/templates/blog-post.js")
+//     resolve(
+//       graphql(
+//         `
+//       {
+//         allMarkdownRemark(limit: 1000) {
+//           edges {
+//             node {
+//               fields {
+//                 slug
+//               }
+//             }
+//           }
+//         }
+//       }
+//     `
+//       ).then(result => {
+//         if (result.errors) {
+//           console.log(result.errors)
+//           reject(result.errors)
+//         }
+
+//         // Create blog posts pages.
+//         // _.each(result.data.allMarkdownRemark.edges, edge => {
+//         result.data.allMarkdownRemark.edges.map(({ node }) => {
+//           createPage({
+//             path: node.fields.slug,
+//             component: blogPost,
+//             context: {
+//               slug: node.fields.slug,
+//             },
+//           })
+//         })
+//         resolve()
+//       })
+//     )
+//   })
+// }
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
-
   return new Promise((resolve, reject) => {
-    const pages = []
-    const blogPost = path.resolve("./src/templates/blog-post.js")
-    resolve(
-      graphql(
-        `
+    graphql(`
       {
-        allMarkdownRemark(limit: 1000) {
+        allMarkdownRemark {
           edges {
             node {
               fields {
@@ -38,25 +76,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
-        }
-
-        // Create blog posts pages.
-        // _.each(result.data.allMarkdownRemark.edges, edge => {
-        result.data.allMarkdownRemark.edges.map(({ node }) => {
-          createPage({
-            path: node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: node.fields.slug,
-            },
-          })
+    ).then(result => {
+      result.data.allMarkdownRemark.edges.map(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/blog-post.js`),
+          context: {
+            // Data passed to context is available in page queries as GraphQL variables.
+            slug: node.fields.slug,
+          },
         })
-        resolve()
       })
-    )
+      resolve()
+    })
   })
 }

@@ -45,7 +45,7 @@ BlogIndex.propTypes = {
 
 export default BlogIndex
 
-export const pageQuery = graphql`
+export const query = graphql`
   query IndexQuery {
     site {
       siteMetadata {
@@ -60,8 +60,6 @@ export const pageQuery = graphql`
           frontmatter {
             path
             date(formatString: "DD MMMM, YYYY")
-          }
-          frontmatter {
             title
             subtitle
           }
