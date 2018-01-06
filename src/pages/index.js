@@ -58,7 +58,6 @@ export const query = graphql`
         node {
           excerpt
           frontmatter {
-            path
             date(formatString: "DD MMMM, YYYY")
             title
             subtitle
