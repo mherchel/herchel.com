@@ -24,9 +24,10 @@ class EventIndex extends React.Component {
             const date = get(event, 'node.date')
             const status = get(event, 'node.status')
             const location = get(event, 'node.location')
+            const url = get(event, 'node.url')
             return (
               <div key={date}>
-                <h3>{title}</h3>
+                <h3><a target="_blank" href={url}>{title}</a></h3>
                 <div className="date">{date}</div>
                 <div className="status">{status}</div>
                 <div className="location">{location}</div>
@@ -59,6 +60,7 @@ export const eventQuery = graphql`
           date(formatString: "MMM DD, YYYY")
           status
           location
+          url
         }
       }
     }
