@@ -1,4 +1,9 @@
-automatic slug generation
-urls in events
-link events to urls
-convert static pages to md
+* urls in events
+* link events to urls
+* convert static pages to md
+* Move events to own file
+
+
+## design ideas
+lots of use of css filters
+intersection observer?
