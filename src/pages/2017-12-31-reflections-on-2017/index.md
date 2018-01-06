@@ -2,7 +2,6 @@
 title: Reflections on 2017
 date: "2017-12-31T00:00:00.000Z"
 subtitle: "Goodbye 2017"
-path: "/reflections-on-2017/"
 ---
 
 In the "micro sense" of the my life, 2017 has been really great to me. 

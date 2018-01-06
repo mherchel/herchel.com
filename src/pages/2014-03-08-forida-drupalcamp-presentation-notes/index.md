@@ -2,7 +2,6 @@
 title: Florida DrupalCamp Presentation Notes
 date: "2013-10-20T00:00:00.000Z"
 subtitle: "Lean, mean, and maintainable Drupal theming practices"
-path: "/forida-drupalcamp-presentation-notes/"
 ---
 
 Below are my slides from my Drupal theming best practices presentation at the most awesome Florida Drupalcamp ever! The main points that I want to get across in this presentation is 

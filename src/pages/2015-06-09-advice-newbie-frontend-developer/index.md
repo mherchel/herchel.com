@@ -2,7 +2,6 @@
 title: Advice for Newbie Front-end Developer
 date: "2015-06-09T00:00:00.000Z"
 subtitle: "Critique and advice on getting started"
-path: "/advice-newbie-frontend-developer/"
 ---
 
 *I had a new front-end developer reach out to me asking for a critique of their website, résumé, and Github account. I ended up going to town on my critique and advice, and I believe what follows is useful for many individuals who are looking at getting into the web development industry.*

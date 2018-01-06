@@ -2,7 +2,6 @@
 title: Making Scroll Animations on Syfy.com Not Suck
 date: "2015-04-19T00:00:00.000Z"
 subtitle: "A deep dive into browser rendering and devTools"
-path: "/making-syfy-animations-not-suck/"
 ---
 
 Earlier this year, [Lullabot](https://www.lullabot.com/) launched the new [Syfy.com](http://www.syfy.com/). I was fortunate to be the lead front-end developer on the project. The new Syfy design called for some very complex animations that were directly bound to the scroll event. So, on every scroll, animations would progress a certain amount.

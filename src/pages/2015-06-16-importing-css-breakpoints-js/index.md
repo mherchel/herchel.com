@@ -2,7 +2,6 @@
 title: Importing CSS Breakpoints Into Javascript
 date: "2015-06-16T00:00:00.000Z"
 subtitle: "A simpler way to keep your project's CSS and JS in sync"
-path: "/importing-css-breakpoints-js/"
 ---
 
 *Note this article was originally published on [Lullabot.com](https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript).*

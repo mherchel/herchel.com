@@ -2,7 +2,6 @@
 title: DrupalCamp Atlanta Presentation Notes
 date: "2013-10-20T00:00:00.000Z"
 subtitle: "Notes from Drupalcamp Atlanta 2013"
-path: "/drupalcamp-atlanta-session-notes/"
 ---
 
 This presentation is a rehash of my 2012 Florida Drupalcamp presentation, Simple Ways to Awesomize® Drupal's Page Load Times.

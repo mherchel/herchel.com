@@ -2,7 +2,6 @@
 title: A New Method for Dealing with Comment Spam
 date: "2014-09-04T00:00:00.000Z"
 subtitle: "Hit the spammers where it hurts..."
-path: "/new-method-comment-spam/"
 ---
 
 I’m a co-owner of GatorTailgating.com, which I genuinely believe is the absolute best website on the entire internet. Having a popular website has a downside, though - we get tons of comment spam.

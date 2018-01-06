@@ -2,7 +2,6 @@
 title: Notes on Developing with Drupal 8 (Alpha 10)
 date: "2014-04-29T00:00:00.000Z"
 subtitle: "Trials, tribulations, and lots of beer..."
-path: "/notes-on-developing-drupal-8-alpha13/"
 ---
 
 Earlier this year, I decided to redevelop my site in Drupal and start blogging. Being a Drupal developer, this should be an ace in the hole. But, I chose to up the ante and do it in the yet-unrelesed version of Drupal - Drupal 8. Specifically, Drupal 8 Alpha10.

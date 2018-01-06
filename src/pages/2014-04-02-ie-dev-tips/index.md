@@ -2,7 +2,6 @@
 title: Development Tips for Internet Explorer
 date: "2014-04-02T00:00:00.000Z"
 subtitle: "How not to hate on IE8"
-path: "/tips-developing-ie/"
 ---
 
 At the time of this writing, somewhere around 13% of the world’s web traffic is from Internet Explorer 8 (IE8). This can be even worse in certain demographics. Windows XP (and therefore IE8) is dying a slow death. It’s now unsupported by Microsoft (or not), but will probably be around for years to come.

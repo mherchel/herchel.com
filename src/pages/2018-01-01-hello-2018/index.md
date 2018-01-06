@@ -2,7 +2,6 @@
 title: Hello 2018
 date: "2018-01-01T00:00:00.000Z"
 subtitle: "It's gonna be awesome"
-path: "/hello-2018/"
 ---
 
 I'm looking forward to 2018 with excitement and a bit of trepidation. 
