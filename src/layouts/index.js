@@ -46,6 +46,7 @@ injectGlobal`
   :root {
     --primary: orange;
     --gray: #333;
+    --white: white;
   }
 
   body {
@@ -57,6 +58,17 @@ injectGlobal`
 
   h1, h2, h3 {
     line-height: 1.4;
+    color: var(--gray);
+  }
+
+  .content {
+    min-height: calc(100vh - 20px);
+    padding: 40px;
+    background: var(--white);
+
+    h1 {
+      margin-top: 0;
+    }
   }
 `
 
@@ -72,6 +84,7 @@ const layoutStyles = css`
   }
 
   main {
+    flex-grow: 1;
     overflow: hidden;
   }
 `

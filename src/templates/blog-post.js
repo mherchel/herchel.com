@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-import { css } from 'emotion'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -10,7 +9,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div className={blogStyles}>
+      <div className='content'>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
         <p>
@@ -21,17 +20,6 @@ class BlogPostTemplate extends React.Component {
     )
   }
 }
-
-const blogStyles = css`
-  min-height: calc(100vh - 20px);
-  padding: 40px;
-  background: white;
-
-  h1 {
-    margin-top: 0;
-  }
-
-`
 
 export default BlogPostTemplate
 

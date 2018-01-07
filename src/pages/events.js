@@ -11,7 +11,7 @@ class EventIndex extends React.Component {
     const events = get(this, 'props.data.allEventsJson.edges')
 
     return (
-      <div>
+      <div className='content'>
         <Helmet>
           <title>{siteTitle }</title>
           <meta name="description" content={`Events and conferences that is going to, and has been to.`} />

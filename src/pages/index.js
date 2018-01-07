@@ -39,7 +39,7 @@ class BlogIndex extends React.Component {
 
 const articleStyles = css`
   display: block;
-  background: white;
+  background: var(--white);
   margin-bottom: 2px;
   padding: 10px 20px;
   color: var(--gray);

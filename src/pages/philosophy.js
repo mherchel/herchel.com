@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 const pageName = 'Philosophy'
 
 export default ({ data }) =>
-  <div>
+  <div className='content'>
     <Helmet title={`${pageName} | ${data.site.siteMetadata.title}`} />
     <h1>{pageName}</h1>
     <p><em>These ideas mostly serve as a public reality check for myself. They're intended to be in constant flux.</em></p>

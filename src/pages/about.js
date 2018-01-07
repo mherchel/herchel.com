@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 const pageName = 'About Me'
 
 export default ({ data }) =>
-  <div>
+  <div className='content'>
     <Helmet title={`${pageName} | ${data.site.siteMetadata.title}`} />
     <h1>{pageName}</h1>
     <p>Hi. I'm Mike, and I love what I do. </p>
