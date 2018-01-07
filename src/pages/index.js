@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import { css } from 'emotion'
 
 const pageName = '8th Grade Geography Bee Champion'
 
@@ -21,21 +22,42 @@ class BlogIndex extends React.Component {
           const title = get(post, 'node.frontmatter.title')
           const subtitle = get(post, 'node.frontmatter.subtitle')
           return (
-            <div key={post.node.fields.slug}>
-              <h3>
-                <Link to={post.node.fields.slug} >
-                  {title}
-                </Link>
-              </h3>
+            <Link to={post.node.fields.slug} key={post.node.fields.slug} className={articleStyles}>
+              <h2>
+                {title}
+              </h2>
+              <div className="metadata">
               <small>{post.node.frontmatter.date}</small>
-              <p>{subtitle}</p>
-            </div>
+              <p>{subtitle}</p></div>
+            </Link>
           )
         })}
       </div>
     )
   }
 }
+
+const articleStyles = css`
+  display: block;
+  background: white;
+  margin-bottom: 2px;
+  padding: 10px 20px;
+  color: var(--gray);
+  text-decoration: none;
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  p {
+    margin: 10px;
+  }
+
+  .metadata {
+    display: flex;
+    align-items: center;
+  }
+`
 
 BlogIndex.propTypes = {
   route: React.PropTypes.object,

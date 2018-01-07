@@ -45,6 +45,7 @@ injectGlobal`
 
   :root {
     --primary: orange;
+    --gray: #666;
   }
 
   body {
