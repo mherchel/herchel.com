@@ -3,8 +3,6 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
-
 const pageName = '8th Grade Geography Bee Champion'
 
 class BlogIndex extends React.Component {
@@ -18,7 +16,7 @@ class BlogIndex extends React.Component {
           <title>{siteTitle }</title>
           <meta name="description" content={get(this, 'props.data.site.siteMetadata.description')} />
         </Helmet>
-        <Bio />
+        
         {posts.map(post => {
           const title = get(post, 'node.frontmatter.title')
           const subtitle = get(post, 'node.frontmatter.subtitle')

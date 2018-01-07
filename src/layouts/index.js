@@ -1,33 +1,93 @@
 import React from 'react'
-import { css } from 'emotion'
+import { css, injectGlobal } from 'emotion'
 import Link from 'gatsby-link'
+import Bio from '../components/Bio'
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
     return (
-      <div>
+      <div className={layoutStyles}>
         <header className={headerStyles}>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/about'}>About</Link>
-          <Link to={'/philosophy'}>Philosophy</Link>
-          <Link to={'/events'}>Events</Link>
-          <Link to={'/contact'}>Contact</Link>
+          <Bio />
+          <nav className={navStyles}>
+            <Link to={'/'}>Home</Link>
+            <Link to={'/about'}>About</Link>
+            <Link to={'/philosophy'}>Philosophy</Link>
+            <Link to={'/events'}>Events</Link>
+          </nav>
+          <section className={contactStyles}>
+            <p>Email me at <a href="mailto:mike@herchel.com" target="_blank">mike@herchel.com</a></p>
+            <p>Follow me at <a href="http://twitter.com/mikeherchel" target="_blank">@mikeherchel</a></p>
+            <p>I'm on github at <a href="https://github.com/mherchel" target="_blank">github.com/mherchel</a></p>
+            <p>Facebook profile is <a href="http://www.facebook.com/mherchel" target="_blank">facebook.com/mherchel</a></p>
+            <p>Find me on D.O at <a href="http://drupal.org/user/118428" target="_blank">drupal.org/user/118428</a></p>
+            <p>I don't use LinkedIn <a href="http://www.linkedin.com/in/mherchel" target="_blank">linkedin.com/in/mherchel</a></p>
+            </section>
         </header>
-        {children()}
+        <main role="main">
+          {children()}
+        </main>
       </div>
     )
   }
 }
 
-const headerStyles = css`
-  max-width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  font-size: 1.5rem;
+injectGlobal`
+  * {
+    box-sizing: border-box;
 
-  a:not(:last-child) {
-    margin-right: 0.6rem;
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
+
+  :root {
+    --primary: orange;
+  }
+
+  body {
+    background-color: var(--primary);
+    line-height: 1.7;
+    font-family: helvetica, arial, sans-serif;
+  }
+`
+
+const layoutStyles = css`
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  header {
+    flex-basis: 320px;
+    flex-shrink: 0;
+    margin-right: 60px;
+  }
+`
+
+const headerStyles = css`
+  text-align: right;
+  color: white;
+`
+
+const navStyles = css`
+  margin: 20px 0;
+  font-size: 40px;
+  font-weight: bold;
+
+  a {
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+`
+
+const contactStyles = css`
+  color: rgba(255, 255, 255, 0.8);
+
+  a {
+    color: white;
   }
 `
 
