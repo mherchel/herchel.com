@@ -45,13 +45,18 @@ injectGlobal`
 
   :root {
     --primary: orange;
-    --gray: #666;
+    --gray: #333;
   }
 
   body {
     background-color: var(--primary);
     line-height: 1.7;
+    overflow: scroll;
     font-family: helvetica, arial, sans-serif;
+  }
+
+  h1, h2, h3 {
+    line-height: 1.4;
   }
 `
 
@@ -64,6 +69,10 @@ const layoutStyles = css`
     flex-basis: 320px;
     flex-shrink: 0;
     margin-right: 60px;
+  }
+
+  main {
+    overflow: hidden;
   }
 `
 

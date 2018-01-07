@@ -2,8 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-
-import Bio from '../components/Bio'
+import { css } from 'emotion'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -11,19 +10,28 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <div>
+      <div className={blogStyles}>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
         <p>
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <Bio />
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     )
   }
 }
+
+const blogStyles = css`
+  min-height: calc(100vh - 20px);
+  padding: 40px;
+  background: white;
+
+  h1 {
+    margin-top: 0;
+  }
+
+`
 
 export default BlogPostTemplate
 
