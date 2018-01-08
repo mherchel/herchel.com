@@ -12,14 +12,6 @@ class Template extends React.Component {
         <header className={headerStyles}>
           <Bio />
           <Nav />
-          <section className={contactStyles}>
-            <p>Email me at <a href="mailto:mike@herchel.com" target="_blank">mike@herchel.com</a></p>
-            <p>Follow me at <a href="http://twitter.com/mikeherchel" target="_blank">@mikeherchel</a></p>
-            <p>I'm on github at <a href="https://github.com/mherchel" target="_blank">github.com/mherchel</a></p>
-            <p>Facebook profile is <a href="http://www.facebook.com/mherchel" target="_blank">facebook.com/mherchel</a></p>
-            <p>Find me on D.O at <a href="http://drupal.org/user/118428" target="_blank">drupal.org/user/118428</a></p>
-            <p>I don't use LinkedIn <a href="http://www.linkedin.com/in/mherchel" target="_blank">linkedin.com/in/mherchel</a></p>
-            </section>
         </header>
         <main role="main">
           {children()}
@@ -98,34 +90,34 @@ injectGlobal`
 `
 
 const layoutStyles = css`
-  display: flex;
   width: 94%;
   max-width: 1200px;
   margin: 0 auto;
 
+  @media (min-width: 700px) {
+    display: flex;
+  }
+
   header {
-    flex-basis: 320px;
-    flex-shrink: 0;
     margin-right: 60px;
+
+    @media (min-width: 700px) {
+      flex-basis: 320px;
+      flex-shrink: 0;
+    }
   }
 
   main {
-    flex-grow: 1;
-    width: calc(100% - 320px);
+    @media (min-width: 700px) {
+      flex-grow: 1;
+      width: calc(100% - 320px);
+    }
   }
 `
 
 const headerStyles = css`
   text-align: right;
   color: white;
-`
-
-const contactStyles = css`
-  color: rgba(255, 255, 255, 0.8);
-
-  a {
-    color: white;
-  }
 `
 
 Template.propTypes = {
