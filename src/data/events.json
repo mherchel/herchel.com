@@ -1,12 +1,29 @@
 [
   {
-    "title": "Florida Drupalcamp",
+    "title": "#PerfMatters Conf",
+    "date": "2018-03-27",
+    "status": "attending",
+    "location": "San Francisco",
+    "url": "https://perfmattersconf.com":
+  }, {
+    "title": "DrupalCon Nashville",
+    "date": "2018-04-10",
+    "status": "attending",
+    "location": "Nashville",
+    "url": "https://events.drupal.org/nashville2018"
+  }, {
+    "title": "Frontend Design Conference",
+    "date": "2018-04-26",
+    "status": "attending",
+    "location": "St Petersburg",
+    "url": "http://frontenddesignconference.com/"
+  }, {
+    "title": "Florida Drupalcamp1",
     "date": "2018-02-16",
     "status": "speaking",
     "location": "Orlando",
     "url": "https://www.fldrupal.camp"
-  },
-  {
+  }, {
     "title": "Florida Drupalcamp",
     "date": "2010-02-20",
     "status": "attending",
@@ -247,13 +264,13 @@
     "date": "2017-07-15",
     "status": "attending",
     "location": "Asheville",
-    "url": "ttps://www.drupalasheville.com"
+    "url": "https://www.drupalasheville.com"
   }, {
     "title": "Drupalcamp Colorado",
     "date": "2017-07-28",
     "status": "speaking",
     "location": "Denver",
-    "url": "2017.drupalcampcolorado.org"
+    "url": "http://2017.drupalcampcolorado.org"
   }, {
     "title": "BADCamp",
     "date": "2017-10-18",
