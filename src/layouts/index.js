@@ -44,12 +44,13 @@ injectGlobal`
   }
 
   :root {
-    --primary: orange;
+    --primary: deepskyblue;
     --gray: #333;
     --white: white;
   }
 
   body {
+    margin: 10px;
     background-color: var(--primary);
     line-height: 1.7;
     overflow: scroll;
@@ -65,6 +66,10 @@ injectGlobal`
     min-height: calc(100vh - 20px);
     padding: 40px;
     background: var(--white);
+    font-family: georgia;
+    color: #666;
+    font-size: 22px;
+    line-height: 2;
 
     h1 {
       margin-top: 0;
