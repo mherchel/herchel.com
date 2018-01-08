@@ -30,6 +30,13 @@ const bioStyles = css`
     flex-wrap: wrap;
   }
 
+  a {
+    @media (max-width: 450px) {
+      height: 50px;
+      overflow: hidden;
+    }
+  }
+
   img {
     border-radius: 50%
 
@@ -39,8 +46,7 @@ const bioStyles = css`
     }
 
     @media (max-width: 450px) {
-      width: 50px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
   }
 
