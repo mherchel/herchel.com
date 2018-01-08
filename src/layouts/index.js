@@ -44,6 +44,11 @@ injectGlobal`
     --font-serif: georgia, serif;
   }
 
+  ::selection {
+    color: var(--primary); 
+    background: black;
+  }
+
   body {
     margin: 10px;
     background: var(--primary);
@@ -158,11 +163,14 @@ const layoutStyles = css`
   footer {
     flex-basis: 100%;
   }
+  
 `
 
 const headerStyles = css`
   text-align: right;
   color: white;
+
+  
 `
 
 const footerStyles = css`
