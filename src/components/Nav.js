@@ -60,6 +60,18 @@ const buttonStyle = css`
     display: none;
   }
 
+  /* Work around for a FF bug where blend-mode causes button to be red. */
+  @supports (-moz-appearance: none) {
+    mix-blend-mode: initial;
+
+    &:before {
+      position: relative;
+      top: -4px;
+      padding: 0 ;
+      background: var(--primary);
+    }   
+  }
+
   &:before {
     content: "☰"
   }
@@ -106,7 +118,7 @@ const navStyles = css`
     display: block;
     color: white;
     text-decoration: none;
-    
+
     @media (min-width: 700px) {
       &.active:not(:first-child) {
         text-decoration: underline;
