@@ -41,7 +41,7 @@ const articleStyles = css`
   display: block;
   background: var(--white);
   margin-bottom: 2px;
-  padding: 10px 20px;
+  padding: 20px;
   color: var(--gray);
   text-decoration: none;
 

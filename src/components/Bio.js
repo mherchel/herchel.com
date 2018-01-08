@@ -17,6 +17,8 @@ class Bio extends React.Component {
 }
 
 const bioStyles = css`
+  margin-top: 20px;
+
   img {
     border-radius: 50%
   }

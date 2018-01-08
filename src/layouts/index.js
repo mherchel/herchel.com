@@ -63,6 +63,7 @@ injectGlobal`
   }
 
   .content {
+    position: relative;
     min-height: calc(100vh - 20px);
     padding: 40px;
     background: var(--white);
@@ -70,6 +71,19 @@ injectGlobal`
     color: #666;
     font-size: 22px;
     line-height: 2;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 70px;
+      transform: translatey(-50%);
+      height: 0;
+      width: 0;
+      border-top: solid transparent 20px;
+      border-right: solid var(--white) 20px;
+      border-bottom: solid transparent 20px;
+    }
 
     h1 {
       margin-top: 0;
@@ -79,7 +93,8 @@ injectGlobal`
 
 const layoutStyles = css`
   display: flex;
-  max-width: 1000px;
+  width: 94%;
+  max-width: 1200px;
   margin: 0 auto;
 
   header {
@@ -90,7 +105,7 @@ const layoutStyles = css`
 
   main {
     flex-grow: 1;
-    overflow: hidden;
+    width: calc(100% - 320px);
   }
 `
 
