@@ -56,6 +56,11 @@ injectGlobal`
   h1, h2, h3 {
     line-height: 1.4;
     color: var(--gray);
+    margin: 1em 0 0.5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   .content {
@@ -81,8 +86,13 @@ injectGlobal`
       border-bottom: solid transparent 20px;
     }
 
-    h1 {
-      margin-top: 0;
+    em {
+      color: #777;
+    }
+
+    a {
+      color: var(--primary);
+      filter: brightness(0.8);
     }
   }
 `

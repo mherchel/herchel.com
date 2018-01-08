@@ -46,6 +46,17 @@ const articleStyles = css`
   text-decoration: none;
   box-shadow: 5px 6px 0px rgba(0,0,0,0.2);
 
+  > * {
+    transition: 0.1s;
+  }
+
+  &:hover,
+  &:focus {
+    > * {
+      transform: translatex(5px);
+    }
+  }
+
   h2 {
     margin: 10px 0;
     font-size: 30px;
