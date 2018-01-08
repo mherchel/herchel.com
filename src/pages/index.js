@@ -63,12 +63,18 @@ const articleStyles = css`
   }
 
   p {
-    margin: 10px;
+    margin: 10px 0;
+  }
+
+  small {
+    margin-right: 10px;
   }
 
   .metadata {
-    display: flex;
-    align-items: center;
+    @media (min-width: 500px) {
+      display: flex;
+      align-items: center;
+    }
   }
 `
 
