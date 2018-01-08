@@ -27,8 +27,9 @@ class BlogIndex extends React.Component {
                 {title}
               </h2>
               <div className="metadata">
-              <small>{post.node.frontmatter.date}</small>
-              <p>{subtitle}</p></div>
+                <span className="date">{post.node.frontmatter.date}</span>
+                <span className="subtitle">{subtitle}</span>
+              </div>
             </Link>
           )
         })}
@@ -45,16 +46,15 @@ const articleStyles = css`
   color: var(--gray);
   text-decoration: none;
   box-shadow: 5px 6px 0px rgba(0,0,0,0.2);
+  opacity: 0.98;
 
-  > * {
-    transition: 0.1s;
+  @media (min-width: 1000px) {
+    padding: 20px 40px;
   }
 
   &:hover,
   &:focus {
-    > * {
-      transform: translatex(5px);
-    }
+    opacity: 1;
   }
 
   h2 {
@@ -62,19 +62,27 @@ const articleStyles = css`
     font-size: 30px;
   }
 
-  p {
-    margin: 10px 0;
-  }
-
-  small {
-    margin-right: 10px;
-  }
-
   .metadata {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+
     @media (min-width: 500px) {
-      display: flex;
+      flex-direction: row;
       align-items: center;
+
+      > *:not(:last-child) {
+        &:after {
+          content: "   |   ";
+          white-space: pre;
+          color: #aaa;
+        }
+      }
     }
+  }
+
+  .date {
+    color: #999;
   }
 `
 
@@ -97,7 +105,7 @@ export const query = graphql`
         node {
           excerpt
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MM.DD.YYYY")
             title
             subtitle
           }

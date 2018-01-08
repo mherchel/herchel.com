@@ -15,18 +15,17 @@ class Nav extends React.Component {
     return (
       <div>
         <button 
-          className={buttonStyle}
+          className={`${buttonStyle} ${this.state.navVisible ? 'active' : '' }`}
           onClick={() => this.handleNavClick()}
-          style={{ 'transform': this.state.navVisible ? 'rotate(90deg)' : '' }}
         >
           <span>Toggle Navigation</span>
         </button>
         <div className={navWrapperStyles} style={{'display' : this.state.navVisible ? 'block' : ''}}>
           <nav className={navStyles}>
-            <Link onClick={() => this.handleNavClick()} to={'/'}>Home</Link>
-            <Link onClick={() => this.handleNavClick()} to={'/about'}>About</Link>
-            <Link onClick={() => this.handleNavClick()} to={'/philosophy'}>Philosophy</Link>
-            <Link onClick={() => this.handleNavClick()} to={'/events'}>Events</Link>
+            <Link activeClassName="active" onClick={() => this.handleNavClick()} to={'/'}>Home</Link>
+            <Link activeClassName="active" onClick={() => this.handleNavClick()} to={'/about'}>About</Link>
+            <Link activeClassName="active" onClick={() => this.handleNavClick()} to={'/philosophy'}>Philosophy</Link>
+            <Link activeClassName="active" onClick={() => this.handleNavClick()} to={'/events'}>Events</Link>
           </nav>
           <section className={contactStyles}>
             <p>Email me at <a href="mailto:mike@herchel.com" target="_blank">mike@herchel.com</a></p>
@@ -47,25 +46,27 @@ const buttonStyle = css`
   top: 35px;
   right: 20px;
   z-index: 3;
+  overflow: hidden;
   border: 0;
-  background: var(--primary);
+  background: transparent;
   color: white;
   font-size: 40px;
   line-height: 40px;
   cursor: pointer;
   transition: 0.2s;
+  mix-blend-mode: difference;
 
   @media (min-width: 700px) {
     display: none;
   }
 
-  &:focus {
-    outline: 0;
-    transform: rotate(10deg);
-  }
-
   &:before {
     content: "☰"
+  }
+
+  &.active {
+    transform: rotate(90deg);
+    mix-blend-mode: initial;
   }
 
   span {
@@ -105,6 +106,12 @@ const navStyles = css`
     display: block;
     color: white;
     text-decoration: none;
+    
+    @media (min-width: 700px) {
+      &.active:not(:first-child) {
+        text-decoration: underline;
+      }
+    }
   }
 `
 

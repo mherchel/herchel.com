@@ -16,6 +16,10 @@ class Template extends React.Component {
         <main role="main">
           {children()}
         </main>
+        <footer className={footerStyles}>
+          <span className="developed">Developed using <a target="_blank" href="http://gatsbyjs.org">GatsbyJS</a></span>
+          <span className="github">Submit a PR <a target="_blank" href="https://github.com/mherchel/herchel.com">on GitHub</a></span>
+        </footer>
       </div>
     )
   }
@@ -108,10 +112,11 @@ const layoutStyles = css`
   width: 94%;
   max-width: 1200px;
   margin: 0 auto;
-  --header-width: 200px;
+  --header-width: 220px;
 
   @media (min-width: 700px) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 1000px) {
@@ -119,25 +124,60 @@ const layoutStyles = css`
   }
 
   header {
-    margin-right: 60px;
-
     @media (min-width: 700px) {
+      margin-right: 40px;
       flex-basis: var(--header-width);
       flex-shrink: 0;
+    }
+
+    @media (min-width: 1000px) {
+      margin-right: 60px;
     }
   }
 
   main {
     @media (min-width: 700px) {
       flex-grow: 1;
-      width: calc(100% - var(--header-width));
+      width: calc(100% - (var(--header-width) + 40px));
     }
+
+    @media (min-width: 1000px) {
+      width: calc(100% - (var(--header-width) + 60px));
+    }
+  }
+
+  footer {
+    flex-basis: 100%;
   }
 `
 
 const headerStyles = css`
   text-align: right;
   color: white;
+`
+
+const footerStyles = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: rgba(255, 255, 255, 0.8);
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+    align-items: center;
+
+    > *:not(:last-child) {
+      &:after {
+        content: "   |   ";
+        white-space: pre;
+        color: white;
+      }
+    }
+  }
+
+  a {
+    color: white;
+  }
 `
 
 Template.propTypes = {
