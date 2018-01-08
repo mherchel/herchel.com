@@ -58,24 +58,38 @@ const articleStyles = css`
     opacity: 1;
   }
 
-  &:after {
-    --cut-width: 20px;
-    content: "";
-    position: absolute;
-    right: -5px;
-    top: -12px;
-    height: 0;
-    width: 0;
-    border-top: solid var(--cut-width) transparent;
-    border-left: solid var(--cut-width) transparent;
-    border-right: solid var(--cut-width) transparent;
-    border-bottom: solid var(--cut-width) var(--primary);
-    transform : rotate(45deg);
-    transform-origin: bottom right;
+  @media (min-width: 700px) {
+    &:before {
+      --cut-width: 20px;
+      content: "";
+      position: absolute;
+      right: -5px;
+      top: -12px;
+      height: 0;
+      width: 0;
+      border-top: solid var(--cut-width) transparent;
+      border-left: solid var(--cut-width) transparent;
+      border-right: solid var(--cut-width) transparent;
+      border-bottom: solid var(--cut-width) var(--primary);
+      transform : rotate(45deg);
+      transform-origin: bottom right;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 100%;
+      height: 20px;
+      width: 10px;
+      background: var(--primary);
+      transform: skew(0, 45deg);
+    }
   }
 
   h2 {
     font-size: 30px;
+    line-height: 1.2;
   }
 
   .metadata {
