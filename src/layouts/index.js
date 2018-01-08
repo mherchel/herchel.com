@@ -51,7 +51,7 @@ injectGlobal`
 
   body {
     margin: 10px;
-    background-color: var(--primary);
+    background: var(--primary);
     line-height: 1.7;
     overflow: scroll;
     font-family: helvetica, arial, sans-serif;
