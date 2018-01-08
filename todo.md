@@ -6,6 +6,4 @@
 * lots of use of css filters
 * intersection observer?
 * fluid typography on headings
-* blockquotes
 * selection
-* Show top half of my head at mobile

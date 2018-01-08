@@ -40,6 +40,8 @@ injectGlobal`
     --primary: deepskyblue;
     --gray: #333;
     --white: white;
+    --font-sans: helvetica, arial, sans-serif;
+    --font-serif: georgia, serif;
   }
 
   body {
@@ -47,7 +49,7 @@ injectGlobal`
     background: var(--primary);
     line-height: 1.7;
     overflow: scroll;
-    font-family: helvetica, arial, sans-serif;
+    font-family: var(--font-sans);
   }
 
   h1, h2, h3 {
@@ -72,12 +74,19 @@ injectGlobal`
     }
   }
 
+  blockquote {
+    background-color: #eee;
+    padding: 10px 20px;
+    border-left: solid 5px #ccc;
+    font-family: var(--font-sans);
+  }
+
   .content {
     position: relative;
     min-height: calc(100vh - 20px);
     padding: 40px;
     background: var(--white);
-    font-family: georgia;
+    font-family: var(--font-serif);
     color: #666;
     font-size: 22px;
     line-height: 2;

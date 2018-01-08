@@ -65,6 +65,7 @@ const articleStyles = css`
   .metadata {
     display: flex;
     flex-direction: column;
+    line-height: 1.2;
     color: #666;
 
     @media (min-width: 500px) {
