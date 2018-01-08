@@ -49,7 +49,7 @@ const articleStyles = css`
   opacity: 0.98;
 
   @media (min-width: 1000px) {
-    padding: 20px 40px;
+    padding: 30px 40px;
   }
 
   &:hover,
@@ -58,7 +58,6 @@ const articleStyles = css`
   }
 
   h2 {
-    margin: 10px 0;
     font-size: 30px;
   }
 
