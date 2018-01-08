@@ -2,6 +2,7 @@ import React from 'react'
 import { css, injectGlobal } from 'emotion'
 import Link from 'gatsby-link'
 import Bio from '../components/Bio'
+import Nav from '../components/Nav'
 
 class Template extends React.Component {
   render() {
@@ -10,12 +11,7 @@ class Template extends React.Component {
       <div className={layoutStyles}>
         <header className={headerStyles}>
           <Bio />
-          <nav className={navStyles}>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/about'}>About</Link>
-            <Link to={'/philosophy'}>Philosophy</Link>
-            <Link to={'/events'}>Events</Link>
-          </nav>
+          <Nav />
           <section className={contactStyles}>
             <p>Email me at <a href="mailto:mike@herchel.com" target="_blank">mike@herchel.com</a></p>
             <p>Follow me at <a href="http://twitter.com/mikeherchel" target="_blank">@mikeherchel</a></p>
@@ -112,18 +108,6 @@ const layoutStyles = css`
 const headerStyles = css`
   text-align: right;
   color: white;
-`
-
-const navStyles = css`
-  margin: 20px 0;
-  font-size: 40px;
-  font-weight: bold;
-
-  a {
-    display: block;
-    color: white;
-    text-decoration: none;
-  }
 `
 
 const contactStyles = css`
