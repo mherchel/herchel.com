@@ -4,7 +4,7 @@
     "date": "2018-03-27",
     "status": "attending",
     "location": "San Francisco",
-    "url": "https://perfmattersconf.com":
+    "url": "https://perfmattersconf.com"
   }, {
     "title": "DrupalCon Nashville",
     "date": "2018-04-10",
@@ -18,7 +18,7 @@
     "location": "St Petersburg",
     "url": "http://frontenddesignconference.com/"
   }, {
-    "title": "Florida Drupalcamp1",
+    "title": "Florida Drupalcamp",
     "date": "2018-02-16",
     "status": "speaking",
     "location": "Orlando",

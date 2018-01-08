@@ -80,7 +80,7 @@ export const eventQuery = graphql`
         title
       }
     }
-    allEventsJson(sort: { fields: [date], order: DESC }) {
+    allEventsJson(sort: { fields: [date], order: ASC }) {
       edges {
         node {
           title
