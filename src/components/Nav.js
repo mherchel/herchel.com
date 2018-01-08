@@ -3,17 +3,30 @@ import Link from 'gatsby-link'
 import { css } from 'emotion'
 
 class Nav extends React.Component {
+  constructor() {
+    super()
+    this.handleNavClick = this.handleNavClick.bind(this)
+    this.state = { navVisible: false }
+  }
+  handleNavClick() {
+    this.setState({ navVisible: !this.state.navVisible })
+  }
   render() {
     return (
       <div>
-        <input className={checkboxStyle} id="nav-toggle" type="checkbox"/>
-        <label htmlFor="nav-toggle" className={buttonStyle}><span>Toggle Navigation</span></label>
-        <div className={`nav-wrapper ${navWrapperStyles}`}>
+        <button 
+          className={buttonStyle}
+          onClick={() => this.handleNavClick()}
+          style={{ 'transform': this.state.navVisible ? 'rotate(90deg)' : '' }}
+        >
+          <span>Toggle Navigation</span>
+        </button>
+        <div className={navWrapperStyles} style={{'display' : this.state.navVisible ? 'block' : ''}}>
           <nav className={navStyles}>
-            <Link to={'/'}>Home</Link>
-            <Link to={'/about'}>About</Link>
-            <Link to={'/philosophy'}>Philosophy</Link>
-            <Link to={'/events'}>Events</Link>
+            <Link onClick={() => this.handleNavClick()} to={'/'}>Home</Link>
+            <Link onClick={() => this.handleNavClick()} to={'/about'}>About</Link>
+            <Link onClick={() => this.handleNavClick()} to={'/philosophy'}>Philosophy</Link>
+            <Link onClick={() => this.handleNavClick()} to={'/events'}>Events</Link>
           </nav>
           <section className={contactStyles}>
             <p>Email me at <a href="mailto:mike@herchel.com" target="_blank">mike@herchel.com</a></p>
@@ -33,10 +46,13 @@ const buttonStyle = css`
   position: fixed;
   top: 35px;
   right: 20px;
+  z-index: 3;
+  border: 0;
+  background: transparent;
+  color: white;
   font-size: 40px;
   line-height: 40px;
   cursor: pointer;
-  z-index: 3;
   transition: 0.2s;
 
   @media (min-width: 700px) {
@@ -50,27 +66,6 @@ const buttonStyle = css`
     font-size: 0;
     position: absolute;
     visibility: hidden;
-  }
-`
-
-const checkboxStyle = css`
-  font-size: 0;
-  position: absolute;
-  visibility: hidden;
-  transition: transform 0.2s;
-
-  @media (min-width: 700px) {
-    display: none;
-  }
-
-  &:checked {
-    ~ label {
-      transform: rotate(90deg);
-    }
-    
-    ~ .nav-wrapper {
-      display: block;
-    }
   }
 `
 
