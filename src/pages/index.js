@@ -39,6 +39,7 @@ class BlogIndex extends React.Component {
 }
 
 const articleStyles = css`
+  position: relative;
   display: block;
   background: var(--white);
   margin-bottom: 20px;
@@ -55,6 +56,22 @@ const articleStyles = css`
   &:hover,
   &:focus {
     opacity: 1;
+  }
+
+  &:after {
+    --cut-width: 20px;
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: -12px;
+    height: 0;
+    width: 0;
+    border-top: solid var(--cut-width) transparent;
+    border-left: solid var(--cut-width) transparent;
+    border-right: solid var(--cut-width) transparent;
+    border-bottom: solid var(--cut-width) var(--primary);
+    transform : rotate(45deg);
+    transform-origin: bottom right;
   }
 
   h2 {

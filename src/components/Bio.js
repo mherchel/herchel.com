@@ -62,6 +62,7 @@ const bioStyles = css`
 
     @media (min-width: 700px) {
       margin-right: 0;
+      margin-top: 20px;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.15);
       font-size: 20px;
