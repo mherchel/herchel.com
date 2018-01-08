@@ -48,7 +48,7 @@ const buttonStyle = css`
   right: 20px;
   z-index: 3;
   border: 0;
-  background: transparent;
+  background: var(--primary);
   color: white;
   font-size: 40px;
   line-height: 40px;
@@ -59,9 +59,15 @@ const buttonStyle = css`
     display: none;
   }
 
+  &:focus {
+    outline: 0;
+    transform: rotate(10deg);
+  }
+
   &:before {
     content: "☰"
   }
+
   span {
     font-size: 0;
     position: absolute;

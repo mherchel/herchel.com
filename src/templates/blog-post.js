@@ -25,14 +25,16 @@ class BlogPostTemplate extends React.Component {
 }
 
 const blogStyles = css`
+  article {
+    overflow: hidden; /* Ensure long URLs don't cause content to stretch. */
+  }
+
   .gatsby-highlight {
     font-size: 16px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
 `
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
@@ -52,3 +54,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default BlogPostTemplate

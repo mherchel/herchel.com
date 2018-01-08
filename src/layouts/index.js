@@ -24,6 +24,7 @@ class Template extends React.Component {
 injectGlobal`
   * {
     box-sizing: border-box;
+    touch-action: manipulation;
 
     &:before,
     &:after {
