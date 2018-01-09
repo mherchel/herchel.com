@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import { css } from 'emotion'
 
 const pageName = 'Events'
 
@@ -26,8 +27,8 @@ class EventIndex extends React.Component {
           <meta name="description" content={`Events and conferences that is going to, and has been to.`} />
         </Helmet>
         <h1>{pageName}</h1>
-        <h2>Upcoming events</h2>
-        <div className="events upcoming">
+        <h2 className={eventsHeading}>Upcoming events</h2>
+        <div className={eventsWrapper}>
           {upcomingEvents.map(event => {
             const title = get(event, 'node.title')
             const date = get(event, 'node.date')
@@ -35,17 +36,15 @@ class EventIndex extends React.Component {
             const location = get(event, 'node.location')
             const url = get(event, 'node.url')
             return (
-              <div key={date}>
+              <article className={eventStyles} key={date}>
                 <h3><a target="_blank" href={url}>{title}</a></h3>
-                <div className="date">{date}</div>
-                <div className="status">{status}</div>
-                <div className="location">{location}</div>
-              </div>
+                <div className="meta">{date} in {location}</div>
+              </article>
             )
           })}
         </div>
-        <h2>Previous events</h2>
-        <div className="events previous">
+        <h2 className={eventsHeading}>Previous events</h2>
+        <div className={eventsWrapper}>
           {prevEvents.map(event => {
             const title = get(event, 'node.title')
             const date = get(event, 'node.date')
@@ -53,12 +52,10 @@ class EventIndex extends React.Component {
             const location = get(event, 'node.location')
             const url = get(event, 'node.url')
             return (
-              <div key={date}>
+              <article className={eventStyles} key={date}>
                 <h3><a target="_blank" href={url}>{title}</a></h3>
-                <div className="date">{date}</div>
-                <div className="status">{status}</div>
-                <div className="location">{location}</div>
-              </div>
+                <div className="meta">{date} in {location}</div>
+              </article>
             )
           })}
         </div>
@@ -66,6 +63,76 @@ class EventIndex extends React.Component {
     )
   }
 }
+
+const eventsHeading = css`
+  clear: both;
+`
+
+const eventsWrapper = css`
+  clear: both;
+  border-left: solid 4px var(--primary);
+  margin-left: 20px;
+  padding-left: 20px;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+`
+
+const eventStyles = css`
+  --offset: 20px;
+  position: relative;
+  float: left;
+  clear: both;
+  margin: 20px 0;  
+  background: #eee;
+  border-left: solid 4px var(--primary);
+  padding: var(--offset);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .meta {
+    font-size: 16px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translatey(-50%);
+    width: calc(var(--offset) + 4px);
+    height 4px;
+    background: var(--primary);
+  }
+
+  &:after {
+    content: "";
+    --width: 20px;
+    position: absolute;
+    right: calc(100% + var(--offset) - 4px);
+    top: 50%;
+    transform: translatey(-50%);
+    width: var(--width);
+    height: var(--width); 
+    border-radius: 50%;
+    background: var(--primary);
+
+  }
+`
 
 EventIndex.propTypes = {
   route: React.PropTypes.object,
