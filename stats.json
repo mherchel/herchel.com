@@ -13,8 +13,8 @@
       "path---2015-06-16-importing-css-breakpoints-js-8dd5e75cdcca00e10769.js.map"
     ],
     "path---events": [
-      "path---events-892b71d52721c0f4eb25.js",
-      "path---events-892b71d52721c0f4eb25.js.map"
+      "path---events-71086713fb85dbe8a16c.js",
+      "path---events-71086713fb85dbe8a16c.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -23,6 +23,10 @@
     "path---2012-12-02-florida-drupalcamp-2012-session-notes": [
       "path---2012-12-02-florida-drupalcamp-2012-session-notes-f47b70ffa982f41655ce.js",
       "path---2012-12-02-florida-drupalcamp-2012-session-notes-f47b70ffa982f41655ce.js.map"
+    ],
+    "path---2018-01-08-why-is-gatsby-fast-prpl": [
+      "path---2018-01-08-why-is-gatsby-fast-prpl-9182cf767887ac25ba30.js",
+      "path---2018-01-08-why-is-gatsby-fast-prpl-9182cf767887ac25ba30.js.map"
     ],
     "path---2013-10-20-drupalcamp-atlanta-session-notes": [
       "path---2013-10-20-drupalcamp-atlanta-session-notes-b368b461f578e2002b4d.js",
@@ -33,8 +37,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-26bae8d00f3a72f21e82.js",
-      "component---src-templates-blog-post-js-26bae8d00f3a72f21e82.js.map"
+      "component---src-templates-blog-post-js-8c4fb8415180c3034ba1.js",
+      "component---src-templates-blog-post-js-8c4fb8415180c3034ba1.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-ede472da8a456f06524b.js",
@@ -49,8 +53,8 @@
       "path---philosophy-f8f2f2235c0cec2b21e4.js.map"
     ],
     "path---index": [
-      "path---index-93016f4f58e05b1b772b.js",
-      "path---index-93016f4f58e05b1b772b.js.map"
+      "path---index-7a35046352d9143267f1.js",
+      "path---index-7a35046352d9143267f1.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-b594fd554c340e31941b.js",
@@ -83,9 +87,9 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-c2e4b547e1751255678a.js",
+      "app-acf5bece0c614ca5026a.js",
       "build-js-styles.css",
-      "app-c2e4b547e1751255678a.js.map",
+      "app-acf5bece0c614ca5026a.js.map",
       "build-js-styles.css.map"
     ],
     "path---2014-03-08-forida-drupalcamp-presentation-notes": [
