@@ -34,6 +34,11 @@ const blogStyles = css`
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
+
+  p > code {
+    padding: 2px 5px;
+    background: #eee;
+  }
 `
 
 export const pageQuery = graphql`
