@@ -86,6 +86,25 @@ injectGlobal`
     font-family: var(--font-sans);
   }
 
+  video {
+    display: block;
+  }
+
+  figure {
+    margin: 20px 0;
+  }
+
+  figcaption {
+    padding: 5px 20px;
+    background #eee;
+    font-family: var(--font-sans);
+    font-style: italic;
+  }
+
+  .gatsby-resp-image-wrapper {
+    max-width: 100% !important; /* Override inline styles @todo */
+  }
+
   .content {
     position: relative;
     min-height: calc(100vh - 20px);
@@ -117,7 +136,6 @@ injectGlobal`
 
     a {
       color: var(--primary);
-      filter: brightness(0.8);
     }
   }
 `

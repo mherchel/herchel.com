@@ -6,4 +6,3 @@
 * lots of use of css filters
 * intersection observer?
 * fluid typography on headings
-* selection
