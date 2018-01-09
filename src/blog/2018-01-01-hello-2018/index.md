@@ -1,5 +1,5 @@
 ---
-title: Hello 2018
+title: Hello 2018. Please be Awesome.
 date: "2018-01-01T00:00:00.000Z"
 subtitle: "It's gonna be awesome"
 ---
