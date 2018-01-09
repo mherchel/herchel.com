@@ -10,6 +10,6 @@ I travelled *a lot* including Asheville, NC, Atlanta, Baltimore, Boston, Lake Ar
 
 Millie continues to kick ass and be awesome (despite breaking her arm twice this year). Her teachers love her, she's excelling at school, and seems to be really well adjusted. The best thing is her sense of humor, which totally comes from me (lots of poop and fart jokes)!
 
-At Lullabot I continued work on the same project that I starated on. The project started in a bad way (not very well organized, not meeting deadlines, etc), but by the end of the year, it was whipped into a lean mean shit-getting-done machine. 
+At Lullabot I continued work on the same project that I started on. The project started in a bad way (not very well organized, not meeting deadlines, etc), but by the end of the year, it was whipped into a lean mean shit-getting-done machine. 
 
-I've learned *a lot* this year, particularly in JavaScript (which is what this blog is based off of). Although my primary billable hours are still writing jQuery, I feel very competent in ES6 and am also getting familar (and not so intimidated) with React. I've also become more familiar with the backend of Drupal 7 including Ctools content types and debugging PHP.
+I've learned *a lot* this year, particularly in JavaScript (which is what this blog is based off of). Although my primary billable hours are still writing jQuery, I feel very competent in ES6 and am also getting familiar (and not so intimidated) with React. I've also become more familiar with the backend of Drupal 7 including Ctools content types and debugging PHP.
