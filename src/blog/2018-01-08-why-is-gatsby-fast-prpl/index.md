@@ -13,7 +13,7 @@ PRPL stands for
 
 * **Push** critical resources for the initial URL route. Basically this uses [HTTP/2 Server push](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/), which allows you to send site assets to the user before they’ve even asked for them.
 * **Render** initial route. This is the basic rendering of the web page.
-* **Pre-cache** remaining routes. This includes analyzing any current hyperlinks, and then downloading the code for each before they're needed. They're stored in the browser's cache.
+* **Pre-cache** remaining routes. This includes analyzing any current hyperlinks, and then downloading the code for each before they're needed. Gatsby uses a service worker to pre-fetch and cache.
 * **Lazy-load** and create remaining routes on demand. As the end-user scrolls down the page, each hyperlink that comes into the viewport also gets pre-downloaded.
 
 Because each page is pre-downloaded, when the end user clicks a link, the next page is rendered instantly. There's no performance penalty for pre-downloading the pages because this happens only after the page you're looking at is rendered.
