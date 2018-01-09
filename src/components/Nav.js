@@ -13,7 +13,7 @@ class Nav extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={navComponentStyle}>
         <button 
           className={`${buttonStyle} ${this.state.navVisible ? 'active' : '' }`}
           onClick={() => this.handleNavClick()}
@@ -40,6 +40,13 @@ class Nav extends React.Component {
     )
   }
 }
+
+const navComponentStyle = css`
+  @media (min-width: 700px) {
+    position: sticky;
+    top: 20px;
+  }
+`
 
 const buttonStyle = css`
   position: fixed;
