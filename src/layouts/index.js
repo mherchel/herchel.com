@@ -65,7 +65,7 @@ injectGlobal`
       left: 0;
       width: 100%;
       height: 100vh;
-      background: url(/bg-boxes.png);
+      background: url(/bg-boxes.jpg);
       opacity: 0.3;
       filter: invert(100%)
     }
@@ -131,7 +131,7 @@ injectGlobal`
     font-family: var(--font-sans);
     font-style: italic;
   }
-  
+
   twitterwidget {
     margin: 0 auto;
   }
