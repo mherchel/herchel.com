@@ -55,6 +55,32 @@ injectGlobal`
     line-height: 1.7;
     overflow: scroll;
     font-family: var(--font-sans);
+
+    &:before {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: url(/bg-boxes.png);
+      opacity: 0.3;
+      filter: invert(100%)
+    }
+
+    &:after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      backface-visibility: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(to bottom, var(--primary), transparent 50%);
+    }
   }
 
   h1, h2, h3 {
@@ -160,32 +186,6 @@ const layoutStyles = css`
     --header-width: 320px;
   }
 
-  &:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to bottom, var(--primary), transparent 50%);
-    backface-visibility: hidden;
-    z-index: -1;
-  }
-
-  &:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url(/bg-boxes.png);
-    backface-visibility: hidden;
-    z-index: -1;
-    opacity: 0.3;
-    filter: invert(100%)
-  }
-
   header {
     @media (min-width: 700px) {
       margin-right: 40px;
@@ -218,8 +218,6 @@ const layoutStyles = css`
 const headerStyles = css`
   text-align: right;
   color: white;
-
-  
 `
 
 const footerStyles = css`
