@@ -131,6 +131,10 @@ injectGlobal`
     font-family: var(--font-sans);
     font-style: italic;
   }
+  
+  twitterwidget {
+    margin: 0 auto;
+  }
 
   .gatsby-resp-image-wrapper {
     max-width: 100% !important; /* Override inline styles @todo */
