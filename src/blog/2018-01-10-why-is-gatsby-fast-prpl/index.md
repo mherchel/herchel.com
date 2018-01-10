@@ -1,7 +1,7 @@
 ---
 title: Why is Gatsby so Fast? The PRPL Pattern.
 date: "2018-01-10T00:00:00.000Z"
-subtitle: "WTF is the PRPL pattern?"
+subtitle: "And a damned fine implementation of it"
 ---
 Gatsby is a ReactJS based static site generator. This means that the *build process* will automatically generate all files that are sent to the end-user's computer. You don't need to do server-side processing. 
 
@@ -22,13 +22,13 @@ PRPL stands for
 * **Pre-cache** remaining routes. This includes analyzing any current hyperlinks, and then downloading the code for each before they're needed. Gatsby uses a service worker to pre-fetch and cache.
 * **Lazy-load** and create remaining routes on demand. As the end-user scrolls down the page, each hyperlink that comes into the viewport also gets pre-downloaded.
 
-Because each page is pre-downloaded, when the end user clicks a link, the next page is rendered instantly. There's no performance penalty for pre-downloading the pages because this happens only after the page you're looking at is rendered.
+Because each page is pre-downloaded, when the end user clicks a link, the next page is rendered instantly. There's no performance penalty for pre-downloading the pages because this happens in the background after your page is rendered.
 
 ## This sounds complicated.
 
-It really is complicated. Normally, you'd have to create a custom webpack config with code splitting, and a lot of custom development to do this properly. 
+It is complicated. Normally, you'd have to create a custom webpack config with code splitting, tree-shaking and goat-sacrificing to do this properly. 
 
-But Gatsby makes it easy. It just handles it - in fact, it's pretty hard to make a slow website in Gatsby. Gatsby will automatically follow this pattern. If you open up the network panel in Chrome Developer Tools, you can watch the network requests filter in as you scroll down the page. Cool!
+Gatsby, on the other hand, makes it easy. It just handles it - in fact, it's pretty hard to make a slow website in Gatsby. Gatsby will automatically follow this pattern. If you open up the network panel in Chrome Developer Tools, you can watch the network requests filter in as you scroll down the page. Cool!
 
 <figure>
     <video width="100%" autoplay controls loop muted>

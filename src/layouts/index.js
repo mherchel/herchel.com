@@ -84,6 +84,11 @@ injectGlobal`
     padding: 10px 20px;
     border-left: solid 5px #ccc;
     font-family: var(--font-sans);
+
+    @media (max-width: 500px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   video {
