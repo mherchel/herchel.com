@@ -66,8 +66,8 @@ injectGlobal`
       width: 100%;
       height: 100vh;
       background: url(/bg-boxes.jpg);
-      opacity: 0.3;
-      filter: invert(100%)
+      opacity: 0.4;
+      filter: grayscale(100%) invert(100%);
     }
 
     &:after {
@@ -79,7 +79,7 @@ injectGlobal`
       left: 0;
       width: 100%;
       height: 100vh;
-      background-image: linear-gradient(to bottom, var(--primary), transparent 50%);
+      background-image: linear-gradient(to bottom, var(--primary), transparent 70%);
     }
   }
 
@@ -123,13 +123,14 @@ injectGlobal`
 
   figure {
     margin: 20px 0;
+    background #eee;
   }
 
   figcaption {
     padding: 5px 20px;
-    background #eee;
     font-family: var(--font-sans);
     font-style: italic;
+    line-height: 1.2;
   }
 
   twitterwidget {

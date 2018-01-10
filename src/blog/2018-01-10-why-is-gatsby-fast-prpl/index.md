@@ -9,7 +9,7 @@ There are many static site generators, but what makes Gatsby unique is is *raw, 
 
 <figure>
     <img alt="Devtools profile of Gatsby loading" src="./gatsby-load.png" />
-    <figcaption>Gatsby's page-load is fast!</figcaption>
+    <figcaption>Gatsby's initial page-load is fast!</figcaption>
 </figure>
 
 
@@ -84,5 +84,3 @@ It works without JavaScript! Seriously, disable JS and try it out. It obviously 
 ## So what else? 
 
 That's not enough? There's lots more to Gatsby, including the developer experience, ease of setup, and plugins. But that's a topic for another blog post.
-
-PS. Gatsby also does responsive images for you out of the box 😎
