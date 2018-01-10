@@ -51,7 +51,7 @@ injectGlobal`
 
   body {
     margin: 10px;
-    background: var(--primary);
+    background-color: var(--primary);
     line-height: 1.7;
     overflow: scroll;
     font-family: var(--font-sans);
@@ -158,6 +158,32 @@ const layoutStyles = css`
 
   @media (min-width: 1000px) {
     --header-width: 320px;
+  }
+
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--primary), transparent 50%);
+    backface-visibility: hidden;
+    z-index: -1;
+  }
+
+  &:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(/bg-boxes.png);
+    backface-visibility: hidden;
+    z-index: -1;
+    opacity: 0.3;
+    filter: invert(100%)
   }
 
   header {
