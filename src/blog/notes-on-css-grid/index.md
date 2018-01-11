@@ -1,7 +1,7 @@
 ---
 title: Notes on CSS Grid
 date: "2018-01-18T00:00:00.000Z"
-subtitle: ""
+subtitle: "A cheatsheet just for me, made by me"
 ---
 
 This is preparation for my upcoming talk at Front-end Awesome
@@ -88,6 +88,33 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 ```css
 grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+```
+
+### grid-auto-rows and grid-auto-columns
+
+`grid-auto-rows` and `grid-auto-columns` specify the height (track size) of the auto-generated columns and rows. This can be in in any unit including `fr`.
+
+```css
+/* All auto-generated rows will have 30px height */
+grid-auto-rows: 30px;
+```
+
+### 
+
+```css
+
+```
+
+### 
+
+```css
+
+```
+
+### 
+
+```css
+
 ```
 
 ### 
