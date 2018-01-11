@@ -4,7 +4,7 @@ date: "2018-01-18T00:00:00.000Z"
 subtitle: "A cheatsheet just for me, made by me"
 ---
 
-This is preparation for my upcoming talk at Front-end Awesome
+One of the best ways for me to learn a topic is to teach a topic. To that end, I'm preparing this blog and then giving a presentation for our local front-end development meetup.
 
 ## Background
 
@@ -16,7 +16,7 @@ CSS Grid is pretty easy once you get started with it, but just like CSS, it gets
 
 Use a cheat sheet such as https://css-tricks.com/snippets/css/complete-guide-grid/
 
-## Syntax
+## Grid Container Syntax
 
 ### Initialize CSS Grid
 
@@ -99,7 +99,78 @@ grid-template-columns: repeat(autofill, minmax(200px, 1fr));
 grid-auto-rows: 30px;
 ```
 
-### 
+### Masonry layout using grid
+
+If you have grid elements that are taking up multiple columns and/or rows, you can come across situations where "holes" in the grid appear.
+
+You can fix this by using `grid-auto-flow: dense;`. Note this will show the elements out of the original source order.
+
+```css
+/* Enable masonry like layout */
+grid-auto-flow: dense;
+```
+
+## Grid Child Syntax
+
+The following properties apply to children of grid containers.
+
+### Have a child span multiple columns
+
+The following rule will have the child take up two columns
+
+```css
+/* Grid child element will always take up two columns */
+grid-column-end: span 2;
+
+/* Grid child element will start on column two, and go to column 4 */
+grid-column-start: 2;
+grid-column-end: span 2;
+
+/* You can also specify the exact end column */
+grid-column-start: 2;
+grid-column-end: 4;
+
+/* Shorthand for this specifying the ending column */
+grid-column: 2 / 4; 
+
+/* Shorthand specifying that element always spans 2 columns */
+grid-column: 2 / span 2;
+```
+### Have a child span multiple *rows*
+
+Similarly, the following rule will have the child take up two *rows*
+
+```css
+grid-row-end: span 2;
+```
+
+### Always put a child into a certain row
+
+I can see this being is useful for advertisements.
+
+Note that you can reference rows from the end by using negative integers. So `grid-row: -2` will reference the second to last row.
+
+```css
+/* This will always be in the second row */
+grid-row: 2;
+```
+
+### Have child element take up the full width of the row
+
+The following snippet will place the `.grid-child` element into the third row and have it span the entire width of the row.
+
+```css
+.grid-child {
+  grid-row: 3; /* Place the element into the third row */
+  grid-column-start: 1; /* Start the element in the first column */
+  grid-column-end: -1; /* End the column at the last column. Remember that you can reference
+                          columns and rows from the end by using negative integers */
+  grid-column: 1 / -1; /* Shorthand syntax for grid-column-start and grid-column-end */
+}
+
+```
+
+### Place a child in a certain column and have it span multiple columns
 
 ```css
 
@@ -129,8 +200,13 @@ grid-auto-rows: 30px;
 
 ```
 
-### 
 
-```css
 
-```
+grid-column-end: span 2  // take up two columns
+grid-row-end: span 2 // take up two rows
+grid-row: 3 // will always be in 3rd row
+Column placement
+grid-column-start: 1; // Where the grid starts
+grid-column-end: -1; // Where the grid ends
+Shorthand: grid-column: 1 / -1 // starts on column 1, and goes until the end (-1)
+Or you can say: grid-column 1 / span 2;
