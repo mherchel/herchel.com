@@ -100,8 +100,22 @@ injectGlobal`
   }
 
   h2 {
+    border-bottom: dotted 1px #ccc;
+
     @media (max-width: 700px) {
       font-size: 25px;
+    }
+  }
+
+  h3 {
+    margin: 20px 0 5px;
+    color: var(--primary);
+    filter: brightness(75%);
+    font-size: 22px;
+    font-family: var(--font-sans);
+
+    + p {
+      margin-top: 10px;
     }
   }
 
@@ -144,7 +158,7 @@ injectGlobal`
   .content {
     position: relative;
     min-height: calc(100vh - 20px);
-    padding: 40px;
+    padding: 20px;
     background: var(--white);
     font-family: var(--font-serif);
     color: #666;
@@ -152,6 +166,8 @@ injectGlobal`
     line-height: 2;
 
     @media (min-width: 700px) {
+      padding: 40px;
+
       &:before {
         content: "";
         position: absolute;
