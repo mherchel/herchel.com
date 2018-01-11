@@ -35,9 +35,14 @@ const blogStyles = css`
     -webkit-overflow-scrolling: touch;
   }
 
-  p > code {
+  code {
     padding: 2px 5px;
     background: #eee;
+  }
+
+  .gatsby-highlight code {
+    padding: initial;
+    background: initial;
   }
 `
 

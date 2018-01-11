@@ -108,7 +108,7 @@ injectGlobal`
   }
 
   h3 {
-    margin: 20px 0 5px;
+    margin: 40px 0 5px;
     color: var(--primary);
     filter: brightness(75%);
     font-size: 22px;
@@ -183,7 +183,7 @@ injectGlobal`
     }
 
     em {
-      color: #777;
+      opacity: 0.9;
     }
 
     a {
