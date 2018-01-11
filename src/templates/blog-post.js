@@ -19,6 +19,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <article  dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={thanksStyle}>Thanks for reading. Notice an error or have something to contribute? <a href="https://github.com/mherchel/herchel.com" target="_blank">Submit a Pull Request</a>!</div>
       </div>
     )
   }
@@ -44,6 +45,12 @@ const blogStyles = css`
     padding: initial;
     background: initial;
   }
+`
+
+const thanksStyle = css`
+  margin-top: 30px;
+  padding: 20px;
+  background: #eee;
 `
 
 export const pageQuery = graphql`
