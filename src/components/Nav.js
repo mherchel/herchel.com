@@ -55,28 +55,17 @@ const buttonStyle = css`
   z-index: 3;
   overflow: hidden;
   border: 0;
+  mix-blend-mode: multiply;
+  filter: brightness(0.7);
   background: transparent;
-  color: white;
+  color: var(--primary);
   font-size: 40px;
   line-height: 40px;
   cursor: pointer;
   transition: 0.2s;
-  mix-blend-mode: difference;
 
   @media (min-width: 700px) {
     display: none;
-  }
-
-  /* Work around for a FF bug where blend-mode causes button to be red. */
-  @supports (-moz-appearance: none) {
-    mix-blend-mode: initial;
-
-    &:before {
-      position: relative;
-      top: -4px;
-      padding: 0 ;
-      background: var(--primary);
-    }   
   }
 
   &:before {
@@ -85,7 +74,6 @@ const buttonStyle = css`
 
   &.active {
     transform: rotate(90deg);
-    mix-blend-mode: initial;
   }
 
   span {

@@ -19,6 +19,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <article  dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className={thanksStyle}>Thanks for reading. Notice an error or have something to contribute? <a href="https://github.com/mherchel/herchel.com" target="_blank">Submit a Pull Request</a>!</div>
       </div>
     )
   }
@@ -35,9 +36,33 @@ const blogStyles = css`
     -webkit-overflow-scrolling: touch;
   }
 
-  p > code {
+  code {
     padding: 2px 5px;
     background: #eee;
+  }
+
+  .gatsby-highlight code {
+    padding: initial;
+    background: initial;
+  }
+`
+
+const thanksStyle = css`
+  position: relative;
+  margin-top: 30px;
+  padding: 20px;
+  background: #eee;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 100%;
+    height: 0;
+    width: 0;
+    border-bottom: solid 20px #eee;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
   }
 `
 

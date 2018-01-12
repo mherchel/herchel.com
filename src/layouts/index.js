@@ -108,7 +108,7 @@ injectGlobal`
   }
 
   h3 {
-    margin: 20px 0 5px;
+    margin: 40px 0 5px;
     color: var(--primary);
     filter: brightness(75%);
     font-size: 22px;
@@ -151,10 +151,6 @@ injectGlobal`
     margin: 0 auto;
   }
 
-  .gatsby-resp-image-wrapper {
-    max-width: 100% !important; /* Override inline styles @todo */
-  }
-
   .content {
     position: relative;
     min-height: calc(100vh - 20px);
@@ -183,7 +179,7 @@ injectGlobal`
     }
 
     em {
-      color: #777;
+      opacity: 0.9;
     }
 
     a {

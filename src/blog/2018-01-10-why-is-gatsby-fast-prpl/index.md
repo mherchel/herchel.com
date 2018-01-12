@@ -45,7 +45,7 @@ Styles (CSS) are normally stored in a separate monolithic "stylesheet" that gets
 
 The downside of this approach is that the browser has to wait until the large monolithic stylesheet is downloaded and parsed before it can start rendering the webpage. This adds vital milliseconds to the page-load time.
 
-Gatsby's approach is to identify the CSS that is actually being used on the page, and only rendering this CSS. It also renders this inline to the webpage, so there's no additional download. It does not have a penalty of having to re-download the stylesheet on page reload, because there are no page reloads!
+Gatsby's approach is to identify the CSS that is actually being used on the page, and only adding this CSS to the page. It adds this inline to the webpage, so there's no additional download. It does not have a penalty of having to re-download the stylesheet on page reload, because there are no page reloads!
 
 ### No page reloads
 
@@ -75,7 +75,7 @@ The "P" and the "L" of the PRPL pattern specify that you pre-download content fr
 
 When developing, you'll run the `gatsby develop` command. This will open up a lightweight http server on your localhost. This also enables hot-reloading, where changes to code (JavaScript, CSS, etc) are visible instantaneously. 
 
-When you're ready to deploy, you'll run `gatsby build`. This will run a webpack build process that does code-splitting, tree-shaking, and goat-sacrificing to enable your website to be as fast as possible. 
+When you're ready to deploy, you'll run `gatsby build`. This will run a webpack build process that does code-splitting, tree-shaking, and wood-knocking to enable your website to be as fast as possible. 
 
 ## But it doesn't work without JavaScript, right?
 
