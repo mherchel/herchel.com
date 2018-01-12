@@ -163,7 +163,7 @@ injectGlobal`
     font-family: var(--font-serif);
     color: #666;
     font-size: 22px;
-    line-height: 2;
+    line-height: 1.6;
 
     @media (min-width: 700px) {
       padding: 40px;
