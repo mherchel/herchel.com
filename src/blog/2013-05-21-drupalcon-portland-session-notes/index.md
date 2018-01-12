@@ -13,6 +13,10 @@ This presentation covers a lot of real-world techniques and methodologies on how
 
 Enjoy!
 
+`youtube:https://www.youtube.com/embed/DbQBzd8UCo0`
+
+The presentation got a great reception! Selected tweets are below.
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">&quot;Learning curve of popular CMSes,&quot; shared by <a href="https://twitter.com/mikeherchel?ref_src=twsrc%5Etfw">@mikeherchel</a> in &quot;Awesomizing your editor&#39;s back-end&quot; <a href="https://twitter.com/drupalcon?ref_src=twsrc%5Etfw">@Drupalcon</a>  <a href="http://t.co/15rXFrMVv1">http://t.co/15rXFrMVv1</a></p>&mdash; Ivan Boothe (@rootwork) <a href="https://twitter.com/rootwork/status/336969619522854913?ref_src=twsrc%5Etfw">May 21, 2013</a></blockquote>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">We&#39;re 2 minutes into this guy&#39;s session and I can already tell it may be the best today - <a href="https://twitter.com/mikeherchel?ref_src=twsrc%5Etfw">@mikeherchel</a> <a href="https://twitter.com/hashtag/DrupalCon?src=hash&amp;ref_src=twsrc%5Etfw">#DrupalCon</a></p>&mdash; Jake DiMare (@jakedimare) <a href="https://twitter.com/jakedimare/status/336969706290438144?ref_src=twsrc%5Etfw">May 21, 2013</a></blockquote>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="cy" dir="ltr">Remove unused WYSIWYG buttons YES PLEASE <a href="https://twitter.com/hashtag/drupalcon?src=hash&amp;ref_src=twsrc%5Etfw">#drupalcon</a> <a href="https://twitter.com/hashtag/awesomizing?src=hash&amp;ref_src=twsrc%5Etfw">#awesomizing</a> cc / <a href="https://twitter.com/mikeherchel?ref_src=twsrc%5Etfw">@mikeherchel</a></p>&mdash; John Eckman (@jeckman) <a href="https://twitter.com/jeckman/status/336970146826567680?ref_src=twsrc%5Etfw">May 21, 2013</a></blockquote>

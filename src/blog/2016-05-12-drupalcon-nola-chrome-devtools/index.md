@@ -5,8 +5,9 @@ subtitle: "Debugging, Profiling, & Rocking Out with Browser-Based Developer Tool
 ---
 I was super excited to be able to present on browser based developer tools at Drupalcon New Orleans. The video is below.
 
-https://www.youtube.com/watch?v=IK1GT3ojo1g
+`youtube:https://www.youtube.com/embed/IK1GT3ojo1g`
 
+The presentation got a great reception! Selected tweets are below.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Showing <a href="https://twitter.com/czbusby?ref_src=twsrc%5Etfw">@czbusby</a> some of the dev tools stuff around layers from <a href="https://twitter.com/mikeherchel?ref_src=twsrc%5Etfw">@mikeherchel</a> today. &quot;Holy fuck. Oh fuck!&quot;</p>&mdash; Je(remy) (@RemyAroundTown) <a href="https://twitter.com/RemyAroundTown/status/730865739700314113?ref_src=twsrc%5Etfw">May 12, 2016</a></blockquote>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Learning so many <a href="https://twitter.com/hashtag/chrome?src=hash&amp;ref_src=twsrc%5Etfw">#chrome</a> dev tool secrets! <a href="https://twitter.com/hashtag/DrupalCon2016?src=hash&amp;ref_src=twsrc%5Etfw">#DrupalCon2016</a> <a href="https://twitter.com/hashtag/nola?src=hash&amp;ref_src=twsrc%5Etfw">#nola</a> <a href="https://twitter.com/mikeherchel?ref_src=twsrc%5Etfw">@mikeherchel</a> <a href="https://twitter.com/hashtag/dev?src=hash&amp;ref_src=twsrc%5Etfw">#dev</a> <a href="https://twitter.com/hashtag/drupal?src=hash&amp;ref_src=twsrc%5Etfw">#drupal</a></p>&mdash; Amanda Downie (@aadownie) <a href="https://twitter.com/aadownie/status/730829794938490880?ref_src=twsrc%5Etfw">May 12, 2016</a></blockquote>
