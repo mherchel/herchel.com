@@ -6,6 +6,8 @@ subtitle: "A cheatsheet just for me, made by me"
 
 One of the best ways for me to learn a topic is to teach a topic. To that end, I'm preparing this blog and then giving a presentation for our local front-end development meetup.
 
+> This is my CSS Grid cheat sheet. There are many like it, but this one is mine. My cheat sheet is my best friend. It is my life. I must master it as I must master my life. Without me, my cheat sheet is useless. Without my cheat sheet, I am useless...
+
 ## Background
 
 Lots of grid systems including Bootstrap, Singularity, and Susy (the big boy).
@@ -21,7 +23,9 @@ Use a cheat sheet such as https://css-tricks.com/snippets/css/complete-guide-gri
 ### Initialize CSS Grid
 
 ```css
-display: grid;
+.grid {
+  display: grid;
+}
 ```
 
 ### Set up columns
@@ -29,30 +33,38 @@ display: grid;
 This sets up three 200px columns.
 
 ```css
-grid-template-columns: 200px 200px 200px;
+.grid {
+  grid-template-columns: 200px 200px 200px;
+}
 ```
 
 ### Set up rows
 
 Similarly,` grid-template-rows` sets up your rows.
 ```css
-/* Set up three 200px rows */
-grid-template-rows: 200px 200px 200px;
-/* The auto keyword is equal to the maximum height of the content. */
-grid-template-rows: auto auto auto;
+.grid {
+  /* Set up three 200px rows */
+  grid-template-rows: 200px 200px 200px;
+  /* The auto keyword is equal to the maximum height of the content. */
+  grid-template-rows: auto auto auto;
+}
 ```
 
 ### Repeat syntax
 You can accomplish the same thing by using *repeat syntax*.
 
 ```css
-grid-template-columns: repeat(3, 200px);
+.grid {
+  grid-template-columns: repeat(3, 200px);
+}
 ```
 
 You can mix and match the regular syntax and repeat syntax. This creates one 300px column, and three 200px columns.
 
 ```css
-grid-template-columns: 300px repeat(3, 200px);
+.grid {
+  grid-template-columns: 300px repeat(3, 200px);
+}
 ```
 
 ### MinMax syntax
@@ -60,7 +72,9 @@ grid-template-columns: 300px repeat(3, 200px);
 `minmax` allows you to set a minimum and maximum width of your columns. Doing so helps you avoid using media queries. You can use `minmax` inside of `repeat`.
 
 ```css
-grid-template-columns: minmax(100px, 200px) repeat(3, 200px);
+.grid {
+  grid-template-columns: minmax(100px, 200px) repeat(3, 200px);
+}
 ```
 
 ### FR unit
@@ -72,25 +86,28 @@ So, if I have a three columns that each have `1fr` width, they will each be 33.3
 If the first column is `2fr` and the next two columns are each `1fr`, then the first column will take up 50%, and the next two will each take up 25%.
 
 ```css
-/* Each of the three columns will take up 33.33% width. */
-grid-template-columns: repeat(3, 1fr);
+.grid {
+  /* Each of the three columns will take up 33.33% width. */
+  grid-template-columns: repeat(3, 1fr);
 
-/* Each of the three columns will still take up 33.33% width because they're all equal. */
-grid-template-columns: repeat(3, 2fr);
+  /* Each of the three columns will still take up 33.33% width because they're all equal. */
+  grid-template-columns: repeat(3, 2fr);
 
-/* The first column will take up 50% of the width, and the other columns will each take up 25% width. */
-grid-template-columns: 2fr repeat(2, 1fr);
+  /* The first column will take up 50% of the width, and the other columns will each take up 25% width. */
+  grid-template-columns: 2fr repeat(2, 1fr);
+}
 
 ```
-
 
 ### Autofill property
 
 `autofill` automatically adds columns to the grid layout according to the container width. The example below will create 5 200px columns. Note that these columns can be empty if elements don't exist to fill them in.
 
 ```css
-width: 1000px;
-grid-template-columns: repeat(autofill, 200px);
+.grid {
+  width: 1000px;
+  grid-template-columns: repeat(autofill, 200px);
+}
 ```
 
 ### Autofill + minmax + fr units = Awesome!
@@ -98,7 +115,9 @@ grid-template-columns: repeat(autofill, 200px);
 The syntax below will automatically create as many 200px columns in the row as possible. But, once it cannot fit any more in, it'll stretch each column out equally to fill out the entire width of the container! 😎
 
 ```css
-grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+.grid {
+  grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+}
 ```
 
 ### grid-auto-rows and grid-auto-columns
@@ -106,8 +125,10 @@ grid-template-columns: repeat(autofill, minmax(200px, 1fr));
 `grid-auto-rows` and `grid-auto-columns` specify the height (track size) of the auto-generated columns and rows. This can be in in any unit including `fr`.
 
 ```css
-/* All auto-generated rows will have 30px height */
-grid-auto-rows: 30px;
+.grid {
+  /* All auto-generated rows will have 30px height */
+  grid-auto-rows: 30px;
+}
 ```
 
 ### Masonry layout using grid
@@ -117,9 +138,40 @@ If you have grid elements that are taking up multiple columns and/or rows, you c
 You can fix this by using `grid-auto-flow: dense;`. Note this will show the elements out of the original source order.
 
 ```css
-/* Enable masonry like layout */
-grid-auto-flow: dense;
+.grid {
+  /* Enable masonry like layout */
+  grid-auto-flow: dense;
+}
 ```
+
+### Align tracks within a grid
+
+A track is either a column or a row. What if the grid is wider or higher than your grid tracks? How do you control where the tracks go?
+
+You can use our old flexbox friends `justify-content` and `align-content`! Although the values to use are `start`, `center`, and `end`.
+
+```css
+.grid {
+  display: grid;
+  width: 1000px; /* Explicit width */
+}
+
+.grid-child {
+  grid-template-columns: repeat(3, 300px); /* Note that there'll be an extra 100px left over */
+  justify-content: end; /* This will align the columns to the right. Can also be start (default) or center */
+  align-items: end; /* If I had extra vertical space, this would align the rows to the bottom of the grid. */
+}
+```
+
+You can also use our flexbox friends `space-between` and `space-around`.
+
+```css
+.grid-child {
+  justify-content: space-between; /* Inserts an equal amount of space between the columns.*/
+}
+```
+
+
 
 ## Grid Child Syntax
 
@@ -130,29 +182,33 @@ The following properties apply to children of grid containers.
 The following rule will have the child take up two columns
 
 ```css
-/* Grid child element will always take up two columns */
-grid-column-end: span 2;
+.grid-child {
+  /* Grid child element will always take up two columns */
+  grid-column-end: span 2;
 
-/* Grid child element will start on column two, and go to column 4 */
-grid-column-start: 2;
-grid-column-end: span 2;
+  /* Grid child element will start on column two, and go to column 4 */
+  grid-column-start: 2;
+  grid-column-end: span 2;
 
-/* You can also specify the exact end column */
-grid-column-start: 2;
-grid-column-end: 4;
+  /* You can also specify the exact end column */
+  grid-column-start: 2;
+  grid-column-end: 4;
 
-/* Shorthand for this specifying the ending column */
-grid-column: 2 / 4; 
+  /* Shorthand for this specifying the ending column */
+  grid-column: 2 / 4; 
 
-/* Shorthand specifying that element always spans 2 columns */
-grid-column: 2 / span 2;
+  /* Shorthand specifying that element always spans 2 columns */
+  grid-column: 2 / span 2;
+}
 ```
 ### Have a child span multiple *rows*
 
 Similarly, the following rule will have the child take up two *rows*
 
 ```css
-grid-row-end: span 2;
+.grid-child {
+  grid-row-end: span 2;
+}
 ```
 
 ### Always put a child into a certain row
@@ -162,8 +218,10 @@ I can see this being is useful for advertisements.
 Note that you can reference rows from the end by using negative integers. So `grid-row: -2` will reference the second to last row.
 
 ```css
-/* This will always be in the second row */
-grid-row: 2;
+.grid-child {
+  /* This will always be in the second row */
+  grid-row: 2;
+}
 ```
 
 ### Have child element take up the full width of the row
@@ -221,7 +279,6 @@ The cool thing about named lines is that it makes responsive web design *much si
    left and right of the grid. */
 .grid {
   grid-template-columns: [content-start] 1fr [content-end];
-  grid-template-rows: auto [content-start] auto [content-end];
 }
 
 /* Now, let's change the layout of the grid in a media query. */
@@ -238,6 +295,13 @@ The cool thing about named lines is that it makes responsive web design *much si
 }
 ```
 
+## Tools
+
+Chrome dev tools 
+FF
+
 ## Can I use?
+
+## Should I rewrite my current application to use CSS Grid?
 
 ## Resources
