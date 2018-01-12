@@ -48,9 +48,22 @@ const blogStyles = css`
 `
 
 const thanksStyle = css`
+  position: relative;
   margin-top: 30px;
   padding: 20px;
   background: #eee;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 100%;
+    height: 0;
+    width: 0;
+    border-bottom: solid 20px #eee;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+  }
 `
 
 export const pageQuery = graphql`
