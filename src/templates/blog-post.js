@@ -39,11 +39,13 @@ const blogStyles = css`
   code {
     padding: 2px 5px;
     background: #eee;
+    white-space: nowrap;
   }
 
   .gatsby-highlight code {
     padding: initial;
     background: initial;
+    white-space: inherit;
   }
 `
 
