@@ -3,6 +3,12 @@ title: From Sublime Text to Visual Studio Code
 date: "2018-01-20T00:00:00.000Z"
 subtitle: "Plugins, keyboard shortcuts and more"
 ---
+On every new project I try to change one or two tools and/or techniques. This is a good balance, because if I change too many things, I get bogged down in the details and functionality of new tools. But if I change nothing, I never get the chance to learn new tools, and increase my productivity.
+
+For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text to Visual Studio Code.
+
+## Why the switch?
+
 
 ## My background
 on Mac

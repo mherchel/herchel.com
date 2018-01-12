@@ -178,37 +178,16 @@ The following snippet will place the `.grid-child` element into the third row an
                           columns and rows from the end by using negative integers */
   grid-column: 1 / -1; /* Shorthand syntax for grid-column-start and grid-column-end */
 }
-
 ```
 
 ### Place a child in a certain column and have it span multiple columns
 
 ```css
-
-```
-
-### 
-
-```css
-
-```
-
-### 
-
-```css
-
-```
-
-### 
-
-```css
-
-```
-
-### 
-
-```css
-
+.grid-child {
+  /* Shorthand syntax for grid-column-start and grid-column-end.
+     This will start in column 2, and span 2 more columns. */
+  grid-column: 2 / span 2; 
+}
 ```
 
 ## Helpful syntax
@@ -259,14 +238,6 @@ The cool thing about named lines is that it makes responsive web design *much si
 }
 ```
 
-grid-column-end: span 2  // take up two columns
-grid-row-end: span 2 // take up two rows
-grid-row: 3 // will always be in 3rd row
-Column placement
-grid-column-start: 1; // Where the grid starts
-grid-column-end: -1; // Where the grid ends
-Shorthand: grid-column: 1 / -1 // starts on column 1, and goes until the end (-1)
-Or you can say: grid-column 1 / span 2;
+## Can I use?
 
-
-
+## Resources
