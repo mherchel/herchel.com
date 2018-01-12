@@ -151,10 +151,6 @@ injectGlobal`
     margin: 0 auto;
   }
 
-  .gatsby-resp-image-wrapper {
-    max-width: 100% !important; /* Override inline styles @todo */
-  }
-
   .content {
     position: relative;
     min-height: calc(100vh - 20px);
