@@ -26,13 +26,24 @@ display: grid;
 
 ### Set up columns
 
-This sets up three 200px columns
+This sets up three 200px columns.
+
 ```css
 grid-template-columns: 200px 200px 200px;
 ```
 
+### Set up rows
+
+Similarly,` grid-template-rows` sets up your rows.
+```css
+/* Set up three 200px rows */
+grid-template-rows: 200px 200px 200px;
+/* The auto keyword is equal to the maximum height of the content. */
+grid-template-rows: auto auto auto;
+```
+
 ### Repeat syntax
-You can accomplish the same thing by using *repeat syntax*
+You can accomplish the same thing by using *repeat syntax*.
 
 ```css
 grid-template-columns: repeat(3, 200px);
@@ -200,7 +211,53 @@ The following snippet will place the `.grid-child` element into the third row an
 
 ```
 
+## Helpful syntax
+### Named lines
 
+You can use *names* instead of numbers for your lines. Note that you're not naming your regions, you're naming the lines *around the regions*. Then when you assign a child element, you assign it by *name* instead of *number*.
+
+```css
+.grid {
+  display: grid;
+
+  /* The line between the first and second column is named "content-start",
+     and the line at the end is called "content-end." */
+  grid-template-columns: 1fr [content-start] 3fr [content-end];
+  grid-template-rows: auto [content-start] auto [content-end];
+}
+
+/* Now instead of using numbered column names, I can used the named column names. */
+.grid-child {
+  grid-column: content-start;
+  grid-row: content_start;
+}
+```
+
+### Named lines with media queries == 🤘
+
+The cool thing about named lines is that it makes responsive web design *much simpler*. This is because, when defining placement on the `.grid-child`, you do not need to add media queries for this element &mdash; it will automatically follow the named lines. 
+
+```css
+/* Define our grid at small widths. Note that we can name the lines to the
+   left and right of the grid. */
+.grid {
+  grid-template-columns: [content-start] 1fr [content-end];
+  grid-template-rows: auto [content-start] auto [content-end];
+}
+
+/* Now, let's change the layout of the grid in a media query. */
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr [content-start] 3fr [content-end];
+  }
+}
+
+/* And now, we only need to set the columns on our grid child once. 
+   This child will follow the named lines for the media query. */
+.grid-child {
+  grid-column: content-start;
+}
+```
 
 grid-column-end: span 2  // take up two columns
 grid-row-end: span 2 // take up two rows
@@ -210,3 +267,6 @@ grid-column-start: 1; // Where the grid starts
 grid-column-end: -1; // Where the grid ends
 Shorthand: grid-column: 1 / -1 // starts on column 1, and goes until the end (-1)
 Or you can say: grid-column 1 / span 2;
+
+
+
