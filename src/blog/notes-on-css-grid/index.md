@@ -4,23 +4,31 @@ date: "2018-01-18T00:00:00.000Z"
 subtitle: "A cheatsheet just for me, made by me"
 ---
 
-One of the best ways for me to learn a topic is to teach a topic. To that end, I'm preparing this blog and then giving a presentation for our local front-end development meetup.
+One of the best ways for me to learn a topic is to teach a topic. To that end, I'm preparing this CSS cheat sheet / blog, and also giving a presentation for our [local front-end development meetup](https://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/246457734/).
 
 > This is my CSS Grid cheat sheet. There are many like it, but this one is mine. My cheat sheet is my best friend. It is my life. I must master it as I must master my life. Without me, my cheat sheet is useless. Without my cheat sheet, I am useless...
 
-## Background
+## My Background
 
-Lots of grid systems including Bootstrap, Singularity, and Susy (the big boy).
+I've been doing web development for a long time (since 2001), and am familiar with most of the web's underlying technologies.
+
+I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; unless the design is very grid centric. 
+
+My traditional approach to layout has been set the `width` to a percentage value &mdash; lets say `94%`, and then set the `max-width` of the container to something like `1200px` or whatever the design calls for. Then I can layout the internal structure through flexbox or floats, using a combination of percentages, pixels, and the CSS `calc()` function.
+
+## Tips on getting started with grid
 
 CSS Grid is pretty easy once you get started with it, but just like CSS, it gets more complicated the deeper you dive. The good news is that you don't need to dive very deep to reach some awesome power.
 
-## Tips
-
-Although I created this blog post / cheat sheet, there are many more better to go through.
+As with any new syntax, I highly recommend having (or better yet, creating) a cheat sheet for quick reference. Although I created this blog post / cheat sheet, there are many more better to go through.
 
 * [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [Interactive CSS Grid Playground](https://alialaa.github.io/css-grid-cheat-sheet/)
 * [Codrops CSS Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
+
+I also highly recommend [Rachel Andrew's](https://twitter.com/rachelandrew) website, [Grid by Example](https://gridbyexample.com), which has a plethora of common use cases, and an *excellent* free [video series](https://gridbyexample.com/video/) to get you up and running.
+
+Now let's get to the meat and potatoes of this post... the syntax.
 
 ## Grid Container Syntax
 
@@ -63,7 +71,7 @@ You can accomplish the same thing by using *repeat syntax*.
 }
 ```
 
-You can mix and match the regular syntax and repeat syntax. This creates one 300px column, and three 200px columns.
+You can mix and match the regular syntax and repeat syntax. This example creates one 300px column, and three 200px columns.
 
 ```css
 .grid {
@@ -83,9 +91,9 @@ You can mix and match the regular syntax and repeat syntax. This creates one 300
 
 ### FR unit
 
-The "fr" in the `fr` unit stands for *fraction*. Grid will split up the units according to the sum of all the `fr` units in the row, and then divvy them up according to each column's count.
+The "fr" in the `fr` unit stands for *fraction*. Grid create an amount of identical width units equal to the sum of all the `fr` units in the row, and then it will assign the width of the column based on how many `fr` units are assigned to it.
 
-So, if I have a three columns that each have `1fr` width, they will each be 33.33% wide. If they each have `2fr`, their width will also be the same because they're all equal.
+So, if I have a three columns that each have `1fr` width, they will each be 33.33% wide. If they each have `2fr`, their width will be the same because they're still all equal to each other.
 
 If the first column is `2fr` and the next two columns are each `1fr`, then the first column will take up 50%, and the next two will each take up 25%.
 

@@ -16,7 +16,18 @@ Dreamweaver
 Sublime
 PHPStorm
 
-## Plugins
+## VSCode's plugin management is 👌
+
+VSCode's plugin handling is great. It's easier than Sublime's plugin handling because of a number of reasons.
+
+1. The plugin management interface is easy to find. The plugin dashboard has its own icon to the left of the directory tree.
+2. It will recommend plugins to you based on the types of files that you open. If I open lots of markdown files, it will recommend a popular markdown plugin. If I open lots of JavaScript files, it will show me plugins for that.
+3. It allows you to install plugins through the GUI. Normally, I like to use keyboard shortcuts for everything. But, installing plugins is not a normal day-to-day activity. Browsing, choosing, installing, and configuring plugins is easier through a graphical interface.
+4. It shows your currently installed plugins, and allows you to disable/uninstall them easily. This makes it easy to test-drive and compare plugins.
+5. You can easily search for new plugins using the GUI, or just show the most popular plugins for you to explore.
+
+### Here's what I currently have installed
+
 * [Beautify](https://github.com/HookyQR/VSCodeBeautify) reformats and reindents your JavaScript, CSS, HTML and more.
 * [Drupal Syntax Highlighting](https://github.com/mastazi/VS-code-drupal) does exactly what you think it does :)
 * [ESLint](https://github.com/Microsoft/vscode-eslint) provides integration with the popular ESLint JavaScript linting engine. This highlights syntax errors and code formatting issues in your JavaScript.
@@ -35,6 +46,10 @@ Avoiding using your mouse or trackpad is vital to coding quickly. To that end, h
 * `Opt` + `↑ or ↓` Move selected text block. 
 * `CTRL` + `CMD` + `G` Select all occurrences of highlighted string
 * `CMD` + `D` Select next occurrence of highlighted string
+
+VS Code allows you to easily edit your personal keyboard shortcuts pretty easily under the **Preferences** menu.
+
+![VSCode's Keyboard Shortcut Editor](./keyboard-shortcuts.png)
 
 ## Git Diffs
 
