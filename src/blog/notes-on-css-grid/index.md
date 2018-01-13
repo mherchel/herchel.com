@@ -16,7 +16,11 @@ CSS Grid is pretty easy once you get started with it, but just like CSS, it gets
 
 ## Tips
 
-Use a cheat sheet such as https://css-tricks.com/snippets/css/complete-guide-grid/
+Although I created this blog post / cheat sheet, there are many more better to go through.
+
+* [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [Interactive CSS Grid Playground](https://alialaa.github.io/css-grid-cheat-sheet/)
+* [Codrops CSS Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
 
 ## Grid Container Syntax
 
@@ -294,6 +298,63 @@ The cool thing about named lines is that it makes responsive web design *much si
   grid-column: content-start;
 }
 ```
+
+### Named Areas
+
+You can name your grid children. and then place them *ascii-art style* within a new CSS property. In the example below, I'm using semantic elements to illustrate where we want the content to be placed.
+
+```css
+header {
+  grid-area: header; /* You can name these whever you want */
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+}
+```
+
+Once the areas are named, we line em up in an ascii-art like grid.
+
+```css
+.grid {
+  display: grid;
+
+  /* This will stack them in a vertical column for a mobile layout. */
+  grid-template-areas: 
+    'header'
+    'content'
+    'sidebar'
+    'footer';
+}
+
+@media (min-width: 700px) {
+  .grid {
+    /* Now we do a traditional grid area. */
+    grid-template-areas: 
+      'header  header'
+      'sidebar content'
+      'footer  footer';
+    /* Note that we put header twice because it spans two columns.
+       On the next row, we have sidebar and column taking up the row.
+       And on the third row, we have footer twice.
+
+       You can also use a dog (.) to indicate a blank area. */
+  }
+}
+```
+
+
+
+
+
 
 ## Tools
 
