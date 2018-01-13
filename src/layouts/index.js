@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { css, injectGlobal } from 'emotion'
 import Link from 'gatsby-link'
 import Bio from '../components/Bio'
@@ -9,6 +10,9 @@ class Template extends React.Component {
     const { location, children } = this.props
     return (
       <div className={layoutStyles}>
+        <Helmet>
+          <link rel="icon" type="image/png" href="favicon.png" />
+        </Helmet>
         <header className={headerStyles}>
           <Bio />
           <Nav />
