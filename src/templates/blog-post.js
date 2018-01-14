@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <div className="meta">
           <span className="date">{post.frontmatter.date}</span>
-          <span className="author">By Mike Herchel</span>
+          <span className="author">By {post.frontmatter.author || 'Mike Herchel'}</span>
         </div>
         <article  dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className={thanksStyle}>Thanks for reading. Notice an error or have something to contribute? <a href="https://github.com/mherchel/herchel.com" target="_blank">Submit a Pull Request</a>!</div>
@@ -106,6 +106,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        author
       }
     }
   }
