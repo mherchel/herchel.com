@@ -189,6 +189,18 @@ injectGlobal`
     a {
       color: var(--primary);
     }
+
+    li {
+      margin: 15px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 `
 
