@@ -13,7 +13,13 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div className={`content ${blogStyles}`}>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <Helmet>
+          <title>{`${post.frontmatter.title} | ${siteTitle}`}</title>
+          <meta name="description" content={post.excerpt} />
+          <meta name="twitter:title" content={`${post.frontmatter.title} | ${siteTitle}`} />
+          <meta name="twitter:description" content={post.excerpt} />
+
+        </Helmet>
         <h1>{post.frontmatter.title}</h1>
         <div className="meta">
           <span className="date">{post.frontmatter.date}</span>
@@ -103,6 +109,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

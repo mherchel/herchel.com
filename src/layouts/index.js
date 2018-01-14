@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
 
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
@@ -12,6 +13,10 @@ class Template extends React.Component {
       <div className={layoutStyles}>
         <Helmet>
           <link rel="icon" type="image/png" href="favicon.png" />
+          <meta property="og:image" content="/herchelshead.jpg" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:image" content="/herchelshead.jpg" />
+          <meta name="twitter:site" content="@mikeherchel" />
         </Helmet>
         <header className={headerStyles}>
           <Bio />

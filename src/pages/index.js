@@ -16,6 +16,8 @@ class BlogIndex extends React.Component {
         <Helmet>
           <title>{siteTitle }</title>
           <meta name="description" content={get(this, 'props.data.site.siteMetadata.description')} />
+          <meta name="twitter:title" content={siteTitle} />
+
         </Helmet>
         
         {posts.map(post => {
