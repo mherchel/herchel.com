@@ -23,7 +23,7 @@ My traditional approach to layout has been set the `width` to a percentage value
 
 CSS Grid is pretty easy once you get started with it, but just like CSS, it gets more complicated the deeper you dive. The good news is that you don't need to dive very deep to reach some awesome power. For what it's worth, I think Grid is easier to learn than was flexbox.
 
-As with any new syntax, I highly recommend having (or better yet, creating) a cheat sheet for quick reference. Although I created this blog post, there are many others to go through.
+As with any new syntax, I highly recommend having (or better yet, creating) a cheat sheet for quick reference. Although I created this blog post, there are many other great resources.
 
 * [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [Interactive CSS Grid Playground](https://alialaa.github.io/css-grid-cheat-sheet/)
@@ -84,6 +84,20 @@ You can mix and match the regular syntax and repeat syntax. This example creates
 }
 ```
 
+### Grid Gap
+
+Instead of margins, you specify the gap between grid children with the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties.
+
+```css
+.grid {
+  grid-gap: 20px; /* All rows and columns will have 20px gap. */
+  grid-gap: 20px 40px; /* Columnns will have 20px gap. Rows will have 40px gap. */
+  
+  grid-row-gap: 2vw; /* Now rows will have a 2vw (viewport width units) gap. */
+  grid-column-gap: 10%; /* Columns will have 10% gap between them. */
+}
+```
+
 ### MinMax syntax
 
 `minmax` allows you to set a minimum and maximum width of your columns. Doing so helps you avoid using media queries. You can use `minmax` inside of `repeat`.
@@ -139,7 +153,7 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 ### grid-auto-rows and grid-auto-columns
 
-`grid-auto-rows` and `grid-auto-columns` specify the height (track size) of the auto-generated columns and rows. This can be in in any unit including `fr`.
+`grid-auto-rows` and `grid-auto-columns` specify the height (track size) of the auto-generated columns and rows. This can be in in any unit including `fr`. The initial value for these properties is `auto`, which sets the height equal to the largest content item.
 
 ```css
 .grid {
@@ -150,9 +164,9 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 ### Masonry layout using grid
 
-If you have grid elements that are taking up multiple columns and/or rows, you can come across situations where "holes" in the grid appear.
+If you have grid elements that are taking up multiple columns and/or rows, you can encounter situations where "holes" in the grid appear.
 
-You can fix this by using `grid-auto-flow: dense;`. Note cause the elements to appear out of the original source order.
+You can fix this by using `grid-auto-flow: dense;`. Note that this will cause the elements to appear out of the original source order.
 
 ```css
 .grid {
@@ -165,7 +179,7 @@ You can fix this by using `grid-auto-flow: dense;`. Note cause the elements to a
 
 A track is either a column or a row. What if the grid is wider or higher than your grid tracks? How do you control where the tracks go?
 
-You can use our old flexbox friends `justify-content` and `align-content`! Although the values to use are `start`, `center`, and `end`.
+You can use our old flexbox friends `justify-content` and `align-content`! The values to use are `start`, `center`, and `end`.
 
 ```css
 .grid {
