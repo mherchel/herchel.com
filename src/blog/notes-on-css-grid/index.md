@@ -376,18 +376,20 @@ Once the areas are named, we line em up in an ascii-art like grid.
 }
 ```
 
+## Developer Tooling for CSS Grid
 
+Both Chrome and Firefox have developer tools support for CSS Grid. When hovering your mouse above the grid container, both browser's developer tools will highlight the track and the lines of the grid. Firefox's developer tools have a leg up, though, because you can toggle on and off the highlighting by clicking on a *grid icon* that appears next to the `display: grid;` declaration. With Chrome's developer tools, you have to keep your mouse highlighted above the element in order to view the tracks and lines.
 
-
-
-
-## Tools
-
-Browser based developer tools are a big help when developing with CSS Grid (as )
 <figure border>
  <img src="./firefox-grid-devtools.png" alt="Firefox Grid Devtools" />
  <figcaption>Firefox's Grid Developer Tools showing an example from <a href="https://gridbyexample.com">Grid by Example</a></figcaption>
 </figure>
+
+That being said, the developer tools could be better. When hovering the mouse above named areas, it would be nice if the areas would be highlighted. The same does for named lines &mdash; hovering over the named lines declaration should highlight the appropriate line.
+
+In addition, when using named areas, the entire value is placed on one line &mdash; totally negating the ascii-art matrix where you lined up the grid. DevTools should preserve line breaks and white space.
+
+Furthermore, it would be *really* useful if the browsers integrated a grid builder, similar to what they have for bezier-curve editor, or color-picker within devtools.
 
 ## Should I be using CSS Grid now?
  As long as you're not supporting Internet Explorer 11, then the answer is a resounding... *sure*! Whether to support IE11 is a decision that you have to make after looking at your website's visitor logs. 
