@@ -13,10 +13,11 @@ class Template extends React.Component {
       <div className={layoutStyles}>
         <Helmet>
           <link rel="icon" type="image/png" href="favicon.png" />
-          <meta property="og:image" content="/herchelshead.jpg" />
+          <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:image" content="/herchelshead.jpg" />
+          <meta name="twitter:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:site" content="@mikeherchel" />
+          <meta name="twitter:creator" content="@mikeherchel">
         </Helmet>
         <header className={headerStyles}>
           <Bio />
