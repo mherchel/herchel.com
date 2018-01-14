@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { css, injectGlobal } from 'emotion'
 import Link from 'gatsby-link'
 import Bio from '../components/Bio'
@@ -9,6 +10,9 @@ class Template extends React.Component {
     const { location, children } = this.props
     return (
       <div className={layoutStyles}>
+        <Helmet>
+          <link rel="icon" type="image/png" href="favicon.png" />
+        </Helmet>
         <header className={headerStyles}>
           <Bio />
           <Nav />
@@ -138,12 +142,17 @@ injectGlobal`
   figure {
     margin: 20px 0;
     background #eee;
+
+    &[border] {
+      padding: 3px;
+    }
   }
 
   figcaption {
     padding: 5px 20px;
     font-family: var(--font-sans);
     font-style: italic;
+    font-size: 16px;
     line-height: 1.2;
   }
 
@@ -184,6 +193,18 @@ injectGlobal`
 
     a {
       color: var(--primary);
+    }
+
+    li {
+      margin: 15px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 `
