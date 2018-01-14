@@ -4,7 +4,7 @@ date: "2018-01-18T00:00:00.000Z"
 subtitle: "A cheatsheet just for me, made by me"
 ---
 
-One of the best ways for me to learn a topic is to teach a topic. To that end, I'm giving a presentation for our [local front-end development meetup](https://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/246457734/) this week. In preparation, I'm writing this CSS cheat sheet / blog.
+One of the best ways for anyone to learn a topic is to teach that topic. To that end, I'm giving a presentation for my [local front-end development meetup](https://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/246457734/) this week. In preparation, I'm writing this CSS cheat sheet / blog.
 
 Before we start, let's recite the *CSS Grid Cheat Sheet Creed*.
 
@@ -14,7 +14,7 @@ Before we start, let's recite the *CSS Grid Cheat Sheet Creed*.
 
 I've been doing web development for a long time (since 2001), and am familiar with most of the web's underlying technologies.
 
-I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; unless the design is very grid centric. 
+I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; *unless* the design is very grid centric. 
 
 My traditional approach to layout has been set the `width` to a percentage value &mdash; lets say `94%`, and then set the `max-width` of the container to something like `1200px` or whatever the design calls for. Then I can layout the internal structure through flexbox or floats, using a combination of percentages, pixels, and the CSS `calc()` function.
 
@@ -33,6 +33,8 @@ I also highly recommend [Rachel Andrew's](https://twitter.com/rachelandrew) webs
 Now let's get to the meat and potatoes of this post... the syntax.
 
 ## Grid Container Syntax
+
+First, we'll start with the syntax of the grid container.
 
 ### Initialize CSS Grid
 
@@ -241,7 +243,7 @@ Note that you can reference rows from the end by using negative integers. So `gr
 
 ```css
 .grid-child {
-  /* This will always be in the second row */
+  /* This particular element will always be in the second row */
   grid-row: 2;
 }
 ```
@@ -249,6 +251,8 @@ Note that you can reference rows from the end by using negative integers. So `gr
 ### Have child element take up the full width of the row
 
 The following snippet will place the `.grid-child` element into the third row and have it span the entire width of the row.
+
+Note that I'm setting `grid-column-end` to `-1`. Negative numbers selects the columns (or rows) from the end. So `-1` will always select the last column (or row).
 
 ```css
 .grid-child {
@@ -271,6 +275,9 @@ The following snippet will place the `.grid-child` element into the third row an
 ```
 
 ## Helpful syntax
+
+Because this is web development, there are many approaches to accomplish the same thing. Here are some cool helpful syntax types.
+
 ### Named lines
 
 You can use *names* instead of numbers for your lines. Note that you're not naming your regions, you're naming the lines *around the regions*. Then when you assign a child element, you assign it by *name* instead of *number*.
@@ -294,7 +301,7 @@ You can use *names* instead of numbers for your lines. Note that you're not nami
 
 ### Named lines with media queries == 🤘
 
-The cool thing about named lines is that it makes responsive web design *much simpler*. This is because, when defining placement on the `.grid-child`, you do not need to add media queries for this element &mdash; it will automatically follow the named lines. 
+The cool thing about named lines is that it makes responsive web design *much simpler*. When defining placement on the `.grid-child`, you do not need to add media queries for this element &mdash; it will automatically follow the named lines. 
 
 ```css
 /* Define our grid at small widths. Note that we can name the lines to the
@@ -319,7 +326,7 @@ The cool thing about named lines is that it makes responsive web design *much si
 
 ### Named Areas
 
-You can name your grid children. and then place them *ascii-art style* within a new CSS property. In the example below, I'm using semantic elements to illustrate where we want the content to be placed.
+You can name your grid children, and then place them *ascii-art style* within a new CSS property called ` grid-template-areas`. In the example below, I'm using semantic elements to illustrate where we want the content to be placed.
 
 ```css
 header {
@@ -376,15 +383,25 @@ Once the areas are named, we line em up in an ascii-art like grid.
 
 ## Tools
 
-Chrome dev tools 
-FF
+Browser based developer tools are a big help when developing with CSS Grid (as )
+<figure border>
+ <img src="./firefox-grid-devtools.png" alt="Firefox Grid Devtools" />
+ <figcaption>Firefox's Grid Developer Tools showing an example from <a href="https://gridbyexample.com">Grid by Example</a></figcaption>
+</figure>
 
 ## Should I be using CSS Grid now?
- As long as you're not supporting Internet Explorer 11, then the answer is a resounding YES! Whether to support IE11 is a decision that you have to make after looking at your website's visitor logs. 
+ As long as you're not supporting Internet Explorer 11, then the answer is a resounding... *sure*! Whether to support IE11 is a decision that you have to make after looking at your website's visitor logs. 
  
  In the United States, over 85% of browsers support Grid, although your website's demographic might be dramatically different. Keep in mind the percentage of browsers supporting Grid is only going to continue to increase as time goes on. 
 
 ![Browser Support for CSS Grid](./can-i-use-css-grid.png)
+
 ## Should I rewrite my current application to use CSS Grid?
 
-## Resources
+If you're current web app is working perfectly, should you rewrite? 
+
+The benefits of doing so would be a simpler code base &mdash; you're able to rip out your current grid system, and replace your current layout system(s).
+
+The downsides of rewriting are lesser browser support, the probability of introduced bugs, not to mention the hours spent for the rewriting and for the quality control.
+
+In my opinion, *if it ain't broke, don't fix it*. But, only you know your web app, and can make the correct decision.

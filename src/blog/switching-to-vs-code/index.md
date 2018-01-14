@@ -7,9 +7,19 @@ On every new project I try to change one or two tools and/or techniques. This is
 
 For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text, which has a text-based interface.
 ## Why the switch?
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What text editor are you using for programming these days?</p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/status/951924123357376512?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
 
 
 ## My background
+
+I've been developing for the web since 2001, and I started out using Macromedia Dreamweaver and stuck with that through the end of the decade. Eventually, I exclusively used the code-only view because I liked the syntax highlighting. 
+
+In 2011, I switched to Sublime Text 2, which was amazing. It was fast, lightweight, and clean. I installed various plugins including Emmet, ESLint, Sass, and more. I especially liked the multiple cursors functionality. 
+
+During this time, I also switched from developing on Windows, to developing on OSX. 
+
+When I started at Lullabot, I also started using PHPStorm, not just for PHP, but for jQuery. I liked the built in intelisense. 
+
 on Mac
 Dreamweaver
 Sublime
