@@ -15,9 +15,10 @@ class BlogPostTemplate extends React.Component {
       <div className={`content ${blogStyles}`}>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
-        <p>
-          {post.frontmatter.date}
-        </p>
+        <div className="meta">
+          <span className="date">{post.frontmatter.date}</span>
+          <span className="author">By Mike Herchel</span>
+        </div>
         <article  dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className={thanksStyle}>Thanks for reading. Notice an error or have something to contribute? <a href="https://github.com/mherchel/herchel.com" target="_blank">Submit a Pull Request</a>!</div>
       </div>
@@ -46,6 +47,29 @@ const blogStyles = css`
     padding: initial;
     background: initial;
     white-space: inherit;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: #999;
+    line-height: 1.2;
+
+    @media (min-width: 500px) {
+      flex-direction: row;
+      align-items: center;
+
+      > *:not(:last-child) {
+        &:after {
+          content: "   |   ";
+          white-space: pre;
+          color: #aaa;
+        }
+      }
+    }
+  }
   }
 `
 
