@@ -2,6 +2,7 @@
 title: My First Computer
 date: "2018-01-20T00:00:00.000Z"
 subtitle: ""
+display: "false"
 ---
 Pentium 2 333mhz
 64mb ram

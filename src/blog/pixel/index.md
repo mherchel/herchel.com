@@ -2,6 +2,7 @@
 title: I Switched from an iPhone to Pixel 2 XL
 date: "2018-01-27T00:00:00.000Z"
 subtitle: "And you won't believe what happened next"
+display: "false"
 ---
 too large
 screen is nice
