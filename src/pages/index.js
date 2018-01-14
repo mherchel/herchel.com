@@ -21,6 +21,9 @@ class BlogIndex extends React.Component {
         {posts.map(post => {
           const title = get(post, 'node.frontmatter.title')
           const subtitle = get(post, 'node.frontmatter.subtitle')
+
+          if (get(post, 'node.frontmatter.display') === 'false') return
+          
           return (
             <Link to={post.node.fields.slug} key={post.node.fields.slug} className={articleStyles}>
               <h2>
@@ -111,6 +114,7 @@ export const query = graphql`
             date(formatString: "MM.DD.YYYY")
             title
             subtitle
+            display
           }
           fields {
             slug
