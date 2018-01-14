@@ -67,6 +67,18 @@ Similarly,` grid-template-rows` sets up your rows.
 }
 ```
 
+## Shortcut syntax for setting up columns and rows
+
+The following will set up four 50px rows and three 200px columns.
+
+```css
+.grid {
+  display: grid;
+
+  /* grid-template: rows / columns; */
+  grid-template: 50px 50px 50px 50px / 200px 200px 200px;
+}
+
 ### Repeat syntax
 You can accomplish the same thing by using *repeat syntax*. This also creates three 200px columns.
 
@@ -357,8 +369,7 @@ main {
 }
 
 footer {
-  grid-area: footer;
-}
+  grid-area: footer;}
 ```
 
 Once the areas are named, we line em up in an ascii-art like grid.
@@ -406,13 +417,57 @@ Once the areas are named, we line em up in an ascii-art like grid.
 
 ### Magic Lines
 
-When defining named areas, CSS Grid will give you some named lines for free!
+When defining named areas, CSS Grid will automatically generate `-start` and `-end` lines for each region!
 
+```css
+.grid {
+  /* Lets create a grid using named areas */
+  grid-template-areas: 
+    'sidebar header header'
+    'sidebar content content'
+    '.       footer footer';
+  }
+```
 
+So for the grid above, the browser will automatically generate `sidebar-start`, `sidebar-end`, `header-start`, `header-end`, `content-start`, `content-end`, `footer-start`, and `footer-end` named lines! 
 
+Pretty neat!
 
+This also works in reverse, where if you name your lines with the pattern of *&lt;region&gt;-start* and *&lt;region&gt;-end*, it will automatically name the `region` area!
 
+### grid-template shorthand
 
+You already know that you can define your track widths/heights with shortcut syntax in the `grid-template` area:
+
+```css
+.grid {
+  display: grid;
+
+  /* grid-template: rows / columns; 
+     Create four 50px rows, and three 200px columns. */
+  grid-template: 50px 50px 50px 50px / 200px 200px 200px;
+}
+```
+
+But you can also define your *grid areas* and column widths / row heights all in one property.
+
+```css
+.grid {
+  display: grid;
+  grid-template: 'head head head head' 200px
+                 'side1 main main side2' 300px / repeat(3, 1fr);
+}
+```
+
+This syntax is confusing as hell if you haven't seen it. 
+
+What's going on is the named areas are being mapped to the grid template. After the named areas are placed, the track widths are defined. 
+
+So on the first line, after the `head` area is set to span 4 columns, the row height is set to `200px`. On the second line, the `side1` , `main`, and `side2` regions are placed. After that, the row height is set to `300px`, and the columns are set to three `1fr` columns.
+
+For more information, see this video from Rachel Andrew's [Grid by Example series](https://gridbyexample.com):
+
+`youtube:https://www.youtube.com/embed/aqLifuKpfHU`
 
 ## Developer Tooling for CSS Grid
 
