@@ -1,5 +1,9 @@
 {
   "assetsByChunkName": {
+    "path---grid": [
+      "path---grid-dbad9db5db0c4a10d290.js",
+      "path---grid-dbad9db5db0c4a10d290.js.map"
+    ],
     "path---2015-04-19-making-syfy-animations-not-suck": [
       "path---2015-04-19-making-syfy-animations-not-suck-f7b4a421a7e51de9bea7.js",
       "path---2015-04-19-making-syfy-animations-not-suck-f7b4a421a7e51de9bea7.js.map"
@@ -52,17 +56,13 @@
       "path---2014-04-29-notes-on-developing-drupal-8-alpha-13-041ef3e6bc0c98c38a5e.js",
       "path---2014-04-29-notes-on-developing-drupal-8-alpha-13-041ef3e6bc0c98c38a5e.js.map"
     ],
-    "path---notes-on-css-grid": [
-      "path---notes-on-css-grid-d09fbf1ba5a3355c837b.js",
-      "path---notes-on-css-grid-d09fbf1ba5a3355c837b.js.map"
-    ],
     "path---philosophy": [
       "path---philosophy-f8f2f2235c0cec2b21e4.js",
       "path---philosophy-f8f2f2235c0cec2b21e4.js.map"
     ],
     "path---index": [
-      "path---index-0f03aee79538061752f5.js",
-      "path---index-0f03aee79538061752f5.js.map"
+      "path---index-4fe4e71ab5605608757e.js",
+      "path---index-4fe4e71ab5605608757e.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-58bc6380657b89e565c1.js",
@@ -76,6 +76,10 @@
       "path---2018-01-01-hello-2018-7fa8cc96b0bb03868f8f.js",
       "path---2018-01-01-hello-2018-7fa8cc96b0bb03868f8f.js.map"
     ],
+    "path---pixel": [
+      "path---pixel-719ab3656dd727457f73.js",
+      "path---pixel-719ab3656dd727457f73.js.map"
+    ],
     "commons": [
       "commons-7e72e95503b9cd953cf5.js",
       "build-js-styles.css",
@@ -86,18 +90,26 @@
       "path---2015-06-09-advice-newbie-frontend-developer-1b01b4f192d9525c6a2d.js",
       "path---2015-06-09-advice-newbie-frontend-developer-1b01b4f192d9525c6a2d.js.map"
     ],
+    "path---computer": [
+      "path---computer-6e9d79f77cc4811ffa99.js",
+      "path---computer-6e9d79f77cc4811ffa99.js.map"
+    ],
     "component---src-pages-philosophy-js": [
       "component---src-pages-philosophy-js-a68e9fde55b7ac2534a9.js",
       "component---src-pages-philosophy-js-a68e9fde55b7ac2534a9.js.map"
+    ],
+    "path---vscode": [
+      "path---vscode-c488dcda1842152c7b32.js",
+      "path---vscode-c488dcda1842152c7b32.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-26d07196a105fc545827.js",
+      "app-13885530ee16227b241f.js",
       "build-js-styles.css",
-      "app-26d07196a105fc545827.js.map",
+      "app-13885530ee16227b241f.js.map",
       "build-js-styles.css.map"
     ],
     "path---2014-03-08-forida-drupalcamp-presentation-notes": [

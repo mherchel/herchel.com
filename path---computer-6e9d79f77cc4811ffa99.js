@@ -1,0 +1,2 @@
+webpackJsonp([0xb3fd8a1e2752],{392:function(e,t){e.exports={data:{site:{siteMetadata:{title:"Mike Herchel",author:"Mike Herchel"}},markdownRemark:{id:"/Users/mherchel/sites/herchel-new/src/blog/computer/index.md absPath of file >>> MarkdownRemark",html:"<p>Pentium 2 333mhz\n64mb ram\n6.4gb quantum hdd\nATI all-in-one pro 8mb video card\nModem\nWindows 98</p>",frontmatter:{title:"My First Computer",date:"January 20, 2018"}}},pathContext:{slug:"/computer/"}}}});
+//# sourceMappingURL=path---computer-6e9d79f77cc4811ffa99.js.map
