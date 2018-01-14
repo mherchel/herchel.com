@@ -17,7 +17,7 @@ class Template extends React.Component {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:site" content="@mikeherchel" />
-          <meta name="twitter:creator" content="@mikeherchel">
+          <meta name="twitter:creator" content="@mikeherchel" />
         </Helmet>
         <header className={headerStyles}>
           <Bio />
