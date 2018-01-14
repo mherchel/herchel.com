@@ -1,5 +1,5 @@
 ---
-title: Notes on CSS Grid
+title: Getting Up and Running with CSS Grid
 date: "2018-01-16T00:00:00.000Z"
 subtitle: "A cheatsheet just for me, made by me"
 display: "false"
@@ -15,7 +15,7 @@ Before we start, let's recite the *CSS Grid Cheat Sheet Creed*.
 
 I've been doing web development for a long time (since 2001), and am familiar with most of the web's underlying technologies.
 
-I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; *unless* the design is very grid centric. 
+I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; *unless* the design is very grid centric. 
 
 My traditional approach to layout has been set the `width` to a percentage value &mdash; lets say `94%`, and then set the `max-width` of the container to something like `1200px` or whatever the design calls for. Then I can layout the internal structure through flexbox or floats, using a combination of percentages, pixels, and the CSS `calc()` function.
 
@@ -404,6 +404,16 @@ Once the areas are named, we line em up in an ascii-art like grid.
 }
 ```
 
+### Magic Lines
+
+When defining named areas, CSS Grid will give you some named lines for free!
+
+
+
+
+
+
+
 ## Developer Tooling for CSS Grid
 
 Both Chrome and Firefox have developer tools support for CSS Grid. When hovering your mouse above the grid container, both browser's developer tools will highlight the track and the lines of the grid. Firefox's developer tools have a leg up, though, because you can toggle on and off the highlighting by clicking on a *grid icon* that appears next to the `display: grid;` declaration. With Chrome's developer tools, you have to keep your mouse highlighted above the element in order to view the tracks and lines.
@@ -413,9 +423,9 @@ Both Chrome and Firefox have developer tools support for CSS Grid. When hovering
  <figcaption>Firefox's Grid Developer Tools showing an example from <a href="https://gridbyexample.com">Grid by Example</a></figcaption>
 </figure>
 
-That being said, the developer tools could be better. When hovering the mouse above named areas, it would be nice if the areas would be highlighted. The same goes for named lines &mdash; hovering over the named lines declaration should highlight the appropriate line.
+That being said, the developer tools could be better. When hovering the mouse above named areas, it would be nice if the areas would be highlighted. The same goes for named lines &mdash; hovering over the named lines declaration should highlight the appropriate line. I filed some feature requests for both [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=801897) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1430473) to get these features implemented.
 
-In addition when using named areas, the entire value is placed on one line &mdash; totally negating the *ascii-art* matrix where you lined up the grid. DevTools should preserve line breaks and white space.
+In addition when using named areas, the entire value is placed on one line &mdash; totally negating the *ascii-art* matrix where you lined up the grid. DevTools should preserve line breaks and white space. I also filed featured requests these at: [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=801896) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1430471).
 
 Furthermore, it would be *really* useful if the browsers integrated a grid builder, similar to what they have for [bezier-curve editor](https://brettdewoody.com/using-chromes-cubic-bezier-editor/), or color-picker within devtools.
 
