@@ -142,12 +142,17 @@ injectGlobal`
   figure {
     margin: 20px 0;
     background #eee;
+
+    &[border] {
+      padding: 3px;
+    }
   }
 
   figcaption {
     padding: 5px 20px;
     font-family: var(--font-sans);
     font-style: italic;
+    font-size: 16px;
     line-height: 1.2;
   }
 
