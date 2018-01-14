@@ -1,7 +1,8 @@
 ---
 title: Notes on CSS Grid
-date: "2018-01-18T00:00:00.000Z"
+date: "2018-01-16T00:00:00.000Z"
 subtitle: "A cheatsheet just for me, made by me"
+display: "false"
 ---
 
 One of the best ways for anyone to learn a topic is to teach that topic. To that end, I'm giving a presentation for my [local front-end development meetup](https://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/246457734/) this week. In preparation, I'm writing this CSS cheat sheet / blog.
