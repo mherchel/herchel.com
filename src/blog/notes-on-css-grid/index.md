@@ -4,7 +4,9 @@ date: "2018-01-18T00:00:00.000Z"
 subtitle: "A cheatsheet just for me, made by me"
 ---
 
-One of the best ways for me to learn a topic is to teach a topic. To that end, I'm preparing this CSS cheat sheet / blog, and also giving a presentation for our [local front-end development meetup](https://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/246457734/).
+One of the best ways for me to learn a topic is to teach a topic. To that end, I'm giving a presentation for our [local front-end development meetup](https://www.meetup.com/Gainesville-Front-End-Dev-Meetup/events/246457734/) this week. In preparation, I'm writing this CSS cheat sheet / blog.
+
+Before we start, let's recite the *CSS Grid Cheat Sheet Creed*.
 
 > This is my CSS Grid cheat sheet. There are many like it, but this one is mine. My cheat sheet is my best friend. It is my life. I must master it as I must master my life. Without me, my cheat sheet is useless. Without my cheat sheet, I am useless...
 
@@ -18,9 +20,9 @@ My traditional approach to layout has been set the `width` to a percentage value
 
 ## Tips on getting started with grid
 
-CSS Grid is pretty easy once you get started with it, but just like CSS, it gets more complicated the deeper you dive. The good news is that you don't need to dive very deep to reach some awesome power.
+CSS Grid is pretty easy once you get started with it, but just like CSS, it gets more complicated the deeper you dive. The good news is that you don't need to dive very deep to reach some awesome power. For what it's worth, I think Grid is easier to learn than was flexbox.
 
-As with any new syntax, I highly recommend having (or better yet, creating) a cheat sheet for quick reference. Although I created this blog post / cheat sheet, there are many more better to go through.
+As with any new syntax, I highly recommend having (or better yet, creating) a cheat sheet for quick reference. Although I created this blog post, there are many others to go through.
 
 * [CSS Tricks: A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [Interactive CSS Grid Playground](https://alialaa.github.io/css-grid-cheat-sheet/)
@@ -63,7 +65,7 @@ Similarly,` grid-template-rows` sets up your rows.
 ```
 
 ### Repeat syntax
-You can accomplish the same thing by using *repeat syntax*.
+You can accomplish the same thing by using *repeat syntax*. This also creates three 200px columns.
 
 ```css
 .grid {
@@ -85,13 +87,13 @@ You can mix and match the regular syntax and repeat syntax. This example creates
 
 ```css
 .grid {
-  grid-template-columns: minmax(100px, 200px) repeat(3, 200px);
+  grid-template-columns: 200px repeat(3, minmax(100px, 200px));
 }
 ```
 
 ### FR unit
 
-The "fr" in the `fr` unit stands for *fraction*. Grid create an amount of identical width units equal to the sum of all the `fr` units in the row, and then it will assign the width of the column based on how many `fr` units are assigned to it.
+The "fr" in the `fr` unit stands for *fraction*. Grid will create an amount of identical width units equal to the sum of all the `fr` units in the row, and then it will assign the width of each column based on how many `fr` units are assigned to it.
 
 So, if I have a three columns that each have `1fr` width, they will each be 33.33% wide. If they each have `2fr`, their width will be the same because they're still all equal to each other.
 
@@ -147,7 +149,7 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 If you have grid elements that are taking up multiple columns and/or rows, you can come across situations where "holes" in the grid appear.
 
-You can fix this by using `grid-auto-flow: dense;`. Note this will show the elements out of the original source order.
+You can fix this by using `grid-auto-flow: dense;`. Note cause the elements to appear out of the original source order.
 
 ```css
 .grid {
@@ -183,11 +185,19 @@ You can also use our flexbox friends `space-between` and `space-around`.
 }
 ```
 
-
-
 ## Grid Child Syntax
 
 The following properties apply to children of grid containers.
+
+### Start a child on a specific column
+
+This grid child will start on the second column.
+
+```css
+.grid-child {
+  grid-column-start: 2;
+}
+```
 
 ### Have a child span multiple columns
 
@@ -354,7 +364,7 @@ Once the areas are named, we line em up in an ascii-art like grid.
        On the next row, we have sidebar and column taking up the row.
        And on the third row, we have footer twice.
 
-       You can also use a dog (.) to indicate a blank area. */
+       You can also use a dot (.) to indicate a blank area. */
   }
 }
 ```
@@ -369,8 +379,12 @@ Once the areas are named, we line em up in an ascii-art like grid.
 Chrome dev tools 
 FF
 
-## Can I use?
+## Should I be using CSS Grid now?
+ As long as you're not supporting Internet Explorer 11, then the answer is a resounding YES! Whether to support IE11 is a decision that you have to make after looking at your website's visitor logs. 
+ 
+ In the United States, over 85% of browsers support Grid, although your website's demographic might be dramatically different. Keep in mind the percentage of browsers supporting Grid is only going to continue to increase as time goes on. 
 
+![Browser Support for CSS Grid](./can-i-use-css-grid.png)
 ## Should I rewrite my current application to use CSS Grid?
 
 ## Resources

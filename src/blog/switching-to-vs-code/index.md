@@ -5,8 +5,7 @@ subtitle: "Plugins, keyboard shortcuts and more"
 ---
 On every new project I try to change one or two tools and/or techniques. This is a good balance, because if I change too many things, I get bogged down in the details and functionality of new tools. But if I change nothing, I never get the chance to learn new tools, and increase my productivity.
 
-For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text to Visual Studio Code.
-
+For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text, which has a text-based interface.
 ## Why the switch?
 
 
@@ -26,6 +25,7 @@ VSCode's plugin handling is great. It's easier than Sublime's plugin handling be
 4. It shows your currently installed plugins, and allows you to disable/uninstall them easily. This makes it easy to test-drive and compare plugins.
 5. You can easily search for new plugins using the GUI, or just show the most popular plugins for you to explore.
 
+![VSCode's plugin interface](./plugin-interface-annotated.png)
 ### Here's what I currently have installed
 
 * [Beautify](https://github.com/HookyQR/VSCodeBeautify) reformats and reindents your JavaScript, CSS, HTML and more.
@@ -50,6 +50,11 @@ Avoiding using your mouse or trackpad is vital to coding quickly. To that end, h
 VS Code allows you to easily edit your personal keyboard shortcuts pretty easily under the **Preferences** menu.
 
 ![VSCode's Keyboard Shortcut Editor](./keyboard-shortcuts.png)
+
+## It's the little things
+
+* When sliding over the divider between the directory tree and your code, it will completely disappear until you slide it back. 
+* When deleting from my directory tree, VS Code will send the file to my trash as opposed to just deleting it.
 
 ## Git Diffs
 
