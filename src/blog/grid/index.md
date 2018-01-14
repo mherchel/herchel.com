@@ -92,7 +92,7 @@ Instead of margins, you specify the gap between grid children with the `grid-gap
 .grid {
   grid-gap: 20px; /* All rows and columns will have 20px gap. */
   grid-gap: 20px 40px; /* Columnns will have 20px gap. Rows will have 40px gap. */
-  
+
   grid-row-gap: 2vw; /* Now rows will have a 2vw (viewport width units) gap. */
   grid-column-gap: 10%; /* Columns will have 10% gap between them. */
 }
@@ -341,7 +341,7 @@ The cool thing about named lines is that it makes responsive web design *much si
 
 ### Named Areas
 
-You can name your grid children, and then place them *ascii-art style* within a new CSS property called ` grid-template-areas`. In the example below, I'm using semantic elements to illustrate where we want the content to be placed.
+You can name your grid children, and then place them *ascii-art style* within a new CSS property called ` grid-template-areas`. In the example below, I'm using semantic element types to illustrate where we want the content to be placed.
 
 ```css
 header {
@@ -389,6 +389,19 @@ Once the areas are named, we line em up in an ascii-art like grid.
        You can also use a dot (.) to indicate a blank area. */
   }
 }
+
+
+@media (min-width: 1000px) {
+  .grid {
+    /* Change around the regions at a larger viewport width. */
+    grid-template-areas: 
+      'sidebar header header'
+      'sidebar content content'
+      '.       footer footer';
+    /* We're having the Sidebar take up the entire first column. 
+       The first column of the last row will be empty. */
+  }
+}
 ```
 
 ## Developer Tooling for CSS Grid
@@ -400,14 +413,15 @@ Both Chrome and Firefox have developer tools support for CSS Grid. When hovering
  <figcaption>Firefox's Grid Developer Tools showing an example from <a href="https://gridbyexample.com">Grid by Example</a></figcaption>
 </figure>
 
-That being said, the developer tools could be better. When hovering the mouse above named areas, it would be nice if the areas would be highlighted. The same does for named lines &mdash; hovering over the named lines declaration should highlight the appropriate line.
+That being said, the developer tools could be better. When hovering the mouse above named areas, it would be nice if the areas would be highlighted. The same goes for named lines &mdash; hovering over the named lines declaration should highlight the appropriate line.
 
-In addition, when using named areas, the entire value is placed on one line &mdash; totally negating the ascii-art matrix where you lined up the grid. DevTools should preserve line breaks and white space.
+In addition when using named areas, the entire value is placed on one line &mdash; totally negating the *ascii-art* matrix where you lined up the grid. DevTools should preserve line breaks and white space.
 
-Furthermore, it would be *really* useful if the browsers integrated a grid builder, similar to what they have for bezier-curve editor, or color-picker within devtools.
+Furthermore, it would be *really* useful if the browsers integrated a grid builder, similar to what they have for [bezier-curve editor](https://brettdewoody.com/using-chromes-cubic-bezier-editor/), or color-picker within devtools.
 
 ## Should I be using CSS Grid now?
- As long as you're not supporting Internet Explorer 11, then the answer is a resounding... *sure*! Whether to support IE11 is a decision that you have to make after looking at your website's visitor logs. 
+
+ As long as you're not supporting Internet Explorer 11, then the answer is a resounding... *sure*! Whether to support IE11 is a decision that your team has to make after looking at your website's visitor logs. 
  
  In the United States, over 85% of browsers support Grid, although your website's demographic might be dramatically different. Keep in mind the percentage of browsers supporting Grid is only going to continue to increase as time goes on. 
 
