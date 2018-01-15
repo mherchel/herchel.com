@@ -1,8 +1,8 @@
 ---
 title: Getting Up and Running with CSS Grid
-date: "2018-01-16T00:00:00.000Z"
-subtitle: "A cheatsheet just for me, made by me"
-display: "false"
+date: "2018-01-15T00:00:00.000Z"
+subtitle: "A CSS Grid Cheatsheet for Me, by Me"
+display: ""
 author : ""
 ---
 
@@ -38,7 +38,7 @@ Now let's get to the meat and potatoes of this post... the syntax.
 
 ## Grid Container Syntax
 
-First, we'll start with the syntax of the grid container. Which is basically the wrapping element around all grid children.
+First, we'll start with the syntax of the grid container. The markup is pretty basic and looks like this:
 
 ```html
 <div class="grid">
@@ -51,6 +51,8 @@ First, we'll start with the syntax of the grid container. Which is basically the
 ```
 
 ### Initialize CSS Grid
+
+We have to initialize the grid in order to use all of these awesome grid properties.
 
 ```css
 .grid {
@@ -80,7 +82,7 @@ Similarly,` grid-template-rows` sets up your rows.
 }
 ```
 
-## Shortcut syntax for setting up columns and rows
+### Shortcut syntax for setting up columns and rows
 
 The following will set up four `50px` rows and three `200px` columns.
 
@@ -449,9 +451,9 @@ Pretty neat!
 
 This also works in reverse, where if you name your lines with the pattern of *&lt;region&gt;-start* and *&lt;region&gt;-end*, it will automatically name the `region` area!
 
-### grid-template shorthand
+### Grid-template shorthand
 
-You already know that you can define your track widths/heights with shortcut syntax in the `grid-template` area:
+We already know that we can define your track widths/heights with shortcut syntax in the `grid-template` area:
 
 ```css
 .grid {
@@ -463,7 +465,7 @@ You already know that you can define your track widths/heights with shortcut syn
 }
 ```
 
-But you can also define your *grid areas* and column widths / row heights all in one property.
+But we can also define your *grid areas* and column widths / row heights all in one property.
 
 ```css
 .grid {
@@ -515,3 +517,5 @@ The benefits of doing so would be a simpler code base &mdash; you're able to rip
 The downsides of rewriting are lesser browser support, the probability of introduced bugs, not to mention the hours spent for the rewriting and for the quality control.
 
 In my opinion, *if it ain't broke, don't fix it*. But, only you know your web app, and can make the correct decision.
+
+*Thanks to [Wes Ruvalcaba](https://twitter.com/wesruv) and [John Tucker](https://twitter.com/larkintuckerllc) for helping to review this post.*
