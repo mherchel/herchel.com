@@ -22,19 +22,16 @@ class Template extends React.Component {
     }
   }
   handleMouseDown(e) {
-    this.setState({ mousedown: true} )
+    this.setState({ mousedown: true })
     document.addEventListener('mousemove', this.handleMouseMove)
+    document.addEventListener('touchmove', this.handleMouseMove)
   }
-
   handleMouseUp(e) {
-    this.setState({ 
-      mousedown: false,
-    })
+    this.setState({ mousedown: false })
     document.removeEventListener('mousemove', this.handleMouseMove)
+    document.removeEventListener('touchmove', this.handleMouseMove)
   }
   handleMouseMove(e) {
-    console.log(e)
-    // debugger;
     const hueIncrement = window.innerHeight / 255
     const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
     const mouseXPositionPercent = (e.clientX / window.innerWidth) * 100
@@ -48,7 +45,16 @@ class Template extends React.Component {
     })
   }
   componentDidMount() {
-   document.addEventListener('mouseup', this.handleMouseUp)
+    document.addEventListener('mousedown', this.handleMouseDown)
+    document.addEventListener('mouseup', this.handleMouseUp)
+    document.addEventListener('touchdown', this.handleMouseDown)
+    document.addEventListener('touchup', this.handleMouseUp)
+  }
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleMouseDown)
+    document.removeEventListener('mouseup', this.handleMouseUp)
+    document.removeEventListener('touchdown', this.handleMouseDown)
+    document.removeEventListener('touchup', this.handleMouseUp)
   }
   render() {
     const { location, children } = this.props
@@ -75,7 +81,6 @@ class Template extends React.Component {
           <span className="developed">Developed using <a target="_blank" href="http://gatsbyjs.org">GatsbyJS</a></span>
           <span className="github">Submit a PR <a target="_blank" href="https://github.com/mherchel/herchel.com">on GitHub</a></span>
         </footer>
-        <div onMouseDown={(e) => this.handleMouseDown(e)} style={{ top: `${this.state.ypos}px`, left: `${this.state.xpos}px`}} className="color"></div>
       </div>
     )
   }
@@ -222,6 +227,7 @@ injectGlobal`
     color: #666;
     font-size: 22px;
     line-height: 2;
+    user-select: initial;
 
     @media (min-width: ${vars.breakpoints.navChange}) {
       padding: 40px;
@@ -303,17 +309,6 @@ const layoutStyles = css`
   footer {
     flex-basis: 100%;
   }
-
-  .color {
-    position: fixed;
-    top: calc(100vh - 20px);
-    left: 20px;
-    height: 40px;
-    width: 40px;
-    background-color: red;
-    border-radius: 50%;
-  }
-  
 `
 
 const headerStyles = css`
