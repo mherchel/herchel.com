@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { css } from 'emotion'
+import vars from '../layouts/variables'
 
 class Nav extends React.Component {
   constructor() {
@@ -42,7 +43,7 @@ class Nav extends React.Component {
 }
 
 const navComponentStyle = css`
-  @media (min-width: 700px) {
+  @media (min-width: ${vars.breakpoints.navChange}) {
     position: sticky;
     top: 20px;
   }
@@ -64,7 +65,7 @@ const buttonStyle = css`
   cursor: pointer;
   transition: 0.2s;
 
-  @media (min-width: 700px) {
+  @media (min-width: ${vars.breakpoints.navChange}) {
     display: none;
   }
 
@@ -84,7 +85,7 @@ const buttonStyle = css`
 `
 
 const navWrapperStyles = css`
-  @media (max-width: 700px) {
+  @media (max-width: ${vars.breakpoints.navChange}) {
     display: none;
     position: fixed;
     z-index: 2;
@@ -105,7 +106,7 @@ const navStyles = css`
   font-size: 40px;
   font-weight: bold;
 
-  @media (min-width: 700px) {
+  @media (min-width: ${vars.breakpoints.navChange}) {
     margin-top: 20px;
   }
 
@@ -114,7 +115,7 @@ const navStyles = css`
     color: white;
     text-decoration: none;
 
-    @media (min-width: 700px) {
+    @media (min-width: ${vars.breakpoints.navChange}) {
       &.active:not(:first-child) {
         text-decoration: underline;
       }

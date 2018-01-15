@@ -4,7 +4,7 @@ import { css, injectGlobal } from 'emotion'
 import Link from 'gatsby-link'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
-
+import vars from '../layouts/variables'
 
 class Template extends React.Component {
   render() {
@@ -176,7 +176,7 @@ injectGlobal`
     font-size: 22px;
     line-height: 2;
 
-    @media (min-width: 700px) {
+    @media (min-width: ${vars.breakpoints.navChange}) {
       padding: 40px;
 
       &:before {
@@ -221,34 +221,34 @@ const layoutStyles = css`
   margin: 0 auto;
   --header-width: 220px;
 
-  @media (min-width: 700px) {
+  @media (min-width: ${vars.breakpoints.navChange}) {
     display: flex;
     flex-wrap: wrap;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: ${vars.breakpoints.large}) {
     --header-width: 320px;
   }
 
   header {
-    @media (min-width: 700px) {
+    @media (min-width: ${vars.breakpoints.navChange}) {
       margin-right: 40px;
       flex-basis: var(--header-width);
       flex-shrink: 0;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: ${vars.breakpoints.large}) {
       margin-right: 60px;
     }
   }
 
   main {
-    @media (min-width: 700px) {
+    @media (min-width: ${vars.breakpoints.navChange}) {
       flex-grow: 1;
       width: calc(100% - (var(--header-width) + 40px));
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: ${vars.breakpoints.large}) {
       width: calc(100% - (var(--header-width) + 60px));
     }
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { css } from 'emotion'
+import vars from '../layouts/variables'
 import profilePic from './herchelshead.jpg'
 
 class Bio extends React.Component {
@@ -19,19 +20,19 @@ class Bio extends React.Component {
 const bioStyles = css`
   margin-top: 20px;
 
-  @media (max-width: 700px) {
+  @media (max-width: ${vars.breakpoints.navChange}) {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     text-align: left;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: ${vars.breakpoints.bioImageChange}) {
     flex-wrap: wrap;
   }
 
   a {
-    @media (max-width: 450px) {
+    @media (max-width: ${vars.breakpoints.bioImageChange}) {
       height: 50px;
       overflow: hidden;
     }
@@ -54,13 +55,13 @@ const bioStyles = css`
     color: white;
     font-size: 16px;
     width: 100%;
-    margin 0;
+    margin: 0;
 
-    @media (min-width: 450px) {
+    @media (min-width: ${vars.breakpoints.bioImageChange}) {
       margin-right: 40px;
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: ${vars.breakpoints.navChange}) {
       margin-right: 0;
       margin-top: 20px;
       padding: 20px;
