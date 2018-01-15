@@ -34,9 +34,17 @@ class Template extends React.Component {
   }
   handleMouseMove(e) {
     console.log(e)
+    // debugger;
+    const hueIncrement = window.innerHeight / 255
+    const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
+    const mouseXPositionPercent = (e.clientX / window.innerWidth) * 100
+    const hueValue = mouseYPositionPercent * hueIncrement
+
     this.setState({
       xpos: e.clientX,
-      ypos: e.clientY
+      ypos: e.clientY,
+      hue: hueValue,
+      luminosity: mouseXPositionPercent
     })
   }
   componentDidMount() {
@@ -47,7 +55,7 @@ class Template extends React.Component {
     return (
       <div className={layoutStyles}>
         <Helmet htmlAttributes={{ 
-            style: `--primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1);`
+            style: `--primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1); ${this.state.mousedown ? `user-select: none` : ``}`
           }}>
           <link rel="icon" type="image/png" href="favicon.png" />
           <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
@@ -103,6 +111,7 @@ injectGlobal`
     line-height: 1.7;
     overflow: scroll;
     font-family: var(--font-sans);
+    transition: 0.2s;
 
     &:before {
       content: "";
