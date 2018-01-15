@@ -60,20 +60,21 @@ class Template extends React.Component {
     const { location, children } = this.props
     return (
       <div className={layoutStyles}>
-        <Helmet htmlAttributes={{ 
-            style: `
-              --primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1); 
-              ${this.state.mousedown ? `user-select: none;` : ``}
-              ${this.state.mousedown ? `-webkit-user-select: none;` : ``}
-              ${this.state.mousedown ? `-moz-user-select: none;` : ``}
-            `
-          }}>
+        <Helmet>
           <link rel="icon" type="image/png" href="favicon.png" />
           <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:site" content="@mikeherchel" />
           <meta name="twitter:creator" content="@mikeherchel" />
+          <style>{`
+            body {
+              --primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1);
+              -webkit-user-select: ${this.state.mousedown ? 'none' : 'auto'};
+              -moz-user-select: ${this.state.mousedown ? 'none' : 'auto'};
+              user-select: ${this.state.mousedown ? 'none' : 'auto'};
+            `}
+          </style>
         </Helmet>
         <header className={headerStyles}>
           <Bio />
