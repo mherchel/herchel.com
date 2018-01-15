@@ -9,8 +9,20 @@ import './prism-theme.css'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
+    const image = this.props.data.imageSharp.resolutions.src
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    let imageMetaTag = `
+      <meta name="twitter:card" content="summary" />
+      <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
+      <meta name="twitter:image" content="https://herchel.com/herchelshead.jpg" />`
 
+    if (this.props.data.imageSharp.resolutions.src) {
+      imageMetaTag = `
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image" content="https://herchel.com${this.props.data.imageSharp.resolutions.src}" />
+        <meta name="twitter:image" content="https://herchel.com${this.props.data.imageSharp.resolutions.src}" />`
+    }
+    console.log(imageMetaTag)
     return (
       <div className={`content ${blogStyles}`}>
         <Helmet>
@@ -18,7 +30,9 @@ class BlogPostTemplate extends React.Component {
           <meta name="description" content={post.excerpt} />
           <meta name="twitter:title" content={`${post.frontmatter.title} | ${siteTitle}`} />
           <meta name="twitter:description" content={post.excerpt} />
-
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="og:image" content={`https://herchel.com${this.props.data.imageSharp.resolutions.src}`} />
+          <meta name="twitter:image" content={`https://herchel.com${this.props.data.imageSharp.resolutions.src}`} />`
         </Helmet>
         <h1>{post.frontmatter.title}</h1>
         <div className="meta">
@@ -114,6 +128,11 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+      }
+    }
+    imageSharp(fields: { slug: { eq: $slug } }) {
+      resolutions {
+        src
       }
     }
   }
