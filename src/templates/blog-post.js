@@ -78,6 +78,7 @@ const blogStyles = css`
   }
 
   /* Make unrendered tweet look as close as possible to the rendered tweet. */
+  .mike,
   blockquote.twitter-tweet:not(.twitter-tweet-rendered) {
     position: relative;
     display: flex;
@@ -86,7 +87,7 @@ const blogStyles = css`
     min-width: 220px;
     max-width: 520px;
     margin: 10px auto;
-    padding: 20px 20px 11.6px 20px;
+    padding: 20px 20px 30px 20px;
     border: 1px solid #e1e8ed;
     border-radius: 5px;
     background-color: #fff;
@@ -106,8 +107,21 @@ const blogStyles = css`
       background-repeat: no-repeat;
     }
 
+    > a {
+      margin-top: 3.2px;
+      order: 3;
+      font-size: 14px;
+      color: rgb(105, 120, 130);
+      text-decoration: none;
+    }
+
     > p {
       order: 2;
+
+      a {
+        color: rgb(43, 123, 185);
+        text-decoration: none;
+      }
     }
   }
 `
