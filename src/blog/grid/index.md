@@ -12,13 +12,15 @@ Before we start, let's recite the *CSS Grid Cheat Sheet Creed*.
 
 > This is my CSS Grid cheat sheet. There are many like it, but this one is mine. My cheat sheet is my best friend. It is my life. I must master it as I must master my life. Without me, my cheat sheet is useless. Without my cheat sheet, I am useless...
 
-## My Background
+## My Perspective
 
 I've been doing web development for a long time (since 2001), and am familiar with most of the web's underlying technologies.
 
 I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; *unless* the design is very grid centric. 
 
 My traditional approach to layout has been set the `width` to a percentage value &mdash; lets say `94%`, and then set the `max-width` of the container to something like `1200px` or whatever the design calls for. Then I can layout the internal structure through flexbox or floats, using a combination of percentages, pixels, and the CSS `calc()` function.
+
+The beauty of CSS Grid is that it allows us the control that traditional grid systems have, but with no added libraries, CSS files, Sass mixins, or complexity.
 
 ## Tips on getting started with grid
 
@@ -36,7 +38,17 @@ Now let's get to the meat and potatoes of this post... the syntax.
 
 ## Grid Container Syntax
 
-First, we'll start with the syntax of the grid container.
+First, we'll start with the syntax of the grid container. Which is basically the wrapping element around all grid children.
+
+```html
+<div class="grid">
+  <div class="grid-child"></div>
+  <div class="grid-child"></div>
+  <div class="grid-child"></div>
+  <div class="grid-child"></div>
+  <div class="grid-child"></div>
+</div>
+```
 
 ### Initialize CSS Grid
 
@@ -70,7 +82,7 @@ Similarly,` grid-template-rows` sets up your rows.
 
 ## Shortcut syntax for setting up columns and rows
 
-The following will set up four 50px rows and three 200px columns.
+The following will set up four `50px` rows and three `200px` columns.
 
 ```css
 .grid {
@@ -79,9 +91,10 @@ The following will set up four 50px rows and three 200px columns.
   /* grid-template: rows / columns; */
   grid-template: 50px 50px 50px 50px / 200px 200px 200px;
 }
+```
 
 ### Repeat syntax
-You can accomplish the same thing by using *repeat syntax*. This also creates three 200px columns.
+You can accomplish the same thing by using *repeat syntax*. This also creates three `200px` columns.
 
 ```css
 .grid {
@@ -89,7 +102,7 @@ You can accomplish the same thing by using *repeat syntax*. This also creates th
 }
 ```
 
-You can mix and match the regular syntax and repeat syntax. This example creates one 300px column, and three 200px columns.
+You can mix and match the regular syntax and repeat syntax. This example creates one 300px column, and three `200px` columns.
 
 ```css
 .grid {
@@ -145,7 +158,7 @@ If the first column is `2fr` and the next two columns are each `1fr`, then the f
 
 ### Autofill property
 
-`autofill` automatically adds columns to the grid layout according to the container width. The example below will create 5 200px columns. Note that these columns can be empty if elements don't exist to fill them in.
+`autofill` automatically adds columns to the grid layout according to the container width. The example below will create 5 `200px` columns. Note that these columns can be empty if elements don't exist to fill them in.
 
 ```css
 .grid {
@@ -164,7 +177,7 @@ The syntax below will automatically create as many 200px columns in the row as p
 }
 ```
 
-### grid-auto-rows and grid-auto-columns
+### Grid-auto-rows and grid-auto-columns
 
 `grid-auto-rows` and `grid-auto-columns` specify the height (track size) of the auto-generated columns and rows. This can be in in any unit including `fr`. The initial value for these properties is `auto`, which sets the height equal to the largest content item.
 
