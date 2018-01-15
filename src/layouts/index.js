@@ -7,11 +7,48 @@ import Nav from '../components/Nav'
 import vars from '../layouts/variables'
 
 class Template extends React.Component {
+  constructor() {
+    super()
+    this.handleMouseDown = this.handleMouseDown.bind(this)
+    this.handleMouseUp = this.handleMouseUp.bind(this)
+    this.handleMouseMove = this.handleMouseMove.bind(this)
+    this.state = {
+      mousedown: false,
+      xpos: 0,
+      ypos: 0,
+      hue: 195,
+      saturation: 100,
+      luminosity: 50
+    }
+  }
+  handleMouseDown(e) {
+    this.setState({ mousedown: true} )
+    document.addEventListener('mousemove', this.handleMouseMove)
+  }
+
+  handleMouseUp(e) {
+    this.setState({ 
+      mousedown: false,
+    })
+    document.removeEventListener('mousemove', this.handleMouseMove)
+  }
+  handleMouseMove(e) {
+    console.log(e)
+    this.setState({
+      xpos: e.clientX,
+      ypos: e.clientY
+    })
+  }
+  componentDidMount() {
+   document.addEventListener('mouseup', this.handleMouseUp)
+  }
   render() {
     const { location, children } = this.props
     return (
       <div className={layoutStyles}>
-        <Helmet>
+        <Helmet htmlAttributes={{ 
+            style: `--primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1);`
+          }}>
           <link rel="icon" type="image/png" href="favicon.png" />
           <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:card" content="summary" />
@@ -30,6 +67,7 @@ class Template extends React.Component {
           <span className="developed">Developed using <a target="_blank" href="http://gatsbyjs.org">GatsbyJS</a></span>
           <span className="github">Submit a PR <a target="_blank" href="https://github.com/mherchel/herchel.com">on GitHub</a></span>
         </footer>
+        <div onMouseDown={(e) => this.handleMouseDown(e)} style={{ top: `${this.state.ypos}px`, left: `${this.state.xpos}px`}} className="color"></div>
       </div>
     )
   }
@@ -255,6 +293,16 @@ const layoutStyles = css`
 
   footer {
     flex-basis: 100%;
+  }
+
+  .color {
+    position: fixed;
+    top: calc(100vh - 20px);
+    left: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 50%;
   }
   
 `
