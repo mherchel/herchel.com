@@ -61,7 +61,12 @@ class Template extends React.Component {
     return (
       <div className={layoutStyles}>
         <Helmet htmlAttributes={{ 
-            style: `--primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1); ${this.state.mousedown ? `user-select: none` : ``}`
+            style: `
+              --primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1); 
+              ${this.state.mousedown ? `user-select: none;` : ``}
+              ${this.state.mousedown ? `-webkit-user-select: none;` : ``}
+              ${this.state.mousedown ? `-moz-user-select: none;` : ``}
+            `
           }}>
           <link rel="icon" type="image/png" href="favicon.png" />
           <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
