@@ -22,14 +22,14 @@ class Template extends React.Component {
     }
   }
   handleMouseDown(e) {
-    this.setState({ mousedown: true })
-    document.addEventListener('mousemove', this.handleMouseMove)
-    document.addEventListener('touchmove', this.handleMouseMove)
+    if (!e.target.matches(`.${layoutStyles}, .${layoutStyles} *`)) {
+      this.setState({ mousedown: true })
+      document.addEventListener('mousemove', this.handleMouseMove)
+    }
   }
   handleMouseUp(e) {
     this.setState({ mousedown: false })
     document.removeEventListener('mousemove', this.handleMouseMove)
-    document.removeEventListener('touchmove', this.handleMouseMove)
   }
   handleMouseMove(e) {
     const hueIncrement = window.innerHeight / 255
@@ -229,7 +229,6 @@ injectGlobal`
     color: #666;
     font-size: 22px;
     line-height: 2;
-    user-select: initial;
 
     @media (min-width: ${vars.breakpoints.navChange}) {
       padding: 40px;
