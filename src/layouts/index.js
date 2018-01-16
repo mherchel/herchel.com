@@ -47,14 +47,14 @@ class Template extends React.Component {
   componentDidMount() {
     document.addEventListener('mousedown', this.handleMouseDown)
     document.addEventListener('mouseup', this.handleMouseUp)
-    document.addEventListener('touchdown', this.handleMouseDown)
-    document.addEventListener('touchup', this.handleMouseUp)
+    document.addEventListener('touchstart', this.handleMouseDown)
+    document.addEventListener('touchend', this.handleMouseUp)
   }
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleMouseDown)
     document.removeEventListener('mouseup', this.handleMouseUp)
-    document.removeEventListener('touchdown', this.handleMouseDown)
-    document.removeEventListener('touchup', this.handleMouseUp)
+    document.removeEventListener('touchstart', this.handleMouseDown)
+    document.removeEventListener('touchend', this.handleMouseUp)
   }
   render() {
     const { location, children } = this.props
