@@ -47,14 +47,10 @@ class Template extends React.Component {
   componentDidMount() {
     document.addEventListener('mousedown', this.handleMouseDown)
     document.addEventListener('mouseup', this.handleMouseUp)
-    document.addEventListener('touchstart', this.handleMouseDown)
-    document.addEventListener('touchend', this.handleMouseUp)
   }
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleMouseDown)
     document.removeEventListener('mouseup', this.handleMouseUp)
-    document.removeEventListener('touchstart', this.handleMouseDown)
-    document.removeEventListener('touchend', this.handleMouseUp)
   }
   render() {
     const { location, children } = this.props
@@ -117,7 +113,7 @@ injectGlobal`
   }
 
   body {
-    margin: 10px;
+    margin: 0;
     background-color: var(--primary);
     line-height: 1.7;
     overflow: scroll;

@@ -52,8 +52,10 @@ const navComponentStyle = css`
 const buttonStyle = css`
   position: fixed;
   top: 35px;
-  right: 20px;
+  right: 3%;
+  width: 40px; /* Necessary for proper placement in Safari. */
   z-index: 3;
+  padding: 0;
   overflow: hidden;
   border: 0;
   mix-blend-mode: multiply;
@@ -70,11 +72,13 @@ const buttonStyle = css`
   }
 
   &:before {
-    content: "☰"
+    content: "☰";
+    display: block;
   }
 
   &.active {
     transform: rotate(90deg);
+    outline: 0;
   }
 
   span {
