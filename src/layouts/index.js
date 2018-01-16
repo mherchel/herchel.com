@@ -273,7 +273,7 @@ injectGlobal`
 const layoutStyles = css`
   width: 94%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10px auto;
   --header-width: 220px;
 
   @media (min-width: ${vars.breakpoints.navChange}) {
