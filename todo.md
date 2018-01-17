@@ -9,3 +9,17 @@
 * lots of use of css filters
 * intersection observer?
 * fluid typography on headings
+
+
+* Set opacity and Saturation to a CSS var
+* Ability to save color theme
+
+## Ideas
+
+* What its like to work from home
+  * pics of dogs
+  * started working somewhere else
+  * showering
+  * getting stuff done
+  * cleaning
+* Lullabot podcast
