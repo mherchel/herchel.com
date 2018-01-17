@@ -23,3 +23,7 @@
   * getting stuff done
   * cleaning
 * Lullabot podcast
+  * The process of doing it
+  * the history of the lullabot podcast
+  * My favorite one
+  * 
