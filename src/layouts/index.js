@@ -17,7 +17,6 @@ class Template extends React.Component {
       xpos: 0,
       ypos: 0,
       hue: 195,
-      saturation: 100,
       luminosity: 50
     }
   }
@@ -64,8 +63,9 @@ class Template extends React.Component {
           <meta name="twitter:site" content="@mikeherchel" />
           <meta name="twitter:creator" content="@mikeherchel" />
           <style>{`
-            body {
-              --primary: hsla(${this.state.hue}, ${this.state.saturation}%, ${this.state.luminosity}%, 1);
+            :root {
+              --primary-hue: ${this.state.hue};
+              --primary-luminosity: ${this.state.luminosity}%;
               -webkit-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               -moz-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               user-select: ${this.state.mousedown ? 'none' : 'auto'};
@@ -100,7 +100,14 @@ injectGlobal`
   }
 
   :root {
-    --primary: deepskyblue;
+    --primary: hsla(var(--primary-hue), 
+                    var(--primary-saturation), 
+                    var(--primary-luminosity), 
+                    var(--primary-alpha));
+    --primary-hue: 195;
+    --primary-saturation: 100%;
+    --primary-luminosity: 50%;
+    --primary-alpha: 1;
     --gray: #333;
     --white: white;
     --font-sans: helvetica, arial, sans-serif;
