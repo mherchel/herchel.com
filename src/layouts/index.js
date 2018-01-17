@@ -223,8 +223,10 @@ injectGlobal`
     line-height: 1.2;
   }
 
+  iframe.twitter-tweet,
   twitterwidget {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .content {
