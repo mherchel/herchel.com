@@ -100,6 +100,7 @@ You can accomplish the same thing by using *repeat syntax*. This also creates th
 
 ```css
 .grid {
+  display: grid;
   grid-template-columns: repeat(3, 200px);
 }
 ```
@@ -108,6 +109,7 @@ You can mix and match the regular syntax and repeat syntax. This example creates
 
 ```css
 .grid {
+  display: grid;
   grid-template-columns: 300px repeat(3, 200px);
 }
 ```
@@ -118,6 +120,7 @@ Instead of margins, you specify the gap between grid children with the `grid-gap
 
 ```css
 .grid {
+  display: grid;
   grid-gap: 20px; /* All rows and columns will have 20px gap. */
   grid-gap: 20px 40px; /* Columnns will have 20px gap. Rows will have 40px gap. */
 
@@ -132,6 +135,7 @@ Instead of margins, you specify the gap between grid children with the `grid-gap
 
 ```css
 .grid {
+  display: grid;
   grid-template-columns: 200px repeat(3, minmax(100px, 200px));
 }
 ```
@@ -146,6 +150,8 @@ If the first column is `2fr` and the next two columns are each `1fr`, then the f
 
 ```css
 .grid {
+  display: grid;
+
   /* Each of the three columns will take up 33.33% width. */
   grid-template-columns: repeat(3, 1fr);
 
@@ -164,6 +170,8 @@ If the first column is `2fr` and the next two columns are each `1fr`, then the f
 
 ```css
 .grid {
+  display: grid;
+
   width: 1000px;
   grid-template-columns: repeat(autofill, 200px);
 }
@@ -175,6 +183,7 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 ```css
 .grid {
+  display: grid;
   grid-template-columns: repeat(autofill, minmax(200px, 1fr));
 }
 ```
@@ -185,6 +194,8 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 ```css
 .grid {
+  display: grid;
+  
   /* All auto-generated rows will have 30px height */
   grid-auto-rows: 30px;
 }
@@ -198,10 +209,16 @@ You can fix this by using `grid-auto-flow: dense;`. Note that this will cause th
 
 ```css
 .grid {
+  display: grid;
+
   /* Enable masonry like layout */
   grid-auto-flow: dense;
 }
 ```
+
+## Grid Child Syntax
+
+The following properties apply to children of grid containers.
 
 ### Align tracks within a grid
 
@@ -229,10 +246,6 @@ You can also use our flexbox friends `space-between` and `space-around`.
   justify-content: space-between; /* Inserts an equal amount of space between the columns.*/
 }
 ```
-
-## Grid Child Syntax
-
-The following properties apply to children of grid containers.
 
 ### Start a child on a specific column
 
