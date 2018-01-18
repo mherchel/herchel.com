@@ -26,4 +26,4 @@
   * The process of doing it
   * the history of the lullabot podcast
   * My favorite one
-  * 
+  * how i got started w it
