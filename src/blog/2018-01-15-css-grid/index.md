@@ -164,27 +164,27 @@ If the first column is `2fr` and the next two columns are each `1fr`, then the f
 
 ```
 
-### Autofill property
+### Auto-fill property
 
-`autofill` automatically adds columns to the grid layout according to the container width. The example below will create 5 `200px` columns. Note that these columns can be empty if elements don't exist to fill them in.
+`auto-fill` automatically adds columns to the grid layout according to the container width. The example below will create 5 `200px` columns. Note that these columns can be empty if elements don't exist to fill them in.
 
 ```css
 .grid {
   display: grid;
 
   width: 1000px;
-  grid-template-columns: repeat(autofill, 200px);
+  grid-template-columns: repeat(auto-fill, 200px);
 }
 ```
 
-### Autofill + minmax + fr units = Awesome!
+### Auto-fill + minmax + fr units = Awesome!
 
 The syntax below will automatically create as many 200px columns in the row as possible. But, once it cannot fit any more in, it'll stretch each column out equally to fill out the entire width of the container! 😎
 
 ```css
 .grid {
   display: grid;
-  grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
