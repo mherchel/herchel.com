@@ -531,4 +531,15 @@ The downsides of rewriting are lesser browser support, the probability of introd
 
 In my opinion, *if it ain't broke, don't fix it*. But, only you know your web app, and can make the correct decision.
 
+## Want to get started? Below are some CodePen links to play with!
+
+* [Basic Start](https://codepen.io/mherchel/pen/RxqmpN)
+* [AutoFill](https://codepen.io/mherchel/pen/vpQQPd)
+* [Minmax](https://codepen.io/mherchel/pen/EoOdqq)
+* [FR Units](https://codepen.io/mherchel/pen/VyVVyb)
+* [Masonry](https://codepen.io/mherchel/pen/NXEepK)
+* [Full Width Row](https://codepen.io/mherchel/pen/baQZax)
+* [Named Areas](https://codepen.io/mherchel/pen/goQEZK)
+
+
 *Thanks to [Wes Ruvalcaba](https://twitter.com/wesruv) and [John Tucker](https://twitter.com/larkintuckerllc) for helping to review this post.*
