@@ -31,13 +31,10 @@ class Template extends React.Component {
   handleMouseMove(e) {
     const hueIncrement = window.innerHeight / 360
     const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
-    const mouseXPositionPercent = (e.clientX / window.innerWidth) * 100
-    const hueValue = mouseYPositionPercent * hueIncrement
+    const lightness = (e.clientX / window.innerWidth) * 100
+    const hue = mouseYPositionPercent * hueIncrement
 
-    this.setState({
-      hue: hueValue,
-      lightness: mouseXPositionPercent
-    })
+    this.setState({ hue, lightness })
   }
   componentDidMount() {
     document.addEventListener('mousedown', this.handleMouseDown)
