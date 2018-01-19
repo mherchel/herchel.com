@@ -14,8 +14,6 @@ class Template extends React.Component {
     this.handleMouseMove = this.handleMouseMove.bind(this)
     this.state = {
       mousedown: false,
-      xpos: 0,
-      ypos: 0,
       hue: 195,
       lightness: 50
     }
@@ -37,8 +35,6 @@ class Template extends React.Component {
     const hueValue = mouseYPositionPercent * hueIncrement
 
     this.setState({
-      xpos: e.clientX,
-      ypos: e.clientY,
       hue: hueValue,
       lightness: mouseXPositionPercent
     })
