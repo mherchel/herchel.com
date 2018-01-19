@@ -57,8 +57,8 @@
       "path---philosophy-f8f2f2235c0cec2b21e4.js.map"
     ],
     "path---index": [
-      "path---index-cdc09eafb93e3993bb62.js",
-      "path---index-cdc09eafb93e3993bb62.js.map"
+      "path---index-f7efb954e56c957815c9.js",
+      "path---index-f7efb954e56c957815c9.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-af867a89f70887e9e861.js",
@@ -86,6 +86,10 @@
       "path---2015-06-09-advice-newbie-frontend-developer-4f72c0c680dff924d6bc.js",
       "path---2015-06-09-advice-newbie-frontend-developer-4f72c0c680dff924d6bc.js.map"
     ],
+    "path---variables": [
+      "path---variables-bbbb70cf62508c3d8707.js",
+      "path---variables-bbbb70cf62508c3d8707.js.map"
+    ],
     "path---computer": [
       "path---computer-ed57e4c2c4204d3498ac.js",
       "path---computer-ed57e4c2c4204d3498ac.js.map"
@@ -103,22 +107,18 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-5d846f20b59c0ca89763.js",
+      "app-2199a80fe77e87ca6ee3.js",
       "build-js-styles.css",
-      "app-5d846f20b59c0ca89763.js.map",
+      "app-2199a80fe77e87ca6ee3.js.map",
       "build-js-styles.css.map"
     ],
     "path---2018-01-15-css-grid": [
-      "path---2018-01-15-css-grid-95812d0c8552a1ab231d.js",
-      "path---2018-01-15-css-grid-95812d0c8552a1ab231d.js.map"
+      "path---2018-01-15-css-grid-76f10f4192f1265af1ca.js",
+      "path---2018-01-15-css-grid-76f10f4192f1265af1ca.js.map"
     ],
     "path---2014-03-08-forida-drupalcamp-presentation-notes": [
       "path---2014-03-08-forida-drupalcamp-presentation-notes-a5fb15746369ec4ccd91.js",
       "path---2014-03-08-forida-drupalcamp-presentation-notes-a5fb15746369ec4ccd91.js.map"
-    ],
-    "path---grid-links": [
-      "path---grid-links-83af49c9dbb5f8c62adb.js",
-      "path---grid-links-83af49c9dbb5f8c62adb.js.map"
     ],
     "component---src-pages-events-js": [
       "component---src-pages-events-js-81785550bd5d1c8c0c3b.js",
