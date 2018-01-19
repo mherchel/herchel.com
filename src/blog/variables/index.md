@@ -2,7 +2,7 @@
 title: Making Rainbows with CSS Variables and React
 date: "2018-01-20T00:00:00.000Z"
 subtitle: "🌈"
-display: "true"
+display: "false"
 ---
 I added an _easter egg_ to my blog last week. If you click and drag the background (you have to be on a screen wider than 1000px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it. Here's how it's done and why it's performant (sometimes).
 
