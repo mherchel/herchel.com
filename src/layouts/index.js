@@ -17,7 +17,7 @@ class Template extends React.Component {
       xpos: 0,
       ypos: 0,
       hue: 195,
-      luminosity: 50
+      lightness: 50
     }
   }
   handleMouseDown(e) {
@@ -31,7 +31,7 @@ class Template extends React.Component {
     document.removeEventListener('mousemove', this.handleMouseMove)
   }
   handleMouseMove(e) {
-    const hueIncrement = window.innerHeight / 255
+    const hueIncrement = window.innerHeight / 360
     const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
     const mouseXPositionPercent = (e.clientX / window.innerWidth) * 100
     const hueValue = mouseYPositionPercent * hueIncrement
@@ -40,7 +40,7 @@ class Template extends React.Component {
       xpos: e.clientX,
       ypos: e.clientY,
       hue: hueValue,
-      luminosity: mouseXPositionPercent
+      lightness: mouseXPositionPercent
     })
   }
   componentDidMount() {
@@ -65,7 +65,7 @@ class Template extends React.Component {
           <style>{`
             :root {
               --primary-hue: ${this.state.hue};
-              --primary-luminosity: ${this.state.luminosity}%;
+              --primary-lightness: ${this.state.lightness}%;
               -webkit-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               -moz-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               user-select: ${this.state.mousedown ? 'none' : 'auto'};
@@ -102,11 +102,11 @@ injectGlobal`
   :root {
     --primary: hsla(var(--primary-hue), 
                     var(--primary-saturation), 
-                    var(--primary-luminosity), 
+                    var(--primary-lightness), 
                     var(--primary-alpha));
     --primary-hue: 195;
     --primary-saturation: 100%;
-    --primary-luminosity: 50%;
+    --primary-lightness: 50%;
     --primary-alpha: 1;
     --gray: #333;
     --white: white;
@@ -127,32 +127,32 @@ injectGlobal`
     font-family: var(--font-sans);
     transition: 0.2s;
 
-    &:before {
-      content: "";
-      position: fixed;
-      z-index: -1;
-      backface-visibility: hidden;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: url(/bg-boxes.jpg);
-      opacity: 0.4;
-      filter: grayscale(100%) invert(100%);
-    }
+      &:before {
+        content: "";
+        position: fixed;
+        z-index: -1;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url(/bg-boxes.jpg);
+        opacity: 0.4;
+        filter: grayscale(100%) invert(100%);
+      }
 
-    &:after {
-      content: "";
-      position: fixed;
-      z-index: -1;
-      backface-visibility: hidden;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-image: linear-gradient(to bottom, var(--primary), transparent 70%);
+      &:after {
+        content: "";
+        position: fixed;
+        z-index: -1;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, var(--primary), transparent 70%);
+      }
     }
-  }
 
   h1, h2, h3 {
     line-height: 1.4;
