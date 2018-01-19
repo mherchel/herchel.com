@@ -4,13 +4,15 @@ date: "2018-01-20T00:00:00.000Z"
 subtitle: "🌈"
 display: "false"
 ---
-I added an _easter egg_ to my blog last week. If you click and drag the background (you have to be on a screen wider than 1000px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it. Here's how it's done and why it's performant (sometimes).
+I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it and looks flippin' sweet. Here's how it's done and why it's performant (sometimes).
+
+![Napoleon Dynamite Meme](./sweet.jpg)
 
 Here's a [video of the color changing in action](./color-changing-variables.mp4), in case you're on mobile.
 
 ## First, let's set up the fixed background
 
-Before we can start messing with variables or React, let's get the background set up.
+Before we can start messing with variables or React, let's get the background setup.
 
 My default background color is `deepskyblue`, which is a named color. 
 
@@ -22,7 +24,7 @@ body {
 
 For the background image, I'm using a pattern from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/) that can be downloaded [here](https://www.toptal.com/designers/subtlepatterns/subtle-grey/). 
 
-I want the background image to be fixed (meaning that it won't move when scrolled), but that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the page will continuously repaint on scroll. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
+I want the background image to be fixed (meaning that it won't move when scrolled). But, that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the page will continuously repaint on scroll. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
 
 To get around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own composite layer using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
 
@@ -70,7 +72,7 @@ Here's what it looks like now.
 
 Looking good! But, we still need to add that fade that's near the top. To do this, we're using a [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) fading between `deepskyblue` and `transparent`. 
 
-Because we also do not want this to scroll, we're using the `::after` pseudo element on the `body` tag.
+Because we also do not want this to scroll, we're using the `::after` pseudo element on the `body` tag in a similar fashion to what we did before.
 
 ```css
 body:after {
@@ -92,7 +94,7 @@ Now it looks right! But, there's a problem. We're declaring `deepskyblue` twice.
 
 [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) (aka CSS Custom Properties) are awesome. Let's get started. 
 
-First we'll add the variable to the `:root` element, which is the HTML element. We call this `--primary` because it's the primary color. Variables are always prepended with double-hyphens.
+First we'll add the variable to the `:root` element (which is the `<html>` element). We call this `--primary` because it's the primary color. Variables are always prepended with double-hyphens.
 
 ```css
 :root {
@@ -138,7 +140,7 @@ body {
   background-color: hsl(195, 100%, 50%, 1); /* This is the same as deepskyblue. */
 }
 ```
-Because we're planning on manipulating the hue, and the lightness separately, let's split each value into their own variables and combine all of those into `--primary`.
+Because we're planning on manipulating the hue, and the lightness separately, let's split each value into their own CSS variables and combine all of those into the `--primary` variable.
 
 ```css
 :root {
