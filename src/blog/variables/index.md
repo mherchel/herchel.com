@@ -6,14 +6,11 @@ display: "false"
 ---
 I added an _easter egg_ to my blog last week. If you click and drag the background (you have to be on a screen wider than 1000px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it. Here's how it's done and why it's performant (sometimes).
 
-<figure>
-    <video width="100%" controls  muted>
-      <source src="./color-changing-variables.mp4" type="video/mp4">
-    </video>
-    <figcaption>Here's a video of the color changing in action, in case you're on mobile.</figcaption>
-</figure>
+Here's a [video of the color changing in action](./color-changing-variables.mp4), in case you're on mobile.
 
-## First, let's set everything up without variables or React
+## First, let's set up the fixed background
+
+Before we can start messing with variables or React, let's get the background set up.
 
 My default background color is `deepskyblue`, which is a named color. 
 
@@ -27,7 +24,7 @@ For the background image, I'm using a pattern from [Subtle Patterns](https://www
 
 I want the background image to be fixed (meaning that it won't move when scrolled), but that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the page will continuously repaint on scroll. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
 
-To get around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own composite layer. This will mitigate any scrolling issues.
+To get around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own composite layer using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
 
 ```css
 body:before {
@@ -43,7 +40,7 @@ body:before {
 }
 ```
 
-Now the background image is taking up the full width of the screen and doesn't scroll &mdash; but, it doesn't look right. We cannot see the `background-color` underneath.
+Now the background image is taking up the full width of the screen and doesn't scroll &mdash; but, it doesn't look right yet. We cannot see the color underneath.
 
 ![Screenshot](./bg-1.jpg)
 
@@ -67,6 +64,8 @@ body:before {
 }
 ```
 
+Here's what it looks like now.
+
 ![Screenshot](./bg-2.jpg)
 
 Looking good! But, we still need to add that fade that's near the top. To do this, we're using a [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) fading between `deepskyblue` and `transparent`. 
@@ -87,13 +86,13 @@ body:after {
 }
 ```
 
-Now it looks right! But, there's a problem. We're declaring the color (`deepskyblue`) twice. What can we do about that?
+Now it looks right! But, there's a problem. We're declaring `deepskyblue` twice. What can we do about that?
 
 ## CSS Variables to the rescue!
 
 [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) (aka CSS Custom Properties) are awesome. Let's get started. 
 
-First we'll add the variable to the `:root` element, which is the HTML element. 
+First we'll add the variable to the `:root` element, which is the HTML element. We call this `--primary` because it's the primary color. Variables are always prepended with double-hyphens.
 
 ```css
 :root {
@@ -101,7 +100,7 @@ First we'll add the variable to the `:root` element, which is the HTML element.
 }
 ```
 
-Then we can change around the background color, and the linear-gradient.
+Then we can change around the background color, and the linear-gradient using the `var()` function.
 
 ```css
 body {
@@ -130,21 +129,61 @@ Looking good, but how can we manipulate the colors?
 
 ## Convert the colors to HSLA
 
-HSLA stands for **H**ue, **S**aturation, **L**ightness, and **A**lpha. 
+We're going to use HSLA colors here. HSLA stands for **H**ue, **S**aturation, **L**ightness, and **A**lpha. This means that we can change the any of these values individually.
 
-Explain set up
-Background image filter opacity
-background
-https://www.toptal.com/designers/subtlepatterns/
+We can use an [online color converter](https://www.w3schools.com/colors/colors_converter.asp) to do the job.
 
-Changing the color to a variable
+```css
+body {
+  background-color: hsl(195, 100%, 50%, 1); /* This is the same as deepskyblue. */
+}
+```
+Because we're planning on manipulating the hue, and the lightness separately, let's split each value into their own variables and combine all of those into `--primary`.
 
-use the variable across the site
-a, h3, selection
+```css
+:root {
+  --primary: hsla(var(--primary-hue), 
+                  var(--primary-saturation), 
+                  var(--primary-lightness), 
+                  var(--primary-alpha));
+  --primary-hue: 195;
+  --primary-saturation: 100%;
+  --primary-lightness: 50%;
+  --primary-alpha: 1;
+}
+```
+*Now we're cooking with gas... err... variables!*
+
+But we still need to change these variables via React.
+
+## Bringing in ReactJS
+
+The first thing we need to do is to track the mouse movement via the [mousemove](https://developer.mozilla.org/en-US/docs/Web/Events/mousemove) event.
+
+
+I create a 
+
+```js
+handleMouseMove(e) {
+  const hueIncrement = window.innerHeight / 360
+  const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
+  const mouseXPositionPercent = (e.clientX / window.innerWidth) * 100
+  const hueValue = mouseYPositionPercent * hueIncrement
+
+  this.setState({
+    xpos: e.clientX,
+    ypos: e.clientY,
+    hue: hueValue,
+    lightness: mouseXPositionPercent
+  })
+}
+  ```
 
 Changing the variable to more variables
 
 Bind the variables to react state
+
+react helmet
 
 Detecting the mouse position
  Only do so on click
