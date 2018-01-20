@@ -39,6 +39,9 @@ class EventIndex extends React.Component {
               <article className={eventStyles} key={date}>
                 <h3><a target="_blank" href={url}>{title}</a></h3>
                 <div className="meta">{date} in {location}</div>
+                {status == 'speaking' &&
+                  <div className="speaking">Speaking</div>
+                }
               </article>
             )
           })}
@@ -55,6 +58,9 @@ class EventIndex extends React.Component {
               <article className={eventStyles} key={date}>
                 <h3><a target="_blank" href={url}>{title}</a></h3>
                 <div className="meta">{date} in {location}</div>
+                {status == 'speaking' &&
+                  <div className="speaking">Spoke</div>
+                }
               </article>
             )
           })}
@@ -99,15 +105,6 @@ const eventStyles = css`
     margin-bottom: 0;
   }
 
-  h3 {
-    font-size: 18px;
-    margin: 0;
-  }
-
-  .meta {
-    font-size: 16px;
-  }
-
   &:before {
     content: "";
     position: absolute;
@@ -130,7 +127,26 @@ const eventStyles = css`
     height: var(--width); 
     border-radius: 50%;
     background: var(--primary);
+  }
 
+  h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .meta {
+    font-size: 16px;
+  }
+
+  .speaking {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    padding: 5px 10px;
+    background: var(--primary);
+    color: white;
+    font-size: 16px;
+    transform: rotate(10deg);
   }
 `
 
