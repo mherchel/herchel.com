@@ -9,7 +9,7 @@ I'm looking forward to 2018 with excitement and a bit of trepidation.
 ## Technical Goals
 * Continue learning ReactJS.
 * Learn CSS Grid -- I'm already doing this.
-* Speak at a non-Drupal front-end conference. It's harder to get sessions excepted than you'd think.
+* Speak at a non-Drupal front-end conference. It's harder to get sessions accepted than you'd think.
 * Work on a Drupal 8 and/or decoupled JavaScript project at Lullabot.
 
 ## Parenting Goals
