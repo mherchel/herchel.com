@@ -232,7 +232,7 @@ injectGlobal`
     font-family: var(--font-serif);
     color: #666;
     font-size: 22px;
-    line-height: 1.6;
+    line-height: 1.8;
 
     @media (min-width: ${vars.breakpoints.navChange}) {
       padding: 40px;
