@@ -6,29 +6,60 @@ display: "false"
 ---
 On every new project I try to change one or two tools and/or techniques. This is a good balance, because if I change too many things, I get bogged down in the details and functionality of new tools. But if I change nothing, I never get the chance to learn new tools, and increase my productivity.
 
-For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text, which has a text-based interface.
+For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text to [Visual Studio Code](https://code.visualstudio.com/).
+
 ## Why the switch?
+
+I've been using Sublime for over 5 years. Wow &mdash; time goes fast when you're having fun. I've been hearing from some coworkers and friends that Visual Studio Code has really great JavaScript highlighting and is just *nice*.
+
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What text editor are you using for programming these days?</p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/status/951924123357376512?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
 
+I saw the tweet above as I was writing this article, which further solidifies the experiment.
 
-## My background
+## My background and perspective
 
-I've been developing for the web since 2001, and I started out using Macromedia Dreamweaver and stuck with that through the end of the decade. Eventually, I exclusively used the code-only view because I liked the syntax highlighting. 
+I've been developing for the web since 2001, and I started out using Macromedia Dreamweaver and stuck with that through the end of the decade (using the code-only view for the majority of this time).
 
-In 2011, I switched to Sublime Text 2, which was amazing. It was fast, lightweight, and clean. I installed various plugins including Emmet, ESLint, Sass, and more. I especially liked the multiple cursors functionality. 
+In 2012, I switched to Sublime Text 2, which was amazing. It was fast, lightweight, and clean. I installed various plugins including Emmet, ESLint, Sass, and more. I especially liked the multiple cursors functionality. 
 
-During this time, I also switched from developing on Windows, to developing on OSX. 
+I also started using PHPStorm, not just for PHP, but for jQuery. I liked the built in intellisense (autocomplete, quick info, list parameters, etc) that was offered in PHPStorm, but not in Sublime.
 
-When I started at Lullabot, I also started using PHPStorm, not just for PHP, but for jQuery. I liked the built in intelisense. 
+### What I didn't like about Sublime
 
-on Mac
-Dreamweaver
-Sublime
-PHPStorm
+Sublime is fast, but it's bare-bones. In order to get to a nice configuration, you need to install and configure many plugins such as [Package Control](https://packagecontrol.io/packages/Package%20Control), [Emmet](https://packagecontrol.io/packages/Emmet), [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements), [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter), [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter), etc.
 
-## VSCode's plugin management is 👌
+Sublime requires a lot of configuration, it has questionable code highlighting, and linting integration not super tight (even with Sublime Linter).
 
-VSCode's plugin handling is great. It's easier than Sublime's plugin handling because of a number of reasons.
+### What I didn't like about PHPStorm
+
+PHPStorm seemed slow. It's slow to open &mdash; and although it's very feature packed, it's frequently hard to find what you're looking to do.
+
+## About VSCode
+
+Visual Studio Code is weird. It's created by Microsoft, which gives it away for free. In addition to Windows, they also support OSX and Linux. Weird. 
+
+It's built on top of [Electron](https://electronjs.org/), which allows for the development of desktop apps using Chromium and Node, which are web development framework / runtimes.
+
+VSCode occupies the sweet spot between IDE and text editor. It's fairly quick to launch &mdash; although not as quick as Sublime Text. But, that's not a huge deal. I have my editor open all day, as opposed to continually closing and relaunching. While the editor is open, it seems just as fast 😎.
+
+## VSCode Features
+
+VSCode comes with many features standard and enabled out of the box!
+
+### Intellisense / Autocomplete
+
+This is enabled out of the box. If you're using JavaScript, it seems to work great &mdash; on par with PHPStorm and better than Sublime. 
+
+<figure border>
+    <video width="100%" autoplay controls loop muted>
+      <source src="./intellisense.mp4" type="video/mp4">
+    </video>
+    <figcaption>Automatic completion in VSCode</figcaption>
+</figure>
+
+### VSCode's plugin management is 👌
+
+VSCode's plugin handling is great. It's easier than Sublime's plugin handling, which is all text command based.
 
 1. The plugin management interface is easy to find. The plugin dashboard has its own icon to the left of the directory tree.
 2. It will recommend plugins to you based on the types of files that you open. If I open lots of markdown files, it will recommend a popular markdown plugin. If I open lots of JavaScript files, it will show me plugins for that.
