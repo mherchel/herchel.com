@@ -329,7 +329,7 @@ We have one issue though. When dragging the mouse across the screen, it highligh
 class Template extends React.Component {
   // ...
   render() {
-å    return (
+    return (
       <div className={layoutStyles}>
         <Helmet>
           <style>{`
