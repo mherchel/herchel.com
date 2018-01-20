@@ -73,6 +73,7 @@ class Template extends React.Component {
           {children()}
         </main>
         <footer className={footerStyles}>
+          <span className="copyright">&copy;2018 Mike Herchel</span>
           <span className="developed">Developed using <a target="_blank" href="http://gatsbyjs.org">GatsbyJS</a></span>
           <span className="github">Submit a PR <a target="_blank" href="https://github.com/mherchel/herchel.com">on GitHub</a></span>
         </footer>
@@ -325,7 +326,7 @@ const footerStyles = css`
   justify-content: flex-end;
   color: rgba(255, 255, 255, 0.8);
 
-  @media (min-width: 500px) {
+  @media (min-width: 700px) {
     flex-direction: row;
     align-items: center;
 
