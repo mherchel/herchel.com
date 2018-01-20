@@ -1,22 +1,22 @@
 ---
 title: Making Rainbows with CSS Variables and React
-date: "2018-01-20T00:00:00.000Z"
-subtitle: "🌈"
+date: "2018-01-22T00:00:00.000Z"
+subtitle: "Mixing CSS Custom Properties with ReactJS 🌈 "
 display: "false"
 ---
 I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the page's primary color will change. It's pretty silly, but I had a lot of fun doing it and *I think* it looks pretty sweet. 
 
 ![Napoleon Dynamite Meme](./sweet.jpg)
 
-Here's a [video of the color changing in action](./color-changing-variables.mp4), in case you're on mobile.
+Here's a [video of the color changing in action](./color-changing-variables.mp4), just in case you're on mobile.
 
-Anywho... here's how it's done and why it's performant (sometimes).
+Anywho... here's how it's done and why it's performant.
 
 ## First, let's set up the fixed background
 
 Before we can start messing with CSS variables or React, let's get the background setup.
 
-My default background color is `deepskyblue`, which is a named color. 
+My default background color is `deepskyblue`. 
 
 ```css
 body {
@@ -26,7 +26,7 @@ body {
 
 For the background image, I'm using a pattern from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/) that can be downloaded [here](https://www.toptal.com/designers/subtlepatterns/subtle-grey/). 
 
-I want the background image to be fixed (meaning that it won't move when scrolled). But, that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the page will continuously repaint on scroll. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
+I want the background image to be fixed (meaning that it won't move when scrolled). But, that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the browser will continuously [repaint](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas) while you're scrolling. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
 
 To work around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own [composite layer](https://www.html5rocks.com/en/tutorials/speed/layers/) using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
 
@@ -72,7 +72,7 @@ Here's what it looks like now.
 
 ![Screenshot](./bg-2.jpg)
 
-Looking good! But, we still need to add that fade that's near the top. To do this, we're using a [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) fading between `deepskyblue` and `transparent`. 
+Looking good! But, we still need to add that sweet fade that's near the top. To do this, we're using a [linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) fading between `deepskyblue` and `transparent`. 
 
 Because we also do not want this to scroll, we're using the `::after` pseudo element on the `body` tag in a similar fashion to what we did before.
 
@@ -135,14 +135,14 @@ Looking good, but how can we manipulate the colors?
 
 We're going to use HSLA colors here. HSLA stands for **H**ue, **S**aturation, **L**ightness, and **A**lpha. This means that we can change the any of these values individually.
 
-We can use an [online color converter](https://www.w3schools.com/colors/colors_converter.asp) to convert from hex to HSLA.
+We can use an [online color converter](https://www.w3schools.com/colors/colors_converter.asp) to convert from `deepskyblue` to HSLA.
 
 ```css
 body {
   background-color: hsl(195, 100%, 50%, 1); /* This is the same as deepskyblue. */
 }
 ```
-Because we're planning on manipulating the hue, and the lightness separately, let's split each value into their own CSS variables and combine all of those into the `--primary` variable.
+Because we're planning on manipulating the hue and lightness separately, let's split each value into their own CSS variable and *then* combine all of those into the `--primary` variable.
 
 ```css
 :root {
@@ -158,15 +158,15 @@ Because we're planning on manipulating the hue, and the lightness separately, le
 ```
 *Now we're cooking with gas... err... variables!*
 
-But we still need to change these variables via React.
+Pretty neat! But, we still need to change these variables into React.
 
 ## Bringing in ReactJS
 
-Updating the variables would be pretty easy to do with vanilla JavaScript, but since this blog is using React, we're going to make use of that.
+Updating the variables would be pretty easy to do with vanilla JavaScript, but since this blog is using [ReactJS](https://reactjs.org/), we're going to make use of that.
 
 The first thing we need to do is keep track of current *hue* and *lightness* via React's state system. 
 
-### Set up State
+### Set up state
 
 ```js
 class Template extends React.Component {
@@ -185,7 +185,7 @@ class Template extends React.Component {
 
 ### Track mouse movement
 
-Next, we need to do track the mouse movement via the [mousemove](https://developer.mozilla.org/en-US/docs/Web/Events/mousemove) event and calculate and then update those values.
+Next, we track the mouse movement via the `mousemove` event listener, and we calculate and then update the hue and lightness based on the mouse's X and Y position.
 
 ```js
 class Template extends React.Component {
@@ -211,13 +211,13 @@ class Template extends React.Component {
 }
 ```
 
-We're passing in the event object into this method. `e.clientX` and `e.clientY` will return the mouse's position within the viewport.
+We pass the event object into this method. `e.clientX` and `e.clientY` will return the mouse's position within the viewport.
 
 ### Set up event listeners
 
-The `mousemove` event won't fire unless we set up an event listener to tell it to do so. For performance reasons, we only want this to be active when the mouse button is actually being pressed.
+The `mousemove` event won't fire unless we set up an event listener to tell it to do so. For performance reasons, we only want this to be active when the mouse button is actively being pressed.
 
-So, we need to set up methods to handle the `mousedown` and `mouseup` events.
+So, we need to set up methods to handle both the `mousedown` and `mouseup` events.
 
 ```js
 class Template extends React.Component {
@@ -232,6 +232,7 @@ class Template extends React.Component {
       lightness: 50
     }
   }
+  // ...
   handleMouseDown(e) {
     if (!e.target.matches(`.${layoutStyles}, .${layoutStyles} *`)) {
       this.setState({ mousedown: true })
@@ -248,17 +249,20 @@ class Template extends React.Component {
 }
 ```
 
-We're passing the event object to the `handleMouseDown` method. We then check to see if the target of the click is within the content area of the page (this is what checks to verify you clicked on the background). 
+We again pass the event object to the `handleMouseDown` method. We then check to see if the target of the click (`e.target`) is within the content area of the page. This is what verifies that the user initially clicked on the background before they started dragging their mouse. 
 
-We're using the [element.matches() API](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches), which takes a standard selector. The selector in this situation is determined by [Emotion JS](https://github.com/emotion-js/emotion), but is referenced through the `layoutStyles` variable. Note that we're also checking to see if the target is anything *within* `layoutStyles`.
+We use the [element.matches() API](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches), which takes a standard selector (similar to what `document.querySelectorAll()` does). This blog uses [Emotion JS](https://github.com/emotion-js/emotion) to handle styling. So we have to pass in Emotion's `layoutStyles` variable. A couple of notes here:
 
-Only then do we change the mousedown state, and add an event listener for `mousemove`.
+* We're adding a dot `.` to the beginning of the `layoutStyles` variable because this is a class name selector.
+* We also check to see if the click target is any element *within* `layoutStyles` by using a `*` descendent selector.
+
+If those selectors *do not* match, we change the mousedown state and add an event listener for `mousemove`.
 
 We also have a method for handling the `mouseup` event, that changes state and removes the event listener (for performance reasons) when the user stops pressing the mouse.
 
 ### Set up event listeners for mouseup and mousedown
 
-We still need event listeners for the `mouseup` and `mousedown` events. To set these up we place them within React's [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method, which is invoked immediately after a component is mounted. 
+We still need event listeners for the `mouseup` and `mousedown` events. To set these up, we place them within React's [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method, which is invoked immediately after a component is mounted. 
 
 ```js
 class Template extends React.Component {
@@ -268,6 +272,7 @@ class Template extends React.Component {
     this.handleMouseUp = this.handleMouseUp.bind(this)
     // ...
   }
+  // ..
   componentDidMount() {
     document.addEventListener('mousedown', this.handleMouseDown)
     document.addEventListener('mouseup', this.handleMouseUp)
@@ -284,15 +289,15 @@ class Template extends React.Component {
 
 Note that we're also removing the event listeners when the component will unmount. This is best practice.
 
-So, at this point we're updating React's state whenever the user drags from the background. But how are we going to update the CSS variables with this information?
+So at this point, we're updating React's state whenever the user drags their mouse starting at the background of the page. But how are we going to update the CSS variables with this information?
 
 ## Updating CSS Variables with React
 
-The next goal is to insert a `<style>` tag to the bottom of my page's `<head>` tag. Within here, I can place CSS and override the original CSS. 
+The next goal is to insert a `<style>` tag to the bottom of my page's `<head>` tag. Within this, I can place new CSS to override the original CSS. 
 
-To place the `<style>` within the `<head>`, I'm using the [React Helmet](https://github.com/nfl/react-helmet) library (which was developed by the [NFL](https://github.com/nfl)!).
+To place the `<style>` within the `<head>`, I'm using the [React Helmet](https://github.com/nfl/react-helmet) library (which was developed by the [NFL](https://github.com/nfl) &mdash; cool!).
 
-> This reusable React component will manage all of your changes to the document head. Helmet takes plain HTML tags and outputs plain HTML tags. It's dead simple, and React beginner friendly.
+> This reusable React component will manage all of your changes to the document head. Helmet takes plain HTML tags and outputs plain HTML tags.
 
 Let's get started.
 
@@ -300,7 +305,6 @@ Let's get started.
 class Template extends React.Component {
   // ...
   render() {
-    const { location, children } = this.props
     return (
       <div className={layoutStyles}>
         <Helmet>
@@ -345,8 +349,8 @@ class Template extends React.Component {
   }
 }
 ```
-Note that we have to use prefixed versions of the property to include Safari and Firefox.
+Note that we have to use prefixed versions of the property for Safari and Firefox.
 
 ## Conclusion
 
-Hopefully you've learned a little about CSS Variables and React. CSS Variables are supported in all the major browser versions, but are not supported in Internet Explorer 11 (which is depreciated by Edge).
+Hopefully you've learned a little about CSS Variables and React. CSS Variables are [supported in all the major browser versions](https://caniuse.com/#search=css%20variables), but are not supported in Internet Explorer 11 (which is depreciated by Edge).
