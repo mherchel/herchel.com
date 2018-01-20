@@ -62,6 +62,7 @@ class Template extends React.Component {
               -webkit-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               -moz-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               user-select: ${this.state.mousedown ? 'none' : 'auto'};
+            }
             `}
           </style>
         </Helmet>
