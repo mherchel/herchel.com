@@ -329,8 +329,7 @@ We have one issue though. When dragging the mouse across the screen, it highligh
 class Template extends React.Component {
   // ...
   render() {
-    const { location, children } = this.props
-    return (
+å    return (
       <div className={layoutStyles}>
         <Helmet>
           <style>{`
@@ -354,3 +353,5 @@ Note that we have to use prefixed versions of the property for Safari and Firefo
 ## Conclusion
 
 Hopefully you've learned a little about CSS Variables and React. CSS Variables are [supported in all the major browser versions](https://caniuse.com/#search=css%20variables), but are not supported in Internet Explorer 11 (which is depreciated by Edge).
+
+The code examples in this post are a little bit simplified. The full implementation can be [viewed on GitHub](https://github.com/mherchel/herchel.com/blob/master/src/layouts/index.js). Check it out!
