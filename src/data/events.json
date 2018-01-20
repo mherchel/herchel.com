@@ -68,6 +68,7 @@
   }, {
     "title": "Florida Drupalcamp",
     "date": "2013-04-20",
+    "status": "speaking",
     "location": "Orlando, FL",
     "url": "http://2013.fldrupalcamp.org"
   }, {
@@ -85,6 +86,7 @@
   }, {
     "title": "Florida Drupalcamp",
     "date": "2014-03-08",
+    "status": "speaking",
     "location": "Orlando, FL",
     "url": "http://2014.fldrupalcamp.org"
   }, {
@@ -126,6 +128,7 @@
   }, {
     "title": "Florida Drupalcamp",
     "date": "2015-04-11",
+    "status": "speaking",
     "location": "Orlando, FL",
     "url": "http://2015.fldrupalcamp.org"
   }, {
