@@ -4,17 +4,17 @@ date: "2018-01-20T00:00:00.000Z"
 subtitle: "🌈"
 display: "false"
 ---
-I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it and looks pretty sweet. 
+I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the page's primary color will change. It's pretty silly, but I had a lot of fun doing it and *I think* it looks pretty sweet. 
 
 ![Napoleon Dynamite Meme](./sweet.jpg)
 
 Here's a [video of the color changing in action](./color-changing-variables.mp4), in case you're on mobile.
 
-Here's how it's done and why it's performant (sometimes).
+Anywho... here's how it's done and why it's performant (sometimes).
 
 ## First, let's set up the fixed background
 
-Before we can start messing with variables or React, let's get the background setup.
+Before we can start messing with CSS variables or React, let's get the background setup.
 
 My default background color is `deepskyblue`, which is a named color. 
 
@@ -28,7 +28,7 @@ For the background image, I'm using a pattern from [Subtle Patterns](https://www
 
 I want the background image to be fixed (meaning that it won't move when scrolled). But, that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the page will continuously repaint on scroll. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
 
-To get around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own composite layer using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
+To work around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own [composite layer](https://www.html5rocks.com/en/tutorials/speed/layers/) using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
 
 ```css
 body:before {
@@ -245,6 +245,7 @@ class Template extends React.Component {
   render() {
     // ...
   }
+}
 ```
 
 We're passing the event object to the `handleMouseDown` method. We then check to see if the target of the click is within the content area of the page (this is what checks to verify you clicked on the background). 
@@ -262,6 +263,9 @@ We still need event listeners for the `mouseup` and `mousedown` events. To set t
 ```js
 class Template extends React.Component {
   constructor() {
+    super()
+    this.handleMouseDown = this.handleMouseDown.bind(this)
+    this.handleMouseUp = this.handleMouseUp.bind(this)
     // ...
   }
   componentDidMount() {
@@ -275,48 +279,74 @@ class Template extends React.Component {
   render() {
     // ...
   }
+}
 ```
 
+Note that we're also removing the event listeners when the component will unmount. This is best practice.
 
+So, at this point we're updating React's state whenever the user drags from the background. But how are we going to update the CSS variables with this information?
 
+## Updating CSS Variables with React
 
+The next goal is to insert a `<style>` tag to the bottom of my page's `<head>` tag. Within here, I can place CSS and override the original CSS. 
 
+To place the `<style>` within the `<head>`, I'm using the [React Helmet](https://github.com/nfl/react-helmet) library (which was developed by the [NFL](https://github.com/nfl)!).
 
+> This reusable React component will manage all of your changes to the document head. Helmet takes plain HTML tags and outputs plain HTML tags. It's dead simple, and React beginner friendly.
 
+Let's get started.
 
+```js
+class Template extends React.Component {
+  // ...
+  render() {
+    const { location, children } = this.props
+    return (
+      <div className={layoutStyles}>
+        <Helmet>
+          <style>{`
+            :root {
+              --primary-hue: ${this.state.hue};
+              --primary-lightness: ${this.state.lightness}%;
+            `}
+          </style>
+        </Helmet>
+        // ...
+      </div>
+    )
+  }
+}
+```
+This is easy! Now when we drag the mouse, the CSS variables will get overridden.
 
+We have one issue though. When dragging the mouse across the screen, it highlights all of the text. To handle this, we're going to temporarily enable the [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select) CSS property, which can disable the ability to select text. We're going to bind this to the mousedown state.
 
+```js
+class Template extends React.Component {
+  // ...
+  render() {
+    const { location, children } = this.props
+    return (
+      <div className={layoutStyles}>
+        <Helmet>
+          <style>{`
+            :root {
+              --primary-hue: ${this.state.hue};
+              --primary-lightness: ${this.state.lightness}%;
+              -webkit-user-select: ${this.state.mousedown ? 'none' : 'auto'};
+              -moz-user-select: ${this.state.mousedown ? 'none' : 'auto'};
+              user-select: ${this.state.mousedown ? 'none' : 'auto'};
+            `}
+          </style>
+        </Helmet>
+        // ...
+      </div>
+    )
+  }
+}
+```
+Note that we have to use prefixed versions of the property to include Safari and Firefox.
 
+## Conclusion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Changing the variable to more variables
-
-Bind the variables to react state
-
-react helmet
-
-Detecting the mouse position
- Only do so on click
-  don't do so when highlighting content
- Update the state on change
-
-disable highlighting text
-
-What's next?
-
-Save state in local storage
+Hopefully you've learned a little about CSS Variables and React. CSS Variables are supported in all the major browser versions, but are not supported in Internet Explorer 11 (which is depreciated by Edge).
