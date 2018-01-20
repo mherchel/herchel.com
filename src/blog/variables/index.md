@@ -158,7 +158,7 @@ Because we're planning on manipulating the hue and lightness separately, let's s
 ```
 *Now we're cooking with gas... err... variables!*
 
-Pretty neat! But, we still need to change these variables into React.
+Pretty neat! But, we still need to be able to manipulate these variables with React.
 
 ## Bringing in ReactJS
 
@@ -185,7 +185,7 @@ class Template extends React.Component {
 
 ### Track mouse movement
 
-Next, we track the mouse movement via the `mousemove` event listener, and we calculate and then update the hue and lightness based on the mouse's X and Y position.
+Next, we track the mouse movement within the `handleMouseMove` method, where we calculate and then update the hue and lightness based on the mouse's X and Y position.
 
 ```js
 class Template extends React.Component {
@@ -215,9 +215,9 @@ We pass the event object into this method. `e.clientX` and `e.clientY` will retu
 
 ### Set up event listeners
 
-The `mousemove` event won't fire unless we set up an event listener to tell it to do so. For performance reasons, we only want this to be active when the mouse button is actively being pressed.
+The `handleMouseMove` method won't fire unless we activate an event listener and point it to the method. For performance reasons, we only want the event listener to be active when the mouse button is actively being pressed.
 
-So, we need to set up methods to handle both the `mousedown` and `mouseup` events.
+To do this, we set up `handleMouseDown` and `handleMouseUp` methods that will be called when the `mousedown` and `mouseup` events are triggered.
 
 ```js
 class Template extends React.Component {
@@ -249,20 +249,24 @@ class Template extends React.Component {
 }
 ```
 
-We again pass the event object to the `handleMouseDown` method. We then check to see if the target of the click (`e.target`) is within the content area of the page. This is what verifies that the user initially clicked on the background before they started dragging their mouse. 
+We again pass the event object to the `handleMouseDown` method. We need to check if the initial click target (which is `e.target`) is outside of the content area. This is what verifies that the user initially clicked on the background before they started dragging their mouse. 
 
-We use the [element.matches() API](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches), which takes a standard selector (similar to what `document.querySelectorAll()` does). This blog uses [Emotion JS](https://github.com/emotion-js/emotion) to handle styling. So we have to pass in Emotion's `layoutStyles` variable. A couple of notes here:
+We use the [element.matches()](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) API, which takes a standard selector (similar to what `document.querySelectorAll()` does). We then pass in a selector. This blog uses [Emotion JS](https://github.com/emotion-js/emotion) to handle styling, so we have to pass in Emotion's `layoutStyles` variable. A couple of notes here:
 
 * We're adding a dot `.` to the beginning of the `layoutStyles` variable because this is a class name selector.
-* We also check to see if the click target is any element *within* `layoutStyles` by using a `*` descendent selector.
+* We also check to see if the click target is a descendent of `layoutStyles` by using a `*` descendent selector.
 
-If those selectors *do not* match, we change the mousedown state and add an event listener for `mousemove`.
+Only if those selectors *do not* match, do we change the mousedown state and add an event listener for `mousemove`.
 
-We also have a method for handling the `mouseup` event, that changes state and removes the event listener (for performance reasons) when the user stops pressing the mouse.
+We also have a method for handling the `mouseup` event that changes state and removes the event listener (for performance reasons) when the user stops pressing the mouse.
 
 ### Set up event listeners for mouseup and mousedown
 
-We still need event listeners for the `mouseup` and `mousedown` events. To set these up, we place them within React's [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method, which is invoked immediately after a component is mounted. 
+We now have our `mousemove` event listener set up, but we still need event listeners for the `mouseup` and `mousedown` events. 
+
+To enable these, we place them within React's [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method, which is invoked immediately after a component is mounted. 
+
+From these event listeners, we call the `handleMouseDown` and `handleMouseUp` events, which can then create the `mousemove` event listener.
 
 ```js
 class Template extends React.Component {
@@ -293,7 +297,7 @@ So at this point, we're updating React's state whenever the user drags their mou
 
 ## Updating CSS Variables with React
 
-The next goal is to inject a `<style>` tag to the bottom of my page's `<head>` tag. Within this, I can place new CSS to override the original CSS. 
+The next goal is to inject a `<style>` tag into my page's `<head>` tag. Within this, I can place new CSS to override the original CSS. 
 
 To place the `<style>` within the `<head>`, I'm using the [React Helmet](https://github.com/nfl/react-helmet) library (which was developed by the [NFL](https://github.com/nfl) &mdash; cool!).
 
@@ -312,6 +316,7 @@ class Template extends React.Component {
             :root {
               --primary-hue: ${this.state.hue};
               --primary-lightness: ${this.state.lightness}%;
+              }
             `}
           </style>
         </Helmet>
@@ -323,7 +328,7 @@ class Template extends React.Component {
 ```
 This is easy! Now when we drag the mouse, the CSS variables will get overridden.
 
-We have one issue though. When dragging the mouse across the screen, it highlights all of the text. To handle this, we're going to temporarily enable the [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select) CSS property, which can disable the ability to select text. We're going to bind this to the mousedown state.
+We have one issue, though. When dragging the mouse across the screen, it highlights all of the text. To remediate this, we temporarily disable the ability to select text with the [user-select](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select) CSS property. We only activate this when the mousedown state is set to `true`.
 
 ```js
 class Template extends React.Component {
@@ -339,6 +344,7 @@ class Template extends React.Component {
               -webkit-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               -moz-user-select: ${this.state.mousedown ? 'none' : 'auto'};
               user-select: ${this.state.mousedown ? 'none' : 'auto'};
+              }
             `}
           </style>
         </Helmet>
