@@ -26,9 +26,9 @@ body {
 
 For the background image, I'm using a pattern from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/) that can be downloaded [here](https://www.toptal.com/designers/subtlepatterns/subtle-grey/). 
 
-I want the background image to be fixed (meaning that it won't move when scrolled). But, that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the browser will continuously [repaint](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas) while you're scrolling. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
+We want the background image to be fixed (meaning that it won't move when scrolled). But, that introduces a performance issue: When scrolling on a page that has `background-attachment: fixed;`, the browser will continuously [repaint](https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas) while you're scrolling. This is expensive for the CPU, and can often lead to situations where the page acts "janky" while scrolling. 
 
-To work around this, I'm creating a `::before` pseudo-element on the `body`, and then fixed positioning it, *and* promoting it to its own [composite layer](https://www.html5rocks.com/en/tutorials/speed/layers/) using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
+To work around this, we create a `::before` pseudo-element on the `<body>` element, and set it to `position: fixed;`. We then promote it to its own [composite layer](https://www.html5rocks.com/en/tutorials/speed/layers/) using `backface-visibility: hidden;`. This will mitigate any scrolling issues.
 
 ```css
 body:before {
@@ -293,7 +293,7 @@ So at this point, we're updating React's state whenever the user drags their mou
 
 ## Updating CSS Variables with React
 
-The next goal is to insert a `<style>` tag to the bottom of my page's `<head>` tag. Within this, I can place new CSS to override the original CSS. 
+The next goal is to inject a `<style>` tag to the bottom of my page's `<head>` tag. Within this, I can place new CSS to override the original CSS. 
 
 To place the `<style>` within the `<head>`, I'm using the [React Helmet](https://github.com/nfl/react-helmet) library (which was developed by the [NFL](https://github.com/nfl) &mdash; cool!).
 
