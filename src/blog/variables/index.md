@@ -4,11 +4,13 @@ date: "2018-01-20T00:00:00.000Z"
 subtitle: "🌈"
 display: "false"
 ---
-I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it and looks flippin' sweet. Here's how it's done and why it's performant (sometimes).
+I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the background color will change. It's pretty silly, but I had a lot of fun doing it and looks pretty sweet. 
 
 ![Napoleon Dynamite Meme](./sweet.jpg)
 
 Here's a [video of the color changing in action](./color-changing-variables.mp4), in case you're on mobile.
+
+Here's how it's done and why it's performant (sometimes).
 
 ## First, let's set up the fixed background
 
@@ -133,7 +135,7 @@ Looking good, but how can we manipulate the colors?
 
 We're going to use HSLA colors here. HSLA stands for **H**ue, **S**aturation, **L**ightness, and **A**lpha. This means that we can change the any of these values individually.
 
-We can use an [online color converter](https://www.w3schools.com/colors/colors_converter.asp) to do the job.
+We can use an [online color converter](https://www.w3schools.com/colors/colors_converter.asp) to convert from hex to HSLA.
 
 ```css
 body {
@@ -160,26 +162,147 @@ But we still need to change these variables via React.
 
 ## Bringing in ReactJS
 
-The first thing we need to do is to track the mouse movement via the [mousemove](https://developer.mozilla.org/en-US/docs/Web/Events/mousemove) event.
+Updating the variables would be pretty easy to do with vanilla JavaScript, but since this blog is using React, we're going to make use of that.
 
+The first thing we need to do is keep track of current *hue* and *lightness* via React's state system. 
 
-I create a 
+### Set up State
 
 ```js
-handleMouseMove(e) {
-  const hueIncrement = window.innerHeight / 360
-  const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
-  const mouseXPositionPercent = (e.clientX / window.innerWidth) * 100
-  const hueValue = mouseYPositionPercent * hueIncrement
-
-  this.setState({
-    xpos: e.clientX,
-    ypos: e.clientY,
-    hue: hueValue,
-    lightness: mouseXPositionPercent
-  })
+class Template extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      hue: 195,
+      lightness: 50
+    }
+  }
+  render() {
+    ...
+  }
 }
-  ```
+```
+
+### Track mouse movement
+
+Next, we need to do track the mouse movement via the [mousemove](https://developer.mozilla.org/en-US/docs/Web/Events/mousemove) event and calculate and then update those values.
+
+```js
+class Template extends React.Component {
+  constructor() {
+    super()
+    this.handleMouseMove = this.handleMouseMove.bind(this)
+    this.state = {
+      hue: 195,
+      lightness: 50
+    }
+  }
+  handleMouseMove(e) {
+    const hueIncrement = window.innerHeight / 360
+    const mouseYPositionPercent = (e.clientY / window.innerHeight) * 100
+    const hue = mouseYPositionPercent * hueIncrement
+    const lightness = (e.clientX / window.innerWidth) * 100
+
+    this.setState({ hue, lightness })
+  }
+  render() {
+    // ...
+  }
+}
+```
+
+We're passing in the event object into this method. `e.clientX` and `e.clientY` will return the mouse's position within the viewport.
+
+### Set up event listeners
+
+The `mousemove` event won't fire unless we set up an event listener to tell it to do so. For performance reasons, we only want this to be active when the mouse button is actually being pressed.
+
+So, we need to set up methods to handle the `mousedown` and `mouseup` events.
+
+```js
+class Template extends React.Component {
+  constructor() {
+    super()
+    this.handleMouseDown = this.handleMouseDown.bind(this)
+    this.handleMouseUp = this.handleMouseUp.bind(this)
+    this.handleMouseMove = this.handleMouseMove.bind(this)
+    this.state = {
+      mousedown: false,
+      hue: 195,
+      lightness: 50
+    }
+  }
+  handleMouseDown(e) {
+    if (!e.target.matches(`.${layoutStyles}, .${layoutStyles} *`)) {
+      this.setState({ mousedown: true })
+      document.addEventListener('mousemove', this.handleMouseMove)
+    }
+  }
+  handleMouseUp(e) {
+    this.setState({ mousedown: false })
+    document.removeEventListener('mousemove', this.handleMouseMove)
+  }
+  render() {
+    // ...
+  }
+```
+
+We're passing the event object to the `handleMouseDown` method. We then check to see if the target of the click is within the content area of the page (this is what checks to verify you clicked on the background). 
+
+We're using the [element.matches() API](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches), which takes a standard selector. The selector in this situation is determined by [Emotion JS](https://github.com/emotion-js/emotion), but is referenced through the `layoutStyles` variable. Note that we're also checking to see if the target is anything *within* `layoutStyles`.
+
+Only then do we change the mousedown state, and add an event listener for `mousemove`.
+
+We also have a method for handling the `mouseup` event, that changes state and removes the event listener (for performance reasons) when the user stops pressing the mouse.
+
+### Set up event listeners for mouseup and mousedown
+
+We still need event listeners for the `mouseup` and `mousedown` events. To set these up we place them within React's [componentDidMount()](https://reactjs.org/docs/react-component.html#componentdidmount) lifecycle method, which is invoked immediately after a component is mounted. 
+
+```js
+class Template extends React.Component {
+  constructor() {
+    // ...
+  }
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleMouseDown)
+    document.addEventListener('mouseup', this.handleMouseUp)
+  }
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleMouseDown)
+    document.removeEventListener('mouseup', this.handleMouseUp)
+  }
+  render() {
+    // ...
+  }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Changing the variable to more variables
 
