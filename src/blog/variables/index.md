@@ -94,7 +94,7 @@ Now it looks right! But, there's a problem. We're declaring `deepskyblue` twice.
 
 ## CSS Variables to the rescue!
 
-[CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) (aka CSS Custom Properties) are awesome. Let's get started. 
+[CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) (aka CSS Custom Properties) are awesome, but don't confuse them with Sass variables. The difference with CSS Variables is that they can be changed at runtime. Let's get started. 
 
 First we'll add the variable to the `:root` element (which is the `<html>` element). We call this `--primary` because it's the primary color. Variables are always prepended with double-hyphens.
 
@@ -361,3 +361,5 @@ Note that we have to use prefixed versions of the property for Safari and Firefo
 Hopefully you've learned a little about CSS Variables and React. CSS Variables are [supported in all the major browser versions](https://caniuse.com/#search=css%20variables), but are not supported in Internet Explorer 11 (which is depreciated by Edge).
 
 The code examples in this post are a little bit simplified. The full implementation can be [viewed on GitHub](https://github.com/mherchel/herchel.com/blob/master/src/layouts/index.js). Check it out!
+
+*Thanks to [John Tucker](https://twitter.com/larkintuckerllc) for helping to review this post.*
