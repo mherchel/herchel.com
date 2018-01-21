@@ -65,7 +65,7 @@ VSCode comes with many features standard and enabled out of the box!
 
 ### Better usability than other editors
 
-VSCode takes into account the little things that happen when editing. 
+VSCode takes into account the *little things* that happen when editing. 
 
 One of my favorite examples is that when you start dragging to collapse the sidebar, it will completely disappear when it gets under a minimum width &mdash; because this is what you're intending to do! 
 
@@ -73,16 +73,16 @@ When you want to expand the sidebar back, you can either drag it, *or* you can c
 
 VSCode also has much of the functionality of Sublime's popular plugins integrated. This makes it quicker to get up and running, and requires no configuration. VSCode includes functionality similar to [Package Control](https://packagecontrol.io/packages/Package%20Control), [Emmet](https://packagecontrol.io/packages/Emmet), [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements), [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter), and more. This makes *a lot* of sense, because the vast majority of users are going to make use of these at a given point.
 
-More things worth mentioning:
+More little usability wins worth mentioning:
 
-* When deleting from my directory tree, VS Code will send the file to my trash as opposed to just deleting it.
+* When deleting from my directory tree, VSCode will send the file to my trash as opposed to just deleting it.
 * You can drag and drop files to move them around your directory tree.
 * Easy to use git tools (more on this later).
 * Easy to use find and replace functionality.
 
-### Intellisense / Autocomplete
+### Intellisense / Autocomplete just "works"
 
-Intellisense includes autocomplete, quick info, list parameters, and more. And, it's enabled out of the box. If you're using JavaScript, it seems to work great &mdash; on par with PHPStorm and better than Sublime. 
+Intellisense includes autocomplete, quick info, list parameters, and more. And, it's enabled out of the box in VSCode. If you're using JavaScript, it seems to work great &mdash; on par with PHPStorm and better than Sublime. I have yet to use VSCode with PHP.
 
 <figure border>
     <video width="100%" autoplay controls loop muted>
@@ -93,7 +93,7 @@ Intellisense includes autocomplete, quick info, list parameters, and more. And, 
 
 ### VSCode's plugin management is top notch
 
-VSCode's plugin handling is great. It's easier than Sublime's plugin handling, which is all text command based.
+VSCode's plugin handling is great. It's easier than Sublime's plugin handling, which is all text based.
 
 1. The plugin management interface is easy to find. The plugin dashboard has its own icon to the left of the directory tree.
 2. It will recommend plugins to you based on the types of files that you open. If I open lots of markdown files, it will recommend a popular markdown plugin. If I open lots of JavaScript files, it will show me plugins for that.
@@ -101,7 +101,11 @@ VSCode's plugin handling is great. It's easier than Sublime's plugin handling, w
 4. It shows your currently installed plugins, and allows you to disable/uninstall them easily. This makes it easy to test-drive and compare plugins.
 5. You can easily search for new plugins using the GUI, or just show the most popular plugins for you to explore.
 
-![VSCode's plugin interface](./plugin-interface-annotated.png)
+<figure>
+    <img src="./plugin-interface-annotated.png" alt="Annotated screeshot of VSCode's plugin interface">
+    <figcaption>Annotated screeshot of VSCode's plugin interface.</figcaption>
+</figure>
+
 ### Here are the plugins that I currently have installed
 
 * [Beautify](https://github.com/HookyQR/VSCodeBeautify) reformats and reindents your JavaScript, CSS, HTML and more.
