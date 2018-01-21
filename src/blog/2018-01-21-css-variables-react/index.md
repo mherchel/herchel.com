@@ -1,8 +1,8 @@
 ---
-title: Making Rainbows with CSS Variables and React
-date: "2018-01-22T00:00:00.000Z"
-subtitle: "Mixing CSS Custom Properties with ReactJS 🌈 "
-display: "false"
+title: Making Rainbows 🌈 with CSS Variables and React
+date: "2018-01-21T00:00:00.000Z"
+subtitle: "Combining CSS Custom Properties with ReactJS"
+display: "true"
 ---
 I added an [easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) to my blog last week. If you click and drag the background (you have to be on a screen wider than 1200px to do so), the page's primary color will change. It's pretty silly, but I had a lot of fun doing it and *I think* it looks pretty sweet. 
 
