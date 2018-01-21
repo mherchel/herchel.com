@@ -4,13 +4,15 @@ date: "2018-01-20T00:00:00.000Z"
 subtitle: "Plugins, keyboard shortcuts and more"
 display: "false"
 ---
-On every new project I try to change one or two tools and/or techniques. This is a good balance, because if I change too many things, I get bogged down in the details and functionality of new tools. But if I change nothing, I never get the chance to learn new tools, and increase my productivity.
+On every new project I try to change one or two tools and/or techniques. 
 
-For my personal blog (you're reading it), I'm switching my text-editor from Sublime Text to [Visual Studio Code](https://code.visualstudio.com/).
+This is a good balance, because if I change too many things, I get bogged down in the details and complexity of new tools &mdash; but if I change nothing, I never get the chance to learn new tools, and increase my productivity.
+
+For my current project, I'm switching my text-editor from Sublime Text to [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Why the switch?
 
-I've been using Sublime for over 5 years (wow &mdash; time goes fast). I've been hearing from some coworkers and friends that Visual Studio Code has really great JavaScript highlighting and is just *nice*.
+I've been using Sublime for over 5 years (wow &mdash; time goes fast). I've been hearing from some coworkers and friends that Visual Studio Code has really great JavaScript syntax highlighting and is just *nice*.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What text editor are you using for programming these days?</p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/status/951924123357376512?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
 
@@ -43,15 +45,15 @@ I also started using PHPStorm, not just for PHP, but for jQuery. I liked the bui
 
 Sublime is fast, but it's bare-bones. In order to get to a nice configuration, you need to install and configure many plugins such as [Package Control](https://packagecontrol.io/packages/Package%20Control), [Emmet](https://packagecontrol.io/packages/Emmet), [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements), [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter), [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter), etc.
 
-Sublime requires a lot of configuration, it has questionable code highlighting, and linting integration not super tight (even with Sublime Linter).
+Sublime requires a lot of configuration, it has questionable syntax highlighting, and linting integration not super tight (even with Sublime Linter).
 
 ### What I didn't like about PHPStorm
 
-PHPStorm seemed slow. It's slow to open &mdash; and although it's very feature packed, it's frequently hard to find what you're looking to do.
+PHPStorm seemed slow and a bit confusing. It's slow to open &mdash; and although it's very feature packed, it's frequently hard to find what you're looking to do. To be fair, the more I use it, the more I know my way around the UI.
 
-## About VSCode
+## About Visual Studio Code
 
-Visual Studio Code is *weird*. It's created by Microsoft, which gives it away for free. In addition to Windows, they also support OSX and Linux. Weird. 
+VSCode is *weird*. It's created by Microsoft, which gives it away for free. In addition to Windows, they also support OSX and Linux. Weird. 
 
 It's built on top of [Electron](https://electronjs.org/), which allows for the development of desktop apps using Chromium and Node, which are web development framework / runtimes.
 
@@ -59,9 +61,9 @@ VSCode occupies the sweet spot between IDE and text editor. It's fairly quick to
 
 ![Visual Studio Code Screenshot](./vscode.jpg)
 
-## VSCode Features
+## Visual Studio Code features
 
-VSCode comes with many features standard and enabled out of the box!
+VSCode comes with a number of features enabled out of the box:
 
 ### Better usability than other editors
 
@@ -106,7 +108,7 @@ VSCode's plugin handling is great. It's easier than Sublime's plugin handling, w
     <figcaption>Annotated screeshot of VSCode's plugin interface.</figcaption>
 </figure>
 
-### Here are the plugins that I currently have installed
+**Plugins that I currently have installed**
 
 * [Beautify](https://github.com/HookyQR/VSCodeBeautify) reformats and reindents your JavaScript, CSS, HTML and more.
 * [Drupal Syntax Highlighting](https://github.com/mastazi/VS-code-drupal) does exactly what you think it does :)
@@ -116,6 +118,26 @@ VSCode's plugin handling is great. It's easier than Sublime's plugin handling, w
 * [Sublime Text Keymap](https://github.com/Microsoft/vscode-sublime-keybindings) adds additional keymaps similar to Sublime Text for VSCode. 
 * [VSCode Icons](https://github.com/vscode-icons/vscode-icons) gives you a different icon for each type of file within your file explorer. This makes it much easier to find the file you're looking for.
 * [VSCode-styled-components](https://github.com/styled-components/vscode-styled-components) allows for CSS highlighting, indentation, and autocomplete when you're using CSS in JS solutions like [Emotion](https://github.com/emotion-js/emotion).
+
+### Git Integration
+
+In the past, I've been a command-line git user. This includes managing branches, commits, merges, and even conflicts.
+
+That being said, VSCode's git integration is *nice*. 
+<figure>
+    <img src="./gitdiff.png" alt="Screenshot of VSCode showing a git diff">
+    <figcaption>VSCode diff feature makes changes easy to understand.</figcaption>
+</figure>
+
+Out of the box, VSCode also highlights changes within the code view. 
+
+<figure>
+    <img src="./notcommitted.png" alt="Screenshot of VSCode highlighting changes in code view">
+    <figcaption>VSCode diff feature makes changes easy to understand.</figcaption>
+</figure>
+
+
+
 
 ## Common Keyboard shortcuts
 
