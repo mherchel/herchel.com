@@ -251,7 +251,7 @@ class Template extends React.Component {
 
 We again pass the event object to the `handleMouseDown` method. We need to check if the initial click target (which is `e.target`) is outside of the content area. This is what verifies that the user initially clicked on the background before they started dragging their mouse. 
 
-We use the [element.matches()](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) API, which takes a standard selector (similar to what `document.querySelectorAll()` does). We then pass in a selector. This blog uses [Emotion JS](https://github.com/emotion-js/emotion) to handle styling, so we have to pass in Emotion's `layoutStyles` variable. A couple of notes here:
+We use the [element.matches()](https://developer.mozilla.org/en-US/docs/Web/API/Element/matches) API, which takes a standard selector (similar to what `document.querySelectorAll()` does). We then pass in a selector. This blog uses [Emotion JS](https://github.com/emotion-js/emotion) to handle styling, so we have to pass in the same `layoutStyles` variable that we pass to Emotion. A couple of notes here:
 
 * We're adding a dot `.` to the beginning of the `layoutStyles` variable because this is a class name selector.
 * We also check to see if the click target is a descendent of `layoutStyles` by using a `*` descendent selector.
