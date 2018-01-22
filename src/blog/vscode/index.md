@@ -6,7 +6,7 @@ display: "false"
 ---
 On every new project I try to change one or two tools and/or techniques. 
 
-This is a good balance, because if I change too many things, I get bogged down in the details and complexity of new tools &mdash; but if I change nothing, I never get the chance to learn new tools, and increase my productivity.
+This is a good balance, because if I change too many things, I get bogged down in the details and complexity of new tools &mdash; but if I change nothing, I never get the chance to learn these new tools, and increase my productivity.
 
 For my current project, I'm switching my text-editor from Sublime Text to [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -55,7 +55,7 @@ PHPStorm seemed slow and a bit confusing. It's slow to open &mdash; and although
 
 VSCode is *weird*. It's created by Microsoft, which gives it away for free. In addition to Windows, they also support OSX and Linux. Weird. 
 
-It's built on top of [Electron](https://electronjs.org/), which allows for the development of desktop apps using Chromium and Node, which are web development framework / runtimes.
+It's built on top of [Electron](https://electronjs.org/), which allows for the development of desktop apps using Chromium and Node.
 
 VSCode occupies the sweet spot between IDE and text editor. It's fairly quick to launch &mdash; although not as quick as Sublime Text. But, that's not a huge deal. I have my editor open all day, as opposed to continually closing and relaunching. While the editor is open, it seems just as fast 😎.
 
@@ -136,12 +136,20 @@ Out of the box, VSCode also highlights changes within the code view.
     <figcaption>VSCode diff feature makes changes easy to understand.</figcaption>
 </figure>
 
+VSCode has a really slick git merge conflict resolution process. You can trigger the merge by opening the command palette (`CMD` + `Shift` + `P`), and then type in "git merge". You'll see a list of branches that you can merge into. If there is a conflict, VSCode will present this UI:
 
+<figure>
+    <img src="./gitmerge.png" alt="Screenshot of VSCode merge conflict resolution utility">
+    <figcaption>VSCode makes merge conflicts easy to overcome.</figcaption>
+</figure>
 
+Check out the "Accept Current Change", "Accept Incoming Change", "Accept Both Changes", and "Compare Changes" links above the blocks. Clicking one of those will do what you expect it to. Note that you still have the save the file after accepting changes.
 
 ## Common Keyboard shortcuts
 
 Avoiding using your mouse or trackpad is vital to coding quickly. To that end, here are some keyboard shortcuts that I use often.
+
+Note that I have the [Sublime Text Keymap](https://github.com/Microsoft/vscode-sublime-keybindings) extension installed.
 
 * `CMD` + `P` Brings up a prompt where you can type in the name of a file, hit enter, and have the file opened.
 * `CMD` + `Shift` + `P` Brings up Command Palette. I frequently use "Change Language Mode".
@@ -149,24 +157,40 @@ Avoiding using your mouse or trackpad is vital to coding quickly. To that end, h
 * `CTRL` + `CMD` + `G` Select all occurrences of highlighted string
 * `CMD` + `D` Select next occurrence of highlighted string
 * `CTRL` + `~` Open up the integrated console. I don't use this daily, but it can be useful if I do not have my multiple monitors.
+* `Opt` + click a function name to go to function definition. This is called *Hyperclick*.
 
 VS Code allows you to easily edit your personal keyboard shortcuts pretty easily under the **Preferences** menu.
 
 ![VSCode's Keyboard Shortcut Editor](./keyboard-shortcuts.png)
 
-## It's the little things
+## Visual Studio Code does debugging!
 
+Like an IDE, VSCode can debug your JavaScript. To get this working add the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension. You'll need to hit the gear icon to the top of the debugger's left panel to edit the `launch.json` file to something similar to this:
 
+```json
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
+```
 
-## Git Diffs
-
-## Git Merges
-
-## Tips
+To launch Chrome with the debugger enabled, click the play button ▶️ to the top of the debugger's left panel. Now you can set breakpoints, watch expressions, view the call stack and more. 
 
 ## How is the speed?
 
 ### Open the current directory in VSCode from the terminal
+
+
 
 You can open the current directory from the command line by typing 
 ```bash
