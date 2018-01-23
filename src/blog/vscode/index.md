@@ -159,6 +159,7 @@ Note that I have the [Sublime Text Keymap](https://github.com/Microsoft/vscode-s
 * `CTRL` + `~` Open up the integrated console. I don't use this daily, but it can be useful if I do not have my multiple monitors.
 * `Opt` + click a function name to go to function definition. This is called *Hyperclick*.
 * `CMD` + `Shift` + **Drag Mouse** - Drags a box to select text. Will not select text outside of box.
+* `code .` - From a command line, you can open up VSCode to the current directory ([setup](https://code.visualstudio.com/docs/setup/mac)).
 
 VS Code allows you to easily edit your personal keyboard shortcuts pretty easily under the **Preferences** menu.
 
@@ -188,10 +189,15 @@ The following `launch.json` config will launch a new version of Chrome. If you w
 
 To launch Chrome with the debugger enabled, click the play button ▶️ to the top of the debugger's left panel. Now you can set breakpoints, watch expressions, view the call stack and more. 
 
-## Tip: Open the current directory in VSCode from the terminal
+Note that VSCode can also debug Python, C++, C#, and can be integrated with PHP's Xdebug.
 
-This is something that I frequently do in Sublime. To open the current directory from the command line, you first [have to do a small bit of setup](https://code.visualstudio.com/docs/setup/mac), and then you can launch using the `code` command.
+## Conclusion
 
-```bash
-$ code .
-```
+I *really* like VSCode. To me, it boils down to the following:
+
+* It keeps the same great features as Sublime (multiple cursors, etc)
+* Better syntax highlighting
+* Git integration &mdash; specifically merge conflict resolution
+* [Excellent documentation](https://code.visualstudio.com/docs)
+
+That being said, I'm still very new to it. It's going to take me months to become fully fluent in its features. But, I'm excited to get started!
