@@ -10,9 +10,11 @@ This is a good balance, because if I change too many things, I get bogged down i
 
 For my current project, I'm switching my text-editor from Sublime Text to [Visual Studio Code](https://code.visualstudio.com/).
 
+![Visual Studio Code Screenshot](./vscode.jpg)
+
 ## Why the switch?
 
-I've been using Sublime for over 5 years (wow &mdash; time goes fast). I've been hearing from some coworkers and friends that Visual Studio Code has really great JavaScript syntax highlighting and is just *nice*.
+I've been using [Sublime](https://www.sublimetext.com/) for over 5 years (wow &mdash; time goes fast). I've been hearing from some coworkers and friends that Visual Studio Code has really great JavaScript syntax highlighting and is just *nice*.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What text editor are you using for programming these days?</p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/status/951924123357376512?ref_src=twsrc%5Etfw">January 12, 2018</a></blockquote>
 
@@ -49,7 +51,7 @@ Sublime requires a lot of configuration, it has questionable syntax highlighting
 
 ### What I didn't like about PHPStorm
 
-PHPStorm seemed slow and a bit confusing. It's slow to open &mdash; and although it's very feature packed, it's frequently hard to find what you're looking to do. To be fair, the more I use it, the more I know my way around the UI.
+PHPStorm seemed slow and a bit confusing. It's slow to open &mdash; and although it's very feature packed, it's frequently hard to find what you're looking to do. To be fair, the more I've been using it, the more I know my way around the UI.
 
 ## About Visual Studio Code
 
@@ -57,15 +59,13 @@ VSCode is *weird*. It's created by Microsoft, which gives it away for free. In a
 
 It's built on top of [Electron](https://electronjs.org/), which allows for the development of desktop apps using Chromium and Node.
 
-VSCode occupies the sweet spot between IDE and text editor. It's fairly quick to launch &mdash; although not as quick as Sublime Text. But, that's not a huge deal. I have my editor open all day, as opposed to continually closing and relaunching. While the editor is open, it seems just as fast 😎.
+VSCode occupies the sweet spot between IDE and text editor. It's fairly quick to launch &mdash; although not as quick as Sublime Text. But, that's not a huge deal. It's quick enough, and I don't frequently relaunch it. While the editor is open, the runtime seems just as fast 😎.
 
 ![Visual Studio Code Screenshot](./vscode.jpg)
 
-## Visual Studio Code features
+VSCode comes with a number of features enabled out of the box. Let's take a look. 
 
-VSCode comes with a number of features enabled out of the box:
-
-### Better usability than other editors
+## Feature: Better usability than other editors
 
 VSCode takes into account the *little things* that happen when editing. 
 
@@ -73,7 +73,7 @@ One of my favorite examples is that when you start dragging to collapse the side
 
 When you want to expand the sidebar back, you can either drag it, *or* you can click on the *files* icon within the left menu bar. This makes it dead-easy for newcomers to figure out the operation.
 
-VSCode also has much of the functionality of Sublime's popular plugins integrated. This makes it quicker to get up and running, and requires no configuration. VSCode includes functionality similar to [Package Control](https://packagecontrol.io/packages/Package%20Control), [Emmet](https://packagecontrol.io/packages/Emmet), [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements), [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter), and more. This makes *a lot* of sense, because the vast majority of users are going to make use of these at a given point.
+VSCode also has much of the functionality of Sublime's popular plugins already integrated. This makes it quicker to get up and running, and requires no configuration. VSCode includes functionality similar to [Package Control](https://packagecontrol.io/packages/Package%20Control), [Emmet](https://packagecontrol.io/packages/Emmet), [Sidebar Enhancements](https://packagecontrol.io/packages/SideBarEnhancements), [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter), and more. This makes *a lot* of sense, because the vast majority of users are going to make use of these at a given point.
 
 More little usability wins worth mentioning:
 
@@ -82,7 +82,7 @@ More little usability wins worth mentioning:
 * Easy to use git tools (more on this later).
 * Easy to use find and replace functionality.
 
-### Intellisense / Autocomplete just "works"
+## Feature: Intellisense / Autocomplete just "works"
 
 Intellisense includes autocomplete, quick info, list parameters, and more. And, it's enabled out of the box in VSCode. If you're using JavaScript, it seems to work great &mdash; on par with PHPStorm and better than Sublime. I have yet to use VSCode with PHP.
 
@@ -93,7 +93,7 @@ Intellisense includes autocomplete, quick info, list parameters, and more. And, 
     <figcaption>Automatic completion in VSCode</figcaption>
 </figure>
 
-### VSCode's plugin management is top notch
+## Feature: VSCode's plugin management is top notch
 
 VSCode's plugin handling is great. It's easier than Sublime's plugin handling, which is all text based.
 
@@ -108,7 +108,7 @@ VSCode's plugin handling is great. It's easier than Sublime's plugin handling, w
     <figcaption>Annotated screeshot of VSCode's plugin interface.</figcaption>
 </figure>
 
-**Plugins that I currently have installed**
+### Tip: Plugins that I currently have installed**
 
 * [Beautify](https://github.com/HookyQR/VSCodeBeautify) reformats and reindents your JavaScript, CSS, HTML and more.
 * [Drupal Syntax Highlighting](https://github.com/mastazi/VS-code-drupal) does exactly what you think it does :)
@@ -119,7 +119,7 @@ VSCode's plugin handling is great. It's easier than Sublime's plugin handling, w
 * [VSCode Icons](https://github.com/vscode-icons/vscode-icons) gives you a different icon for each type of file within your file explorer. This makes it much easier to find the file you're looking for.
 * [VSCode-styled-components](https://github.com/styled-components/vscode-styled-components) allows for CSS highlighting, indentation, and autocomplete when you're using CSS in JS solutions like [Emotion](https://github.com/emotion-js/emotion).
 
-### Git Integration
+## Feature: Git Integration
 
 In the past, I've been a command-line git user. This includes managing branches, commits, merges, and even conflicts.
 
@@ -145,7 +145,7 @@ VSCode has a really slick git merge conflict resolution process. You can trigger
 
 Check out the "Accept Current Change", "Accept Incoming Change", "Accept Both Changes", and "Compare Changes" links above the blocks. Clicking one of those will do what you expect it to. Note that you still have the save the file after accepting changes.
 
-## Common Keyboard shortcuts
+## Tip: Common Keyboard shortcuts
 
 Avoiding using your mouse or trackpad is vital to coding quickly. To that end, here are some keyboard shortcuts that I use often.
 
@@ -158,19 +158,21 @@ Note that I have the [Sublime Text Keymap](https://github.com/Microsoft/vscode-s
 * `CMD` + `D` Select next occurrence of highlighted string
 * `CTRL` + `~` Open up the integrated console. I don't use this daily, but it can be useful if I do not have my multiple monitors.
 * `Opt` + click a function name to go to function definition. This is called *Hyperclick*.
+* `CMD` + `Shift` + **Drag Mouse** - Drags a box to select text. Will not select text outside of box.
 
 VS Code allows you to easily edit your personal keyboard shortcuts pretty easily under the **Preferences** menu.
 
 ![VSCode's Keyboard Shortcut Editor](./keyboard-shortcuts.png)
 
-## Visual Studio Code does debugging!
+## Feature: Visual Studio Code does debugging!
 
-Like an IDE, VSCode can debug your JavaScript. To get this working add the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension. You'll need to hit the gear icon to the top of the debugger's left panel to edit the `launch.json` file to something similar to this:
+Like an IDE, VSCode can debug your JavaScript (both in-browser, and Node). To get this working for Chrome, add the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension. You'll need to hit the gear icon to the top of the debugger's left panel to edit the `launch.json` file to something similar to this:
+
+> The extension operates in two modes - it can launch an instance of Chrome navigated to your app, or it can attach to a running instance of Chrome
+
+The following `launch.json` config will launch a new version of Chrome. If you want to use you want to use the attach method, you need to append `--remote-debugging-port=9222` when launching Chrome. The full documentation for Chrome debugger is [available on GitHub](https://github.com/Microsoft/vscode-chrome-debug).
 
 ```json
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
@@ -186,14 +188,10 @@ Like an IDE, VSCode can debug your JavaScript. To get this working add the [Debu
 
 To launch Chrome with the debugger enabled, click the play button ▶️ to the top of the debugger's left panel. Now you can set breakpoints, watch expressions, view the call stack and more. 
 
-## How is the speed?
+## Tip: Open the current directory in VSCode from the terminal
 
-### Open the current directory in VSCode from the terminal
+This is something that I frequently do in Sublime. To open the current directory from the command line, you first [have to do a small bit of setup](https://code.visualstudio.com/docs/setup/mac), and then you can launch using the `code` command.
 
-
-
-You can open the current directory from the command line by typing 
 ```bash
 $ code .
 ```
-Note [You have to do a small bit of setup](https://code.visualstudio.com/docs/setup/mac) to get this to work.
