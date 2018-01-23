@@ -49,7 +49,7 @@ class Template extends React.Component {
     return (
       <div className={layoutStyles}>
         <Helmet>
-          <link rel="icon" type="image/png" href="favicon.png" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
           <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:image" content="https://herchel.com/herchelshead.jpg" />
