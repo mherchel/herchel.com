@@ -16,3 +16,4 @@ list of apps
 love the USBC
 Battery seems to last a long time
 charges quick
+lack of airdrop

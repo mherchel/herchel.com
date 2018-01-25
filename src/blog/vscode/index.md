@@ -10,7 +10,7 @@ This is a good balance, because if I change too many things, I get bogged down i
 
 For my current project, I'm switching my text-editor from Sublime Text to [Visual Studio Code](https://code.visualstudio.com/).
 
-![Visual Studio Code Screenshot](./vscode.jpg)
+![Photo of my computer with VSCode open](./computer-picture.jpg)
 
 ## Why the switch?
 

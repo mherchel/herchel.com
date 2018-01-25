@@ -15,12 +15,7 @@
 
 ## Ideas
 
-* What its like to work from home
-  * pics of dogs
-  * started working somewhere else
-  * showering
-  * getting stuff done
-  * cleaning
+
 * Lullabot podcast
   * The process of doing it
   * the history of the lullabot podcast
