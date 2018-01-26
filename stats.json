@@ -44,6 +44,10 @@
       "component---src-templates-blog-post-js-2e9a99750eedee209c30.js",
       "component---src-templates-blog-post-js-2e9a99750eedee209c30.js.map"
     ],
+    "path---home": [
+      "path---home-dd67b1942b4358a50e8f.js",
+      "path---home-dd67b1942b4358a50e8f.js.map"
+    ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-ac27ed3b39769c7db67c.js",
       "component---src-layouts-index-js-ac27ed3b39769c7db67c.js.map"
@@ -57,8 +61,8 @@
       "path---philosophy-f8f2f2235c0cec2b21e4.js.map"
     ],
     "path---index": [
-      "path---index-44b259fd8af6c48677cc.js",
-      "path---index-44b259fd8af6c48677cc.js.map"
+      "path---index-d24af2dfa9aecf68ae78.js",
+      "path---index-d24af2dfa9aecf68ae78.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-af867a89f70887e9e861.js",
@@ -77,8 +81,8 @@
       "component---src-pages-404-js-e024986e7caa3f23f96c.js.map"
     ],
     "path---pixel": [
-      "path---pixel-dbbd591c48a5ceb93960.js",
-      "path---pixel-dbbd591c48a5ceb93960.js.map"
+      "path---pixel-2ea707da0555367f5066.js",
+      "path---pixel-2ea707da0555367f5066.js.map"
     ],
     "commons": [
       "commons-7e72e95503b9cd953cf5.js",
@@ -107,17 +111,17 @@
       "component---src-pages-philosophy-js-a68e9fde55b7ac2534a9.js.map"
     ],
     "path---vscode": [
-      "path---vscode-d9ffd8d9450b9fe4d3e5.js",
-      "path---vscode-d9ffd8d9450b9fe4d3e5.js.map"
+      "path---vscode-5d4b1037a92aab3ca7ec.js",
+      "path---vscode-5d4b1037a92aab3ca7ec.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-f74256232cdca5101eb5.js",
+      "app-dd2b25691894cb6213b2.js",
       "build-js-styles.css",
-      "app-f74256232cdca5101eb5.js.map",
+      "app-dd2b25691894cb6213b2.js.map",
       "build-js-styles.css.map"
     ],
     "path---2018-01-15-css-grid": [
