@@ -22,3 +22,7 @@ standing desk
 multiple monitors
 occasional coffeehouse
   do emails
+
+showering
+  * getting stuff done
+  * cleaning
