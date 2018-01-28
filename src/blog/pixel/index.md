@@ -17,3 +17,8 @@ love the USBC
 Battery seems to last a long time
 charges quick
 lack of airdrop
+
+cannot do screenshots
+
+don't know lock screen icons
+don't see battery icon on lock screen

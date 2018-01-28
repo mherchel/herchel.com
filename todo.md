@@ -21,3 +21,9 @@
   * the history of the lullabot podcast
   * My favorite one
   * how i got started w it
+* Apple has incentive to make mobile safari bad
+  * https://medium.com/@firt/pwas-are-coming-to-ios-11-3-cupertino-we-have-a-problem-2ff49fd7d6ea
+  * Have to use Safari's rendering and JS engine
+  * Money they made off app store
+  * What is a PWA
+  * Google on other hand

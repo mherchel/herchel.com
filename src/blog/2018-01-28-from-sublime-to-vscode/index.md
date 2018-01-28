@@ -1,8 +1,8 @@
 ---
 title: From Sublime Text to Visual Studio Code
-date: "2018-01-20T00:00:00.000Z"
+date: "2018-01-28T00:00:00.000Z"
 subtitle: "Plugins, keyboard shortcuts and more"
-display: "false"
+display: "true"
 ---
 On every new project I try to change one or two tools and/or techniques. 
 
