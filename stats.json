@@ -61,8 +61,8 @@
       "path---philosophy-f8f2f2235c0cec2b21e4.js.map"
     ],
     "path---index": [
-      "path---index-940dace89b66f187ea46.js",
-      "path---index-940dace89b66f187ea46.js.map"
+      "path---index-65c2bc7733cb6048cfd9.js",
+      "path---index-65c2bc7733cb6048cfd9.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-af867a89f70887e9e861.js",
@@ -81,8 +81,8 @@
       "component---src-pages-404-js-e024986e7caa3f23f96c.js.map"
     ],
     "path---pixel": [
-      "path---pixel-2ea707da0555367f5066.js",
-      "path---pixel-2ea707da0555367f5066.js.map"
+      "path---pixel-71ead055b56c847d138b.js",
+      "path---pixel-71ead055b56c847d138b.js.map"
     ],
     "commons": [
       "commons-7e72e95503b9cd953cf5.js",
@@ -110,10 +110,6 @@
       "component---src-pages-philosophy-js-a68e9fde55b7ac2534a9.js",
       "component---src-pages-philosophy-js-a68e9fde55b7ac2534a9.js.map"
     ],
-    "path---vscode": [
-      "path---vscode-5d4b1037a92aab3ca7ec.js",
-      "path---vscode-5d4b1037a92aab3ca7ec.js.map"
-    ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
@@ -123,9 +119,9 @@
       "path---2018-01-27-enable-google-home-gsuite-admin-9fc6a486180771e23bc3.js.map"
     ],
     "app": [
-      "app-abb77ecccad82566ebf7.js",
+      "app-26f0ab2fd657e427a1a1.js",
       "build-js-styles.css",
-      "app-abb77ecccad82566ebf7.js.map",
+      "app-26f0ab2fd657e427a1a1.js.map",
       "build-js-styles.css.map"
     ],
     "path---2018-01-15-css-grid": [
@@ -163,6 +159,10 @@
     "path---about": [
       "path---about-f8f2f2235c0cec2b21e4.js",
       "path---about-f8f2f2235c0cec2b21e4.js.map"
+    ],
+    "path---2018-01-28-from-sublime-to-vscode": [
+      "path---2018-01-28-from-sublime-to-vscode-61c2c7627258a79587bc.js",
+      "path---2018-01-28-from-sublime-to-vscode-61c2c7627258a79587bc.js.map"
     ]
   }
 }
