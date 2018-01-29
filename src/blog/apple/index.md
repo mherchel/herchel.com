@@ -6,6 +6,8 @@ display: "false"
 ---
 Earlier this week I ran into [this article](https://medium.com/@firt/pwas-are-coming-to-ios-11-3-cupertino-we-have-a-problem-2ff49fd7d6ea) on Twitter, which details inconsistencies and bugs in mobile Safari's version of service workers.
 
+> Quote here
+
 For those that are not web developers, let's dive into what service workers are, and why this is relevant. Service workers are background processes that can be "installed" by websites. They're really neat, and can do many things including:
 
 * Offloading of processing
