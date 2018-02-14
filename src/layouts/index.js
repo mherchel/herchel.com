@@ -197,6 +197,14 @@ injectGlobal`
     }
   }
 
+  img {
+    max-width: 100%;
+
+    figure & {
+      display: block;
+    }
+  }
+
   video {
     display: block;
   }
