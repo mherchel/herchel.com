@@ -121,32 +121,9 @@ injectGlobal`
     overflow: scroll;
     font-family: var(--font-sans);
     transition: 0.2s;
-
-      &:before {
-        content: "";
-        position: fixed;
-        z-index: -1;
-        backface-visibility: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: url(/bg-boxes.jpg);
-        opacity: 0.4;
-        filter: grayscale(100%) invert(100%);
-      }
-
-      &:after {
-        content: "";
-        position: fixed;
-        z-index: -1;
-        backface-visibility: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-image: linear-gradient(to bottom, var(--primary), transparent 70%);
-      }
+    background-color: var(--primary);
+    background: linear-gradient(to bottom, var(--primary), transparent 70vh) fixed,
+                url(/bg-boxes.png) fixed;
     }
 
   h1, h2, h3 {
