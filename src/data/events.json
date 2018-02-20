@@ -1,5 +1,11 @@
 [
   {
+    "title": "WordCamp Jacksonville",
+    "date": "2018-04-07",
+    "status": "speaking",
+    "location": "Jacksonville, FL",
+    "url": "https://2018.jacksonville.wordcamp.org/"
+  }, {
     "title": "#PerfMatters Conf",
     "date": "2018-03-27",
     "status": "attending",
