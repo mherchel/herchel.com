@@ -58,6 +58,7 @@ const bioStyles = css`
     margin: 0;
 
     @media (min-width: ${vars.breakpoints.bioImageChange}) {
+      margin-left: 10px;
       margin-right: 40px;
     }
 

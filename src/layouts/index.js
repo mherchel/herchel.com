@@ -116,15 +116,12 @@ injectGlobal`
 
   body {
     margin: 0;
-    background-color: var(--primary);
     line-height: 1.7;
     overflow: scroll;
+    background: linear-gradient(to bottom, var(--primary), transparent 100vh) fixed, url(/bg-boxes.png) fixed;
+    background-color: var(--primary);
     font-family: var(--font-sans);
     transition: 0.2s;
-    background-color: var(--primary);
-    background: linear-gradient(to bottom, var(--primary), transparent 70vh) fixed,
-                url(/bg-boxes.png) fixed;
-    }
 
   h1, h2, h3 {
     line-height: 1.4;
