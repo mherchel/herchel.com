@@ -1,5 +1,12 @@
 [
   {
+    "title": "Frontend United",
+    "date": "2018-06-02",
+    "status": "speaking",
+    "location": "Utrecht, the Netherlands",
+    "url": "https://www.frontendunited.org"
+  },
+  {
     "title": "WordCamp Jacksonville",
     "date": "2018-04-07",
     "status": "speaking",
