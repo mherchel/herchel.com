@@ -1,27 +1,53 @@
 ---
-title: PerfMatters Conference Recap
-date: "2018-01-20T00:00:00.000Z"
+title: '#PerfMatters Conference Recap'
+date: "2018-04-02T00:00:00.000Z"
 subtitle: ""
 display: "false"
 ---
 
-Excited to go to Perfmatters
+[#PerfMatters](https://perfmattersconf.com) is a small conference put on by web developer, O'Reilly author, and all around awesome person [Estelle Wayle](http://www.standardista.com/). The conference was held at the beautiful location of Cañada (pronounced Can-yada) College in Redwood City CA, which lies at the midway point between San Francisco and Silicon Valley.
 
-Put on by Estelle, who coauthored a book 
+I was super excited to go to Perfmatters, although to be honest, I was also a little bit intimidated because all of the _cool_ silicon valley companies. However, when after I started talking to people I found out later that they're running into the same 💩 that everyone else is.
 
-A bit intimidated because all of the cool silicon valley companies, however I found out later that they're running into the same shit that everyone else is.
+## But first
 
-But first
+I traveled out to Oakland the weekend beforehand, and got to hang out with coworker and friend [Nate](https://twitter.com/quicksketch).
 
-Traveled out to Oakland, and hung out with Nate Lampton.
+### Day one in California
 
-Hiked Muir Woods and then Mt Tam - highest peak in the north bay area. Although you can drive up, we hiked up from Panoramic Highway. Muir woods ended up not beign enough. Mt Tam kicked my ass.
+On Saturday, we started off by hiking Muir Woods. Muir Woods is a nature reserve with amazing groves of huge redwood trees nestled among scenic mountain streams. 
 
-Sunday Nate and I sailed around the bay in a sailboat. We had some cool views of Alcatraz and the Golden Gate bridge. Later that night I kicked both Nate and Jen's asses at Settlers of Catan.
+![me hikining in Muir Woods](./muir.jpg)
 
-Monday I visited the city and then headed down to Redwood City, which is about 30 miles south of San Francisco (FYI, everyone calls San Francisco "SF" over there)
+I think we ended up hiking 4-6 miles at Muir Woods, which left me wanting more. Mt Tam delivered. 
 
-Monday night I met up with David (link) and got educated about beer
+Mount Tamalpais is the highest peak in the north bay area. Although you can drive up, we hiked up from Panoramic Highway. It was a pretty awesome hike. We passed through a couple different localized ecosystems including hardwoods, redwoods, scrubs, streams, and more. 
+
+![View on the way hiking Mt Tam](./mttam1.jpg)
+
+Finally after what seemed like 10,000 near vertical steps up, we were finally treated to beautiful panoramic views of the Pacific Ocean, the North Bay, and more.
+
+![Near the summit of Mt Tam with Nate](./mttam2.jpg)
+
+### Day two adventures
+
+On Sunday, we cruised around the bay in a sailboat. We had some cool views of Alcatraz and the Golden Gate bridge, and the beer was surprisingly cheap! Later that night I kicked both Nate and [Jen](https://twitter.com/jenlampton)'s asses at Settlers of Catan 😛
+
+<figure border>
+    <img src="./sailing.jpg" alt="">
+    <figcaption>No one can compete with how cool we are 😎</figcaption>
+</figure>
+
+
+## Down to Redwood City
+
+Monday I visited SF (that's how all the _cooool_ locals refer to San Francisco) and then headed down to Redwood City, which is about 30 miles south.
+
+Through the magic of the #Perfmatters Slack organization, I met up with [David Ross](https://twitter.com/cdaveross) Monday night on Monday night for some beer and pastrami sandwiches at [The Refuge](https://www.refugesc.com), which had been featured in _Diners, Drive-Ins and Dives_.
+
+The best part of the night was learning about beer from who is probably one of the most beer-knowledgeable people that I've met. I learned the difference between a "small IPA", and "session IPA", and more.
+
+
 
 The conference kicked off Tuesday morning. 
 
