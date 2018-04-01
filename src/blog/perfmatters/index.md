@@ -5,7 +5,7 @@ subtitle: ""
 display: "false"
 ---
 
-[#PerfMatters](https://perfmattersconf.com) is a small conference put on by web developer, O'Reilly author, and all around awesome person [Estelle Wayle](http://www.standardista.com/). The conference was held at the beautiful location of Cañada (pronounced Can-yada) College in Redwood City CA, which lies at the midway point between San Francisco and Silicon Valley.
+[#PerfMatters](https://perfmattersconf.com) is a small conference put on by web developer, O'Reilly author, and all around awesome person [Estelle Weyl](http://www.standardista.com/). The conference was held at the beautiful location of Cañada (pronounced Can-yada) College in Redwood City CA, which lies at the midway point between San Francisco and Silicon Valley.
 
 I was super excited to go to Perfmatters, although to be honest, I was also a little bit intimidated because all of the _cool_ silicon valley companies. However, when after I started talking to people I found out later that they're running into the same 💩 that everyone else is.
 
