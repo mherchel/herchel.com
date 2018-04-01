@@ -25,7 +25,7 @@ Mount Tamalpais is the highest peak in the north bay area. Although you can driv
 
 ![View on the way hiking Mt Tam](./mttam1.jpg)
 
-Finally after what seemed like 10,000 near vertical steps up, we were finally treated to beautiful panoramic views of the Pacific Ocean, the North Bay, and more.
+Finally, after what seemed like 10,000 near vertical steps up, we were finally treated to beautiful panoramic views of the Pacific Ocean, the North Bay, and more.
 
 ![Near the summit of Mt Tam with Nate](./mttam2.jpg)
 
@@ -39,31 +39,49 @@ On Sunday, we cruised around the bay in a sailboat. We had some cool views of Al
 </figure>
 
 
-## Down to Redwood City
+### Down to Redwood City
 
-Monday I visited SF (that's how all the _cooool_ locals refer to San Francisco) and then headed down to Redwood City, which is about 30 miles south.
+On Monday, I visited SF (that's how all the _cooool_ locals refer to San Francisco) and then headed down to Redwood City, which is about 30 miles south.
 
 Through the magic of the #Perfmatters Slack organization, I met up with [David Ross](https://twitter.com/cdaveross) Monday night on Monday night for some beer and pastrami sandwiches at [The Refuge](https://www.refugesc.com), which had been featured in _Diners, Drive-Ins and Dives_.
 
-The best part of the night was learning about beer from who is probably one of the most beer-knowledgeable people that I've met. I learned the difference between a "small IPA", and "session IPA", and more.
+The best part of the night was learning about beer from, who is probably, one of the most beer-knowledgeable people that I've met. I learned the difference between a "small IPA", and "session IPA", and more.
+
+## The conference kicked off Tuesday morning. 
+
+Although all sessions were absolutely amazing... I'm going to detail the sessions that I got a lot out of below.
+
+I'm also going to include links to [Cristina Shaver](http://www.cristinashaver.com/)'s [awesome notes from each session](https://github.com/cshaver/perfmatters-notes).
 
 
 
-The conference kicked off Tuesday morning. 
-
-Although all sessions were absolutely amazing... A couple notable sessions were
+### Making Pinterest Fast
+by Jessica Chan, Sarah Dapul-Weberman, and Michelle Vu
 
 Pinterest - showed off a really cool dashboard where they would constantly track the performance of the site (they track the 90th percentile). 
 
 If they detect a regression, they have a tool that automatically does a git bisect and then run performance regression tests to find the exact culprit. The performance team will then work with the author to fix the performance regression.
 
+### Faster Bytes is Not Always Enough - Why is The Web Slow? (and what can we do about it)
+by Yoav Weiss
+
 Yoav's session about HTTP2 aka h2 had a lot of great information including the http 1/1 handles poor connections better. Also talked about link preload prefetch etc.
 
 slides https://yoavweiss.github.io/perfmatters_resource_loading/#1
 
+### Demystifying Performance Timings
+by Jeremy Wagner
+
 Jeremy Wagner's session on performance timings were jam packed with lots of deep information on the navigation timing api and others.
 
+### Modern Performance in the Year of the Dog
+by Jem Young
+
+
 Jem Young's session on "Modern Performance in the Year of the Dog" was amazing because he talked about real trade offs that front-end developers and engineers make on a daily basis. Sometimes various objectives don't always align together properly.
+
+### Making the browser faster
+by Lin Clark
 
 Lin Clark's session on faster was amazing. Lin works for Mozilla and talked about Firefox's effort to parallize its processing of the webpage. 
 
@@ -75,15 +93,24 @@ Estelle had planned a really cool party that was right across the way from the t
 
 I had a great time at the party including hanging out with Ian Caricou and getting the chance to meet Lin Clark, Marcy Sutton (who I had previous interviewed on the Lullabot Podcast) and Steve Souders. 
 
-Wednesday's selected sessions
+### Raiders of the Fast Start: Frontend Performance Archaeology
+by Katie Sylor-Miller
+
+
 
 Katie Sylor-Miller from Etsy presented on Frontend Performance Archaeology. This session was great because she talked about how Etsy's codebase grew to become an unmanageable behemoth, and people were afraid to remove code, so would only add to it. She talked about various tools and techniques to fix this and reduce various bundle sizes.
+
+### Perceived Performance: The only kind that really matters
+by Eli Fitch
 
 Eli Fitch from Mapbox presented on "Perceived Performance: The only kind that really matters". This was really good, and I plan on making Lullabot's designers watch this if the videos ever get posted. 
 
 slides http://assets.eli.wtf/talks/perceived-perf-perfmatters-2018/#/
 
-Basically Eli talked about various "mental" design techniques to trick your mind into making the website 'feel' like it's faster (even though it's not). Techniques included animations on progress bar, discussion of spinners vs progress bars. Using the mousedown even instead of the click event. 
+Basically Eli talked about various "mental" design techniques to trick your mind into making the website 'feel' like it's faster (even though it's not). Techniques included animations on progress bar, discussion of spinners vs progress bars. Using the mousedown even instead of the click event.
+
+### Progressive Web Apps: Show Up for Offline First, but Stay for the Killer Performance Boost
+by Jason Lengstorf 
 
 Another great session was Jason Lengstorf -currently working at Gatsby, presenting on "Progressive Web Apps: Show Up for Offline First, but Stay for the Killer Performance Boost"
 
@@ -91,6 +118,8 @@ Jason talked about making your app work offline, and technologies involved (mani
 
 slides https://jlengstorf.github.io/presentations/pwa-perf
 
+### Web Perf Metrics & Measurement in 2018
+by Paul Irish
 
 The conference ended with the biggest draw (and one of my developer heros), Paul Irish, who is a xxx at Google -- working on Chromium and DevTools. 
 
