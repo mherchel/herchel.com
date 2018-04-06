@@ -22,7 +22,7 @@ display: "true"
 
 
 
-[#PerfMatters](https://perfmattersconf.com) is a camelCase hashtagged conference put on by web developer, O'Reilly author, and all around awesome person [Estelle Weyl](http://www.standardista.com/). The conference was held at the beautiful location of Cañada (pronounced Can-yada) College in Redwood City CA, which lies at the midway point between San Francisco and Silicon Valley.
+[#PerfMatters](https://perfmattersconf.com) is a conference put on by web developer, O'Reilly author, and all around awesome person [Estelle Weyl](http://www.standardista.com/). The conference was held at the beautiful location of Cañada (pronounced Can-yada) College in Redwood City CA, which lies at the midway point between San Francisco and Silicon Valley.
 
 I was super excited to go to #PerfMatters, although to be honest, I was also a little bit intimidated because all of the _cool_ silicon valley companies. However, when after I started talking to people I found out later that they're running into the same 💩 that everyone else is.
 
@@ -91,8 +91,11 @@ The Pinterest performance team showed how they measure performance by tracking t
 When they detect a regression, they have a tool that automatically does a git bisect and then run performance regression tests to find the exact culprit commit. The performance team will then work with the author to fix the performance regression.
 
 <div class="perfmatters-details">
-Notes: 
-<a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Making-Pinterest-Fast_Jess-Michelle-Sarah.md">Link to Cristina Shaver's notes</a>
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Making-Pinterest-Fast_Jess-Michelle-Sarah.md">Notes for this talk</a>
+    </li>
+  </ul>
 </div>
 
 ### Faster Bytes is Not Always Enough - Why is The Web Slow? (and what can we do about it)
@@ -108,9 +111,14 @@ Yoav gave an excellent talk about various performance slowdowns on the web and h
 One of my next goals is to to better understand the preload, preconnect, et al tags, and write an article about this.
 
 <div class="perfmatters-details">
-Notes: 
-<a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Past-Present-and-Future-of-Resource-Loading_Yoav-Weiss.md">Link to Cristina's notes on this talk</a><br>
-Slides: <a href="https://yoavweiss.github.io/perfmatters_resource_loading/">Yoav's Slides</a>
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Past-Present-and-Future-of-Resource-Loading_Yoav-Weiss.md">Notes on Yoav's talk</a>
+    </li>
+    <li>
+      <a href="https://yoavweiss.github.io/perfmatters_resource_loading/">Yoav's Slides</a>
+    </li>
+  </ul>
 </div>
 
 ### Demystifying Performance Timings
@@ -123,8 +131,11 @@ Slides: <a href="https://yoavweiss.github.io/perfmatters_resource_loading/">Yoav
 Jeremy Wagner gave a deep dive into [the navigation timing API](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API). The session was packed with lots of deep information and recipes.
 
 <div class="perfmatters-details">
-Notes: 
-<a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Demystifying-Performance-Timers_Jeremy-Wagner.md">Link to Cristina's notes on this talk</a>
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Demystifying-Performance-Timers_Jeremy-Wagner.md">Notes on Jeremy's talk</a>
+    </li>
+  </ul>
 </div>
 
 
@@ -137,10 +148,12 @@ Notes:
 
 Netflix Engineering's Jem Young gave session on "Modern Performance in the Year of the Dog." It was amazing because he talked about real world trade-offs that front-end developers and engineers make on a daily basis. Sometimes various objectives don't always align together properly, and Jem discussed this. 
 
-I generally don't go for non-technical sessions such as this, but Jem totally nailed it.
 <div class="perfmatters-details">
-Notes: 
-<a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Modern-Performance-in-the-Year-of-the-Dog_Jem-Young.md">Link to Cristina's notes on this talk</a><br>
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Modern-Performance-in-the-Year-of-the-Dog_Jem-Young.md">Notes on Jem's talk</a>
+    </li>
+  </ul>
 </div>
 
 
@@ -156,6 +169,14 @@ Lin Clark's official (maybe?) title at Mozilla is "code cartoonist" because she 
 Mozilla has been working on parallelizing its architecture for years. In fact,they've actually created a brand new programming language ([Rust](https://www.rust-lang.org)) to facilitate this! 
 
 The part that made me grin with excitement is when she said they were working to offload the entire painting process to the computer's GPU, which would make animating any property (such as background, or box-shadow) as performant as we can now do with animating CSS transforms and opacity.
+
+<div class="perfmatters-details">
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-1/Making-the-browser-faster_Lin-Clark.md">Notes on Lin's talk</a>
+    </li>
+  </ul>
+</div>
 
 ### Tuesday night party
 <span class="perfmatter-presenter">Sponsored by [SpeedCurve](https://speedcurve.com/)</span>
@@ -177,29 +198,55 @@ I had a great time at the party including hanging out with some old friends and 
 </figure>
 
 
-Katie Sylor-Miller from Etsy presented on Frontend Performance Archaeology. This session was great because she talked about how Etsy's codebase grew to become an unmanageable behemoth, and people were afraid to remove code, so would only add to it. She talked about various tools and techniques to fix this and reduce various bundle sizes.
+Katie Sylor-Miller from Etsy presented on Frontend Performance Archaeology. She talked about how Etsy's codebase grew to become somewhat unmanageable, and people were afraid to remove code, so would only add to it. Katie also talked about various tools and techniques to fix this and reduce various bundle sizes.
+
+<div class="perfmatters-details">
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-2/Raiders-of-the-Fast-Start-Frontend-Performance-Archaeology_Katie-Sylor-Miller.md">Notes on Katie's talk</a>
+    </li>
+  </ul>
+</div>
 
 ### Perceived Performance: The only kind that really matters
 <span class="perfmatter-presenter">by <a href="https://twitter.com/EliFitch">Eli Fitch</a> from MapBox</span>
 <figure border>
     <img src="./eli.jpg" alt="">
-    <figcaption>xxx</figcaption>
+    <figcaption>Eli Fitch from Mapbox presenting on perceived performance</figcaption>
 </figure>
 
-Eli Fitch from Mapbox presented on "Perceived Performance: The only kind that really matters". This was really good, and I plan on making Lullabot's designers watch this if the videos ever get posted. 
+Eli Fitch from Mapbox presented on "Perceived Performance: The only kind that really matters". Basically Eli talked about various "mental" design techniques to trick your mind into making the website 'feel' like it's faster (even though it's not). Techniques included animations on progress bar, discussion of spinners vs progress bars, using the `mousedown` even instead of the `click` event.  This was really good, and I plan on making Lullabot's designers watch this when the videos are posted.  
 
-slides http://assets.eli.wtf/talks/perceived-perf-perfmatters-2018/#/
-
-Basically Eli talked about various "mental" design techniques to trick your mind into making the website 'feel' like it's faster (even though it's not). Techniques included animations on progress bar, discussion of spinners vs progress bars. Using the mousedown even instead of the click event.
+<div class="perfmatters-details">
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-2/Perceived-Performance-The-only-kind-that-really-matters_Eli-Fitch.md">Notes on Eli's talk</a>
+      </li>
+    <li>
+      <a href="http://assets.eli.wtf/talks/perceived-perf-perfmatters-2018/#/">Eli's Slides</a>
+    </li>
+  </ul>
+</div>
 
 ### Progressive Web Apps: Show Up for Offline First, but Stay for the Killer Performance Boost
 <span class="perfmatter-presenter">by <a href="https://twitter.com/jlengstorf">Jason Lengstorf</a></span>
-
-Another great session was Jason Lengstorf -currently working at Gatsby, presenting on "Progressive Web Apps: Show Up for Offline First, but Stay for the Killer Performance Boost"
+<figure border>
+    <img src="./jason.jpg" alt="">
+    <figcaption>Jason Lengstorf presenting on PWAs</figcaption>
+</figure>
+Another great session was from Jason Lengstorf. He currently works with/at Gatsby (the platform this blog is built on). Jason presented on "Progressive Web Apps: Show Up for Offline First, but Stay for the Killer Performance Boost"
 
 Jason talked about making your app work offline, and technologies involved (manifest, service workers). He also talked about the PRPL pattern and why it's fast.
 
-slides https://jlengstorf.github.io/presentations/pwa-perf
+<div class="perfmatters-details">
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-2/Progressive-Web-Apps-Show-Up-for-Offline-First-but-Stay-for-the-Killer-Performance-Boost_Jason-Lengstorf.md">Notes on Jason's talk</a>
+    </li>
+    <li><a href="https://jlengstorf.github.io/presentations/pwa-perf">Jason's Slides</a></li>
+    </li>
+  </ul>
+</div>
 
 ### Web Perf Metrics & Measurement in 2018
 <span class="perfmatter-presenter">by <a href="https://twitter.com/paul_irish">Paul Irish</a> from Google</span>
@@ -207,18 +254,25 @@ slides https://jlengstorf.github.io/presentations/pwa-perf
     <img src="./paul.jpg" alt="">
     <figcaption>Holy 💩, it's Paul Irish!</figcaption>
 </figure>
-The conference ended with the biggest draw (and one of my developer heros), Paul Irish, who is a xxx at Google -- working on Chromium and DevTools. 
+The conference ended with the biggest draw (and one of my developer heros), Paul Irish, who works at Google on Chromium and DevTools. 
 
-Paul talked about a lot of performance metrics (and there are a lot), how they are calculated, and which ones to pay attention to and when.
+Paul talked about a slew of performance metrics (and there are a lot), how they are calculated, and which ones to pay attention to and when.
 
-slides https://docs.google.com/presentation/u/3/d/1UcjvtuMT4VAmc-MySWOcc1rLkMNoDjt2DxIhvfHNRXg/present
+<div class="perfmatters-details">
+  <ul>
+    <li>
+      <a href="https://github.com/cshaver/perfmatters-notes/blob/master/day-2/Web-Perf-Metrics-and-Measurement-in-2018_Paul-Irish.md">Notes on Paul's talk</a>
+      </li>
+    <li>
+      <a href="https://docs.google.com/presentation/u/3/d/1UcjvtuMT4VAmc-MySWOcc1rLkMNoDjt2DxIhvfHNRXg/present">Paul's Slides</a>
+    </li>
+  </ul>
+</div>
 
+## Conclusion
 
+This was a really fun conference. More than that, it was a technically deep conference, which is what I'm looking for. I'll plan on coming back as long as it's happening. 
 
+Also, I ended up winning a fancy conference tote back (evidently the _only_ one in existence) by taking a photo :) 
 
-
-
-
-
-
-best picture https://twitter.com/estellevw/status/979231389080985601
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Winner of &quot;best picture&quot; at <a href="https://twitter.com/hashtag/PerfMatters?src=hash&amp;ref_src=twsrc%5Etfw">#PerfMatters</a> Conference.<br><br>cc: <a href="https://twitter.com/brucel?ref_src=twsrc%5Etfw">@brucel</a> <a href="https://t.co/9xvXV6ZwBT">https://t.co/9xvXV6ZwBT</a></p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/status/979231389080985601?ref_src=twsrc%5Etfw">March 29, 2018</a></blockquote>
