@@ -1,6 +1,6 @@
 ---
 title: '#PerfMatters Conference Recap'
-date: "2018-04-02T00:00:00.000Z"
+date: "2018-04-06T00:00:00.000Z"
 subtitle: "Hiking, sailing, and a deep dive into web performance"
 display: "true"
 ---
