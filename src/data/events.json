@@ -1,5 +1,12 @@
 [
   {
+    "title": "Drupalcamp Asheville",
+    "date": "2018-07-14",
+    "status": "speaking",
+    "location": "Asheville, NC",
+    "url": "https://www.drupalasheville.com/"
+  },
+  {
     "title": "Frontend United",
     "date": "2018-06-02",
     "status": "speaking",
