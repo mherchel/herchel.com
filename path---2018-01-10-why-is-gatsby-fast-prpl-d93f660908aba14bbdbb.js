@@ -1,2 +1,0 @@
-webpackJsonp([28210096298019],{390:function(t,p){t.exports={pathContext:{slug:"/2018-01-10-why-is-gatsby-fast-prpl/"}}}});
-//# sourceMappingURL=path---2018-01-10-why-is-gatsby-fast-prpl-d93f660908aba14bbdbb.js.map

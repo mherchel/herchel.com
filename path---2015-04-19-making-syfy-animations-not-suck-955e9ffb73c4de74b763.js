@@ -1,2 +1,0 @@
-webpackJsonp([22890600373292],{384:function(n,t){n.exports={pathContext:{slug:"/2015-04-19-making-syfy-animations-not-suck/"}}}});
-//# sourceMappingURL=path---2015-04-19-making-syfy-animations-not-suck-955e9ffb73c4de74b763.js.map

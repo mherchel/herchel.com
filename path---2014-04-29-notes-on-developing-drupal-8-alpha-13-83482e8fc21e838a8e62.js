@@ -1,2 +1,0 @@
-webpackJsonp([0x67ffc6641957],{382:function(n,o){n.exports={pathContext:{slug:"/2014-04-29-notes-on-developing-drupal-8-alpha13/"}}}});
-//# sourceMappingURL=path---2014-04-29-notes-on-developing-drupal-8-alpha-13-83482e8fc21e838a8e62.js.map

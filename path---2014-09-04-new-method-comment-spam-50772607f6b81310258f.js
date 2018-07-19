@@ -1,2 +1,0 @@
-webpackJsonp([0xe715d43b0010],{383:function(e,t){e.exports={pathContext:{slug:"/2014-09-04-new-method-comment-spam/"}}}});
-//# sourceMappingURL=path---2014-09-04-new-method-comment-spam-50772607f6b81310258f.js.map

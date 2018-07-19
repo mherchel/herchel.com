@@ -1,2 +1,0 @@
-webpackJsonp([0x9c6f77b1c617],{385:function(e,n){e.exports={pathContext:{slug:"/2015-06-09-advice-newbie-frontend-developer/"}}}});
-//# sourceMappingURL=path---2015-06-09-advice-newbie-frontend-developer-61c33e719f2de21c4996.js.map
