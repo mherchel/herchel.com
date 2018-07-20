@@ -258,3 +258,16 @@ https://twig.symfony.com/doc/1.x/
 %}
 <article{{ attributes.addClass(classes) }}>
 ```
+
+## Notes
+
+You can reference the path to the theme with
+```
+{{ base_path ~ directory }}
+```
+
+Concatenate strings with a `~`
+
+```
+{{ base_path ~ directory }}
+```
