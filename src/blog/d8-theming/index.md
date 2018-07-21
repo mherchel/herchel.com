@@ -7,12 +7,12 @@ display: "false"
 ## Twig
 
 ### Basics
-```
+```twig
 {# Prints Label #}
 {{ label }}
 ```
 
-```
+```twig
 {% if page.footer_fifth %}
  <!-- Markup here -->
 {% endif %}
@@ -23,12 +23,12 @@ display: "false"
 
 Extends syntax says what file it is extending
 
-```
+```twig
 {% extends "block.twig.html" %}
 ```
 Then you define a block with all of the markup inside of it
 
-```
+```twig
 {% block content %}
   Markup and twig syntax goes here.
 {% endblock %}
@@ -36,7 +36,7 @@ Then you define a block with all of the markup inside of it
 
 Then in the file that gets extended, you need to put a place where the file is getting dropped.
 
-```
+```twig
 {% block content %}
 <div>
 {{ content }}
@@ -54,7 +54,7 @@ namespaced paths
 
 Uncomment the following in settings.php and move it to the bottom of the file.
 
-```
+```php
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
@@ -85,12 +85,14 @@ services:
 ### Twig stuff
 
 AddClass funtion to add CSS class to existing attributes
-```
+
+```twig
 <div{{ attributes.addClass('banner') }}>
 ```
 
 Filter to run string through the 't' function
-```
+
+```twig
 {{ 'Home'|t }}
 ```
 
@@ -99,7 +101,7 @@ Filter to run string through the 't' function
 https://drupalize.me/tutorial/loops-and-iterators-twig?p=2512
 
 
-```
+```twig
 <ul>
   {% for item in items %}
     <li>{{ item.content }} }} </li>
@@ -107,7 +109,7 @@ https://drupalize.me/tutorial/loops-and-iterators-twig?p=2512
 </ul>
 ```
 
-```
+```twig
 <ul class='blog-post__tags field__items'>
   {% for item in items if item.status %}
     <li>{{ value.content }}</li>
@@ -115,7 +117,7 @@ https://drupalize.me/tutorial/loops-and-iterators-twig?p=2512
 </ul>
 ```
 
-```
+```twig
 <ul class='blog-post__tags field__items'>
   {% for item in items %}
     <li>{{ item.content }}</li>
@@ -136,7 +138,7 @@ You also have access to a `loop` variable within the loop.
 * `loop.length`	The number of items in the sequence
 * `loop.parent`	The parent context
 
-```
+```twig
 <ul class='blog-post__tags field__items'>
   {% for item in items %}
     {% if loop.first %}
@@ -153,11 +155,11 @@ You also have access to a `loop` variable within the loop.
 
 ### Twig functions
 
-```
+```twig
 {{ random() }}
 ```
 
-```
+```twig
 {% if ramdom(10) < 5 %}
  This will print if number is < 5
 {% endif %}
@@ -175,13 +177,13 @@ You also have access to a `loop` variable within the loop.
 
 Uppercase the text
 
-```
+```twig
 {{ product|upper }}
 ```
 
 Uppercase then reverse text
 
-```
+```twig
 {{ product|upper|reverse }}
 ```
 
@@ -204,13 +206,13 @@ https://www.drupal.org/docs/8/theming/twig/filters-modifying-variables-in-twig-t
 
 https://twig.symfony.com/doc/1.x/
 
-```
+```twig
 {% if loop.index is divisible by(3) %}
     ...
 {% endif %}
 ```
 
-```
+```twig
 {% if foo.attribute is same as(false) %}
     the foo attribute really is the 'false' PHP value
 {% endif %}
@@ -220,11 +222,11 @@ https://twig.symfony.com/doc/1.x/
 
 ...doesn't appear to work.
 
-```
+```twig
 {{ dump() }}
 ```
 
-```
+```twig
 {{ dump(content) }}
 ```
 
@@ -232,20 +234,26 @@ https://twig.symfony.com/doc/1.x/
 
 * Printing `<div{{ attributes }}>` works fine.
 * Don't add additional spacing in the attributes.
-* Add class `<article{{ attributes.addClass('mikeclass') }}>`
-* Remove class `<div{{ attributes.removeClass('their-class') }}>`
-* add attribute `<div{{ attributes.setAttribute('data-bundle', node.bundle) }}>`
-* Check if attribute exists
-
+* Add class 
+```twig
+<article{{ attributes.addClass('mikeclass') }}>
 ```
+* Remove class
+```twig
+<div{{ attributes.removeClass('their-class') }}>
+```
+* add attribute
+```twig
+<div{{ attributes.setAttribute('data-bundle', node.bundle) }}>
+```
+* Check if attribute exists
+```twig
 {% if attribute.hasClass('myClass') %}
   {# do stuff #}
 {% endif %}
 ```
-
 * Add multiple classes:
-
-```
+```twig
 {%
   set classes = [
     'node',
@@ -262,12 +270,13 @@ https://twig.symfony.com/doc/1.x/
 ## Notes
 
 You can reference the path to the theme with
-```
+
+```twig
 {{ base_path ~ directory }}
 ```
 
 Concatenate strings with a `~`
 
-```
+```twig
 {{ base_path ~ directory }}
 ```

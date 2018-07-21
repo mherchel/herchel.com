@@ -41,6 +41,10 @@ const blogStyles = css`
     font-size: 16px;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+
+    & + .gatsby-highlight {
+      margin-top: 20px;
+    }
   }
 
   code {
