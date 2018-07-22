@@ -1,5 +1,9 @@
 {
   "assetsByChunkName": {
+    "path---2018-07-18-modernizing-legacy-performance": [
+      "path---2018-07-18-modernizing-legacy-performance-561bdbd526916990ded4.js",
+      "path---2018-07-18-modernizing-legacy-performance-561bdbd526916990ded4.js.map"
+    ],
     "path---2015-04-19-making-syfy-animations-not-suck": [
       "path---2015-04-19-making-syfy-animations-not-suck-9fe68391e6d0ce0ad8f0.js",
       "path---2015-04-19-making-syfy-animations-not-suck-9fe68391e6d0ce0ad8f0.js.map"
@@ -77,8 +81,8 @@
       "path---2018-04-06-perfmatters-002b78d95cac72526b80.js.map"
     ],
     "path---index": [
-      "path---index-75cc29cb27869b089d66.js",
-      "path---index-75cc29cb27869b089d66.js.map"
+      "path---index-a71386ad8ba4ebfa22dc.js",
+      "path---index-a71386ad8ba4ebfa22dc.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-ab57e3b15df5a58723a1.js",
@@ -139,9 +143,9 @@
       "path---2018-01-27-enable-google-home-gsuite-admin-8e6f6ce8f06b0e67be3d.js.map"
     ],
     "app": [
-      "app-98b304c66862370226ea.js",
+      "app-caadc7eb004207f5a547.js",
       "build-js-styles.css",
-      "app-98b304c66862370226ea.js.map",
+      "app-caadc7eb004207f5a547.js.map",
       "build-js-styles.css.map"
     ],
     "path---2018-01-15-css-grid": [
