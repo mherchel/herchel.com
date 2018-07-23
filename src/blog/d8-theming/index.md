@@ -218,17 +218,28 @@ https://twig.symfony.com/doc/1.x/
 {% endif %}
 ```
 
-### Dump function
+### Debugger Breakpoints
 
-...doesn't appear to work.
-
+Native to Twig:
 ```twig
 {{ dump() }}
+
+or
+
+{{ dump(_context|keys) }}
 ```
 
+`_context` references the current context and contains all variables passed to the template such as variables sent from theme(), prepared by preprocess, or set in the template. Adding {{ dump() }} without specifying a variable is equivalent to {{ dump(_context) }}.
+
+with Devel module:
+
 ```twig
-{{ dump(content) }}
+{{ devel_breakpoint() }}
 ```
+
+From here, look into the `$context` variable.
+
+when translating items to the twig file, ignore `$content['elements']`. Start from `[content]`.
 
 ### Add classes in Drupal twig
 
@@ -241,6 +252,14 @@ https://twig.symfony.com/doc/1.x/
 * Remove class
 ```twig
 <div{{ attributes.removeClass('their-class') }}>
+```
+* Remove class via set adn ternary operator
+```twig
+{%
+  set classes = [
+    not node.isPublished() ? 'node--unpublished',
+  ]
+%}
 ```
 * add attribute
 ```twig
@@ -267,7 +286,7 @@ https://twig.symfony.com/doc/1.x/
 <article{{ attributes.addClass(classes) }}>
 ```
 
-## Notes
+## Twig Notes
 
 You can reference the path to the theme with
 
@@ -280,3 +299,70 @@ Concatenate strings with a `~`
 ```twig
 {{ base_path ~ directory }}
 ```
+
+## Preprocess function notes
+
+Use `themename.theme` for the file.
+
+Function is in format of `function THEME_preprocess_HOOK()`. Get the hook from twig debug mode.
+
+![Theme Hook Name](theme_hook_name.png)
+
+You can also use `function THEME_preprocess(&$variables, $hook)`. This is useful if you want to inject a variable into every template.
+
+Use render arrays instead of hardcoding html 
+
+```php
+function icecream_preprocess_node(&$variables) {
+  $variables['simple_string'] = array(
+    '#markup' => 'A simple string',
+  );
+}
+```
+
+```twig
+<div class="string">
+ {{ simple_string }}
+</div>
+```
+
+## Render API
+
+1. Structured arrays with data and hints on how to render it.
+2. Pipeline: process Drupal goes through to serve a request.
+
+### Render Arrays
+
+* Properties are array items where the key's names start with a hash. They determine how an instance of an element will ultimately be rendered.
+* Elements are items that do _not_ start with a hash. They can have children. It's an individual section of the array and represent data.
+
+* `#markup` Provides HTML directly
+* `#theme` Provides information on which template is needed to generate the HTML (and where to find it). 
+* `#type` Shorthand for writing a more complex element.
+
+#### Value properties
+
+Store strings, integers, booleans, arrays. Examples:
+
+* `#prefix`
+* `#suffix`
+* `#title`
+* `#weight`
+
+#### Callable properties
+
+Less common. These hold references to PHP callables. At specific points in the rendering, these can be called to alter the state.
+
+* `#pre_render`
+* `#post_render`
+
+## Composer
+
+- `composer install` - initial install. If a `composer.lock` file exists, it will ignore the `package.json` and use the lock file.
+- `composer update` - Updates with the latest tags off of the `package.json` file.
+  - You can use `composer update [package]` to only update a single package.
+- `composer require` - installs new package (or module), and writes it to the `package.json`.
+
+## Tips
+
+* Strip HTML tags with `{{ content.field_first_name|render|striptags }}`
