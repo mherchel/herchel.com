@@ -96,7 +96,7 @@ Filter to run string through the 't' function
 {{ 'Home'|t }}
 ```
 
-### Controls in twig
+### Loops in twig
 
 https://drupalize.me/tutorial/loops-and-iterators-twig?p=2512
 
@@ -109,16 +109,20 @@ https://drupalize.me/tutorial/loops-and-iterators-twig?p=2512
 </ul>
 ```
 
+Check something during the for loop
+
 ```twig
-<ul class='blog-post__tags field__items'>
+<ul>
   {% for item in items if item.status %}
     <li>{{ value.content }}</li>
   {% endfor %}
 </ul>
 ```
 
+You can add an `else` statement in the for loop that will resolve if there are no items.
+
 ```twig
-<ul class='blog-post__tags field__items'>
+<ul>
   {% for item in items %}
     <li>{{ item.content }}</li>
   {% else %}
@@ -366,3 +370,34 @@ Less common. These hold references to PHP callables. At specific points in the r
 ## Tips
 
 * Strip HTML tags with `{{ content.field_first_name|render|striptags }}`
+* Loop through field that has multiple values, and affect markup with
+```twig
+{% for key, interest in content.field_personal_interests if key|first != '#' %}
+  <li>{{ interest }}</li>
+{% endfor %}
+```
+* Add jQuery to themename.libraries.yml
+```yaml
+base:
+  version: 1.0
+  css:
+    theme:
+      css/styles.css: { weight: 10 }
+  js:
+    js/scripts.js: {}
+  dependencies:
+    - core/jquery
+```
+
+
+### Include a twig template file
+
+Note that the `@nb_ph` points to the _templates_ directory within the `nb_ph` theme.
+
+```twig
+{% include "@nb_ph/_prospect_circle_image.twig" %}
+```
+
+It's good practice to prefix your templates with an underscore.
+
+
