@@ -249,7 +249,7 @@ when translating items to the twig file, ignore `$content['elements']`. Start fr
 
 * Printing `<div{{ attributes }}>` works fine.
 * Don't add additional spacing in the attributes.
-* Add class 
+* Add class
 ```twig
 <article{{ attributes.addClass('mikeclass') }}>
 ```
@@ -314,7 +314,7 @@ Function is in format of `function THEME_preprocess_HOOK()`. Get the hook from t
 
 You can also use `function THEME_preprocess(&$variables, $hook)`. This is useful if you want to inject a variable into every template.
 
-Use render arrays instead of hardcoding html 
+Use render arrays instead of hardcoding html
 
 ```php
 function icecream_preprocess_node(&$variables) {
@@ -341,7 +341,7 @@ function icecream_preprocess_node(&$variables) {
 * Elements are items that do _not_ start with a hash. They can have children. It's an individual section of the array and represent data.
 
 * `#markup` Provides HTML directly
-* `#theme` Provides information on which template is needed to generate the HTML (and where to find it). 
+* `#theme` Provides information on which template is needed to generate the HTML (and where to find it).
 * `#type` Shorthand for writing a more complex element.
 
 #### Value properties
@@ -376,7 +376,7 @@ Less common. These hold references to PHP callables. At specific points in the r
   <li>{{ interest }}</li>
 {% endfor %}
 ```
-* Add jQuery to themename.libraries.yml
+* Add jQuery and Drupal behaviors to themename.libraries.yml
 ```yaml
 base:
   version: 1.0
@@ -387,17 +387,43 @@ base:
     js/scripts.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
 ```
+Note the `- core/drupal` line is necessary to include `drupal.js` which processes Drupal behaviors.
+
+### Built in CSS classes
+
+[See the change record](https://www.drupal.org/node/2022859)
+
+* `hidden` - Does a `display: none;`
+* `visually-hidden` - Hides visually, but reachable via screen reader
+* `visually-hidden focusable` - Same as above but focusable.
+* `invisible` - does a `visibility: hidden;`
+
 
 
 ### Include a twig template file
 
-Note that the `@nb_ph` points to the _templates_ directory within the `nb_ph` theme.
+Note that the `@theme_name` points to the _templates_ directory within the `theme_name` theme!
 
 ```twig
-{% include "@nb_ph/_prospect_circle_image.twig" %}
+{% include "@theme_name/_prospect_circle_image.twig" %}
 ```
 
 It's good practice to prefix your templates with an underscore.
 
 
+## Printing out Unix date, NID, sticky, etc
+
+There's a bunch of `getXXX` methods under the node object that are not viewable while PHP debugging. You can call these with `{{ node.XXX.value }}`.
+
+![Debugging Node Values](debugging-node-values.png)
+
+Examples include
+
+* Created date - `{{ node.created.value }}`
+* Updated date - `{{ node.updated.value }}`
+* Node ID - `{{ node.nid.value }}`
+* UID - `{{ node.uid.value }}`
+* Status - `{{ node.status.value }}`
+* Node Type - `{{ node.type.value }}`
