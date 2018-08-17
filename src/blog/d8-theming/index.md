@@ -427,3 +427,51 @@ Examples include
 * UID - `{{ node.uid.value }}`
 * Status - `{{ node.status.value }}`
 * Node Type - `{{ node.type.value }}`
+
+## Multiple ways to check if field exists in twig
+
+Normally you can get away with
+
+```twig
+{% if content.field %}
+  <div class="field">
+    {{ content.field }}
+  </div>
+{% endif %}
+```
+
+If that doesn't work you can render it
+
+```twig
+{% if content.field|render %}
+  <div class="field">
+    {{ content.field }}
+  </div>
+{% endif %}
+```
+
+You can also check the node object, which has the `getValue()` method, which can be reference in twig by `{{ node.field.value }}`. This has the added benefit of not using the field template (and associated markup).
+
+```twig
+{% if node.field.value %}
+  <div class="field">
+    {{ node.field.value }}
+  </div>
+{% endif %}
+```
+
+If needed you can strip tags and trim it after render
+
+```twig
+{% if content.field|render|striptags|trim %}
+  <div class="field">
+    {{ content.field }}
+  </div>
+{% endif %}
+```
+
+You can also use twig syntax similar to the following if needed
+
+```twig
+{% if content.field|render|striptags|trim is not empty %}
+```
