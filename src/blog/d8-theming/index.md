@@ -370,6 +370,7 @@ Less common. These hold references to PHP callables. At specific points in the r
 ## Tips
 
 * Strip HTML tags with `{{ content.field_first_name|render|striptags }}`
+  * You can also try using the node object with the `getValue()` method. That looks like {{ node.field_first_name.value }}. This shouldn't use the field template.
 * Loop through field that has multiple values, and affect markup with
 ```twig
 {% for key, interest in content.field_personal_interests if key|first != '#' %}
@@ -474,4 +475,84 @@ You can also use twig syntax similar to the following if needed
 
 ```twig
 {% if content.field|render|striptags|trim is not empty %}
+```
+
+## Getting fields (and entity reference fields) within preprocess
+
+Thanks to [Marcos Cano](https://www.lullabot.com/about/marcos-cano) for helping me out with all of this!
+
+When debugging in PHPStorm, it's really useful to use the watches panel. This is similar to the watches panel in Chrome DevTools and does the same things. Prior to this, I was using PHPStorm's console tab, but that didn't always work!
+
+Once stopped at a breakpoint, open up the watches tab using the little glasses icon.
+
+![PHPStorm Debugging](debugging-preprocess.png)
+
+You can get access to all of the fields by using Entity API Methods.
+
+First load up the node object (note I didn't yet test this code)
+
+```php
+$variables['node']
+```
+
+Then do a `getFields()` on it to see the fields
+
+```php
+$variables['node']->getFields();
+```
+
+You'll see an array of stuff including fields.
+
+From there you can use the `get()` method to get the field
+
+```php
+$variables['node']->get('field_firstname');
+```
+
+_but_ you can also use what Marcos Cano called _magic_ by using the fieldname as the method. It makes things more readable.
+
+```php
+$variables['node']->field_firstname;
+```
+From there you can try a couple different things based on the field type. Sometimes you can get the value by doing
+```php
+$variables['node']->field_firstname->getValue();
+```
+A lot of times, you can browse down the object, and look for the key that holds the actual data that you're looking for.
+
+This might be `uri` if it's a _link_ field. Or, it might be `value` if it's a _text_ field. Expand the array in the watch expression and take a look.
+
+```php
+// a link field might look like
+$variables['node']->field_firstname->uri;
+// or if its a text field
+$variables['node']->field_firstname->value;
+```
+
+### Loading field from an entity reference.
+
+You'll probably need to load some data from an entity reference. Here's how to do it.
+
+Use the above methods to bring up the field for the reference:
+
+```php
+$variables['node']->field_reference
+```
+
+Then you need to open the `entity` object(?). This won't show when you're looking in the watches panel for whatever reason.
+
+```php
+$variables['node']->field_reference->entity
+```
+
+From there you can use the same methods to access the data as we did before.
+
+```php
+$variables['node']->field_reference->entity->field_firstname->value
+```
+
+And you can even go into different entity references. Here's an example that I worked with. It's a reference to another node, that has a reference to a file!
+
+```php
+$variables['node']->field_parent->entity->field_show_media->entity->field_media_image->entity->uri->value
 ```
