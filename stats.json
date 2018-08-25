@@ -24,6 +24,10 @@
       "path---events-e537a9309936be3202ec.js",
       "path---events-e537a9309936be3202ec.js.map"
     ],
+    "path---2018-08-25-drupalgovcon-2018": [
+      "path---2018-08-25-drupalgovcon-2018-4afdb1950478787c3cb8.js",
+      "path---2018-08-25-drupalgovcon-2018-4afdb1950478787c3cb8.js.map"
+    ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
@@ -81,8 +85,8 @@
       "path---2018-04-06-perfmatters-002b78d95cac72526b80.js.map"
     ],
     "path---index": [
-      "path---index-a71386ad8ba4ebfa22dc.js",
-      "path---index-a71386ad8ba4ebfa22dc.js.map"
+      "path---index-d6306371b616a3fd31dc.js",
+      "path---index-d6306371b616a3fd31dc.js.map"
     ],
     "path---2013-05-21-drupalcon-portland-session-notes": [
       "path---2013-05-21-drupalcon-portland-session-notes-ab57e3b15df5a58723a1.js",
@@ -143,9 +147,9 @@
       "path---2018-01-27-enable-google-home-gsuite-admin-8e6f6ce8f06b0e67be3d.js.map"
     ],
     "app": [
-      "app-caadc7eb004207f5a547.js",
+      "app-8ad35cd93a33e2d41932.js",
       "build-js-styles.css",
-      "app-caadc7eb004207f5a547.js.map",
+      "app-8ad35cd93a33e2d41932.js.map",
       "build-js-styles.css.map"
     ],
     "path---2018-01-15-css-grid": [
