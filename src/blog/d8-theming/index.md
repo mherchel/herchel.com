@@ -17,6 +17,12 @@ display: "false"
  <!-- Markup here -->
 {% endif %}
 ```
+Multiple conditions:
+```twig
+{% if (content.field_first_name or content.field_last_name) %}
+ <!-- Markup here -->
+{% endif %}
+```
 
 
 ### Inheritance
@@ -62,9 +68,13 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 
 Copy `example.settings.local.php` to `settings.local.php`.
 
-Uncomment lines to disable render and local page caches.
+Verify the following lines are uncommented to disable render and local page caches.
+```php
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+```
 
-Make your development.services.yml file like so:
+Make your `development.services.yml` file like below. This file is already enabled within the `settings.local.php` that you've just enabled.
 
 ```yaml
 # Local development services.
@@ -203,6 +213,7 @@ https://www.drupal.org/docs/8/theming/twig/filters-modifying-variables-in-twig-t
 * `clean_id`
 * `format_date`
 * `raw` dangerous
+* `render` Useful for when chaining the `trim` filter after it, or for when checking if the value exists.
 * `safe_join` The safe_join filter joins several strings together with a supplied separator. `{{ items|safe_join(', ') }}`
 * `without`  creates a copy of the renderable array and removes child elements by key specified through arguments passed to the filter. `{{ content|without('links') }}`
 
