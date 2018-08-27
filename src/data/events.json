@@ -1,5 +1,11 @@
 [
   {
+    "title": "CMS Summit",
+    "date": "2018-09-15",
+    "status": "speaking",
+    "location": "Orlando. FL",
+    "url": "https://www.cmssummit.com/"
+  },{
     "title": "Drupal GovCon",
     "date": "2018-08-23",
     "status": "speaking",
