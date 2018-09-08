@@ -24,6 +24,19 @@ Multiple conditions:
 {% endif %}
 ```
 
+### Ternary Operators in twig
+
+Only adds the `has-content-right` if the `page.content_right` region has content.
+
+```twig
+<div class="layout-container {{ page.content_right ? 'has-content-right'}}">
+```
+
+You can also add the else statement, which evaluates if the condition is false:
+```twig
+<div class="layout-container {{ page.content_right ? 'has-content-right': 'no-content-right'}}">
+```
+
 
 ### Inheritance
 
@@ -567,3 +580,25 @@ And you can even go into different entity references. Here's an example that I w
 ```php
 $variables['node']->field_parent->entity->field_show_media->entity->field_media_image->entity->uri->value
 ```
+
+## Theming views output
+
+You may have noticed that Twig debug mode does not output the template suggestions for views twig templates. [The issue](https://www.drupal.org/project/drupal/issues/2118743) is currently postponed, so it probably won't be fixed until 8.8 or 8.7 at the earliest.
+
+Never fear though! Views template suggestions work similar to what they did in D7.
+
+From https://api.drupal.org/api/drupal/core%21modules%21views%21views.theme.inc/group/views_templates/8.6.x
+
+Here is an example of all the templates that will be tried in the following case:
+
+View, named foobar. Style: unformatted. Row style: Fields. Display: Page.
+
+
+<ul>
+  <li>views-view--foobar--page.html.twig</li>
+  <li>views-view--page.html.twig</li>
+  <li>views-view--foobar.html.twig</li>
+  <li><a href="/api/drupal/8.6.x/search/views-view.html.twig" title="Multiple implementations exist." class="local">views-view.html.twig</a></li>
+</ul>
+
+When in doubt, fire up a D7 site, and go into the theming section of the view, and see the template suggestions there.

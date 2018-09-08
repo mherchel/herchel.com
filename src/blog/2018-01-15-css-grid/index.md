@@ -16,7 +16,7 @@ Before we start, let's recite the *CSS Grid Cheat Sheet Creed*.
 
 I've been doing web development for a long time (since 2001), and am familiar with most of the web's underlying technologies.
 
-I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; *unless* the design is very grid centric. 
+I'm a big believer in not adding unneeded complexity, so I typically shy away from traditional grid systems such as [Susy](http://oddbird.net/susy/), [Singularity](https://github.com/at-import/Singularity), and [Bootstrap Grid](https://getbootstrap.com/docs/4.0/layout/grid/) &mdash; *unless* the design is very grid centric.
 
 My traditional approach to layout has been set the `width` to a percentage value &mdash; lets say `94%`, and then set the `max-width` of the container to something like `1200px` or whatever the design calls for. Then I can layout the internal structure through flexbox or floats, using a combination of percentages, pixels, and the CSS `calc()` function.
 
@@ -188,6 +188,28 @@ The syntax below will automatically create as many 200px columns in the row as p
 }
 ```
 
+### Auto-fit + minmax + fr units = Awesome!
+
+Auto-FILL is different than auto-FIT. Auto-fill will automatically create as many grid tracks as possible. Auto-fit will only create as many grid tracks as the content dictates.
+
+So the following HTML with the following CSS will generate a 3 box layout (while the code above will generate as 5 columns for a 1000px container).
+
+```html
+<style>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+</style>
+
+<div class="grid">
+  <p>lorem</p>
+  <p>ipsum</p>
+  <p>don't know the rest</p>
+</div>
+```
+
+
 ### Grid-auto-rows and grid-auto-columns
 
 `grid-auto-rows` and `grid-auto-columns` specify the height (track size) of the auto-generated columns and rows. This can be in in any unit including `fr`. The initial value for these properties is `auto`, which sets the height equal to the largest content item.
@@ -195,7 +217,7 @@ The syntax below will automatically create as many 200px columns in the row as p
 ```css
 .grid {
   display: grid;
-  
+
   /* All auto-generated rows will have 30px height */
   grid-auto-rows: 30px;
 }
@@ -275,7 +297,7 @@ The following rule will have the child take up two columns
   grid-column-end: 4;
 
   /* Shorthand for this specifying the ending column */
-  grid-column: 2 / 4; 
+  grid-column: 2 / 4;
 
   /* Shorthand specifying that element always spans 2 columns */
   grid-column: 2 / span 2;
@@ -326,7 +348,7 @@ Note that I'm setting `grid-column-end` to `-1`. Negative numbers selects the co
 .grid-child {
   /* Shorthand syntax for grid-column-start and grid-column-end.
      This will start in column 2, and span 2 more columns. */
-  grid-column: 2 / span 2; 
+  grid-column: 2 / span 2;
 }
 ```
 
@@ -357,7 +379,7 @@ You can use *names* instead of numbers for your lines. Note that you're not nami
 
 ### Named lines with media queries == 🤘
 
-The cool thing about named lines is that it makes responsive web design *much simpler*. When defining placement on the `.grid-child`, you do not need to add media queries for this element &mdash; it will automatically follow the named lines. 
+The cool thing about named lines is that it makes responsive web design *much simpler*. When defining placement on the `.grid-child`, you do not need to add media queries for this element &mdash; it will automatically follow the named lines.
 
 ```css
 /* Define our grid at small widths. Note that we can name the lines to the
@@ -373,7 +395,7 @@ The cool thing about named lines is that it makes responsive web design *much si
   }
 }
 
-/* And now, we only need to set the columns on our grid child once. 
+/* And now, we only need to set the columns on our grid child once.
    This child will follow the named lines for the media query. */
 .grid-child {
   grid-column: content-start;
@@ -408,7 +430,7 @@ Once the areas are named, we line em up in an ascii-art like grid.
   display: grid;
 
   /* This will stack them in a vertical column for a mobile layout. */
-  grid-template-areas: 
+  grid-template-areas:
     'header'
     'content'
     'sidebar'
@@ -418,7 +440,7 @@ Once the areas are named, we line em up in an ascii-art like grid.
 @media (min-width: 700px) {
   .grid {
     /* Now we do a traditional grid area. */
-    grid-template-areas: 
+    grid-template-areas:
       'header  header'
       'sidebar content'
       'footer  footer';
@@ -434,11 +456,11 @@ Once the areas are named, we line em up in an ascii-art like grid.
 @media (min-width: 1000px) {
   .grid {
     /* Change around the regions at a larger viewport width. */
-    grid-template-areas: 
+    grid-template-areas:
       'sidebar header header'
       'sidebar content content'
       '.       footer footer';
-    /* We're having the Sidebar take up the entire first column. 
+    /* We're having the Sidebar take up the entire first column.
        The first column of the last row will be empty. */
   }
 }
@@ -451,14 +473,14 @@ When defining named areas, CSS Grid will automatically generate `-start` and `-e
 ```css
 .grid {
   /* Lets create a grid using named areas */
-  grid-template-areas: 
+  grid-template-areas:
     'sidebar header header'
     'sidebar content content'
     '.       footer footer';
   }
 ```
 
-So for the grid above, the browser will automatically generate `sidebar-start`, `sidebar-end`, `header-start`, `header-end`, `content-start`, `content-end`, `footer-start`, and `footer-end` named lines! 
+So for the grid above, the browser will automatically generate `sidebar-start`, `sidebar-end`, `header-start`, `header-end`, `content-start`, `content-end`, `footer-start`, and `footer-end` named lines!
 
 Pretty neat!
 
@@ -472,7 +494,7 @@ We already know that we can define your track widths/heights with shortcut synta
 .grid {
   display: grid;
 
-  /* grid-template: rows / columns; 
+  /* grid-template: rows / columns;
      Create four 50px rows, and three 200px columns. */
   grid-template: 50px 50px 50px 50px / 200px 200px 200px;
 }
@@ -488,9 +510,9 @@ But we can also define your *grid areas* and column widths / row heights all in 
 }
 ```
 
-This syntax is confusing as hell if you haven't seen it. 
+This syntax is confusing as hell if you haven't seen it.
 
-What's going on is the named areas are being mapped to the grid template. After the named areas are placed, the track widths are defined. 
+What's going on is the named areas are being mapped to the grid template. After the named areas are placed, the track widths are defined.
 
 So on the first line, after the `head` area is set to span 4 columns, the row height is set to `200px`. On the second line, the `side1` , `main`, and `side2` regions are placed. After that, the row height is set to `300px`, and the columns are set to three `1fr` columns.
 
@@ -515,15 +537,15 @@ Furthermore, it would be *really* useful if the browsers integrated a grid build
 
 ## Should I be using CSS Grid now?
 
- As long as you're not supporting Internet Explorer 11, then the answer is a resounding... *sure*! Whether to support IE11 is a decision that your team has to make after looking at your website's visitor logs. 
- 
- In the United States, over 85% of browsers support Grid, although your website's demographic might be dramatically different. Keep in mind the percentage of browsers supporting Grid is only going to continue to increase as time goes on. 
+ As long as you're not supporting Internet Explorer 11, then the answer is a resounding... *sure*! Whether to support IE11 is a decision that your team has to make after looking at your website's visitor logs.
+
+ In the United States, over 85% of browsers support Grid, although your website's demographic might be dramatically different. Keep in mind the percentage of browsers supporting Grid is only going to continue to increase as time goes on.
 
 ![Browser Support for CSS Grid](./can-i-use-css-grid.png)
 
 ## Should I rewrite my current application to use CSS Grid?
 
-If you're current web app is working perfectly, should you rewrite? 
+If you're current web app is working perfectly, should you rewrite?
 
 The benefits of doing so would be a simpler code base &mdash; you're able to rip out your current grid system, and replace your current layout system(s).
 
