@@ -602,3 +602,23 @@ View, named foobar. Style: unformatted. Row style: Fields. Display: Page.
 </ul>
 
 When in doubt, fire up a D7 site, and go into the theming section of the view, and see the template suggestions there.
+
+## Cachability and Twig
+
+Drupal 8 has a new caching system that really sets above from other systems. However there's a ~bug~ [idiosyncrasy](https://www.drupal.org/project/drupal/issues/2660002) in the way twig templates handle caching.
+
+If you're *not* printing out your templates with the `{{ content }}` variable. Say
+
+```twig
+<div{{ attributes }}>
+  {{ content.first_name }} {{ content.last_name }}
+</div>
+```
+the *cacheable metadata* won't be included. This means that if your data changes within the database, the theming system won't know to show the newer data.
+
+The temporary fix is straightforward, add the following line to the bottom of you twig file:
+
+```twig
+{% set catch_cache = content|render %}
+```
+Thanks to Avi Schwab for [f]inding this solution](https://www.drupal.org/project/drupal/issues/2660002#comment-12361402) and Mark Conroy for putting it [somewhere I actually noticed it](https://mark.ie/blog/web-development/creating-card-component-patternlab-and-mapping-drupal-right-way).
