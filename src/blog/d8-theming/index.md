@@ -455,7 +455,11 @@ Examples include
 
 ## Multiple ways to check if field exists in twig
 
-Normally you can get away with
+Sometimes doing a simple `{% if content.xxx %}` doesn't correctly check. There's an 8 year old (!!!) issue on Drupal.org ([link](https://www.drupal.org/project/drupal/issues/953034)) that details the issues. [Mark Carver's comment](https://www.drupal.org/project/drupal/issues/953034?page=1#comment-12448143) provides some insight on why this is not yet fixed.
+
+In the meantime, there are multiple ways to do conditionals, that will work around this bug.
+
+This is the normal way to do things.
 
 ```twig
 {% if content.field %}
