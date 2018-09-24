@@ -591,19 +591,12 @@ You may have noticed that Twig debug mode does not output the template suggestio
 
 Never fear though! Views template suggestions work similar to what they did in D7.
 
-From https://api.drupal.org/api/drupal/core%21modules%21views%21views.theme.inc/group/views_templates/8.6.x
+### Views twig templates naming
+* Display output: `views-view.html.twig`, `views-view--VIEWNAME.html.twig`, `views-view--attachment.html.twig`, `views-view--VIEWNAME--attachment.html.twig`, `views-view--DISPLAYNAME.html.twig`, `views-view--VIEWNAME--DISPLAYNAME.html.twig`, `views-view--default.html.twig`, `views-view--default.html.twig`, `views-view--DISPLAYNAME-1.html.twig`, `views-view--VIEWNAME--DISPLAYNAME-1.html.twig`
+* Style output: `views-view-unformatted.html.twig`, `views-view-unformatted--VIEWNAME.html.twig`, `views-view-unformatted--DISPLAYNAME.html.twig`, `views-view-unformatted--VIEWNAME--DISPLAYNAME.html.twig`, `views-view-unformatted--default.html.twig`, `views-view-unformatted--default.html.twig`, `views-view-unformatted--DISPLAYNAME-1.html.twig`, `views-view-unformatted--VIEWNAME--DISPLAYNAME-1.html.twig`
+* Row style output: `views-view-fields.html.twig`, `views-view-fields--VIEWNAME.html.twig`, `views-view-fields--DISPLAYNAME.html.twig`, `views-view-fields--VIEWNAME--DISPLAYNAME.html.twig`, `views-view-fields--default.html.twig`, `views-view-fields--default.html.twig`, `views-view-fields--DISPLAYNAME-1.html.twig`, `views-view-fields--VIEWNAME--DISPLAYNAME-1.html.twig`
+* Field Content: `views-view-field.html.twig`, `views-view-field--FIELDNAME.html.twig`, `views-view-field--VIEWNAME.html.twig`, `views-view-field--VIEWNAME--FIELDNAME.html.twig`, `views-view-field--DISPLAYNAME.html.twig`, `views-view-field--DISPLAYNAME--FIELDNAME.html.twig`, `views-view-field--VIEWNAME--DISPLAYNAME.html.twig`, `views-view-field--VIEWNAME--DISPLAYNAME--FIELDNAME.html.twig`, `views-view-field--DISPLAYNAME-1.html.twig`, `views-view-field--DISPLAYNAME-1--FIELDNAME.html.twig`, `views-view-field--VIEWNAME--DISPLAYNAME-1.html.twig`, `views-view-field--VIEWNAME--DISPLAYNAME-1--FIELDNAME.html.twig`
 
-Here is an example of all the templates that will be tried in the following case:
-
-View, named foobar. Style: unformatted. Row style: Fields. Display: Page.
-
-
-<ul>
-  <li>views-view--foobar--page.html.twig</li>
-  <li>views-view--page.html.twig</li>
-  <li>views-view--foobar.html.twig</li>
-  <li><a href="/api/drupal/8.6.x/search/views-view.html.twig" title="Multiple implementations exist." class="local">views-view.html.twig</a></li>
-</ul>
 
 When in doubt, fire up a D7 site, and go into the theming section of the view, and see the template suggestions there.
 
