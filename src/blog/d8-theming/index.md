@@ -4,6 +4,10 @@ date: "2018-07-17T00:00:00.000Z"
 subtitle: "And you won't believe what happened next"
 display: "false"
 ---
+# Note
+
+This is a living document where I throw in notes and code snippits from my experience learning Drupal 8 theme development. There's a ton of basic stuff and also a ton of not-so-basic stuff. This isn't organized very well... it's more stream-of-concious. Please use `CMD+F` to navigate around 👍
+
 ## Twig
 
 ### Basics
@@ -509,9 +513,9 @@ You can also use twig syntax similar to the following if needed
 
 Thanks to [Marcos Cano](https://www.lullabot.com/about/marcos-cano) for helping me out with all of this!
 
-When debugging in PHPStorm, it's really useful to use the watches panel. This is similar to the watches panel in Chrome DevTools and does the same things. Prior to this, I was using PHPStorm's console tab, but that didn't always work!
+When debugging in PHPStorm, it's really useful to use the _Evaluate_ panel. Prior to this, I was using PHPStorm's console tab, but that didn't always work!
 
-Once stopped at a breakpoint, open up the watches tab using the little glasses icon.
+Once stopped at a breakpoint, open up the Evaluate panel by right-clicking on the item you want to start with, and select "Evaluate Expression".
 
 ![PHPStorm Debugging](debugging-preprocess.png)
 
@@ -619,3 +623,7 @@ The temporary fix is straightforward, add the following line to the bottom of yo
 {% set catch_cache = content|render %}
 ```
 Thanks to Avi Schwab for [f]inding this solution](https://www.drupal.org/project/drupal/issues/2660002#comment-12361402) and Mark Conroy for putting it [somewhere I actually noticed it](https://mark.ie/blog/web-development/creating-card-component-patternlab-and-mapping-drupal-right-way).
+
+## Theming Menus
+
+Theming Drupal's menus can be a pain in the ass. Tamás Hajas has an article https://medium.com/integral-vision/drupal-8-twig-add-custom-css-classes-to-menus-based-on-menu-name-35b50142521a showing how to insert proper BEM classes into your markup effectively. The final iteration of the template can be found at https://gist.github.com/thamas/5c2764d65973721f5413b9540e765510

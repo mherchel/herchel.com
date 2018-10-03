@@ -1,5 +1,17 @@
 [
   {
+    "title": "DevFest Florida",
+    "date": "2019-01-19",
+    "status": "speaking",
+    "location": "Orlando, FL",
+    "url": "https://devfestflorida.org/"
+  },{
+    "title": "Drupalcamp Atlanta",
+    "date": "2018-11-10",
+    "status": "speaking",
+    "location": "Atlanta, GA",
+    "url": "https://www.drupalcampatlanta.com/"
+  },{
     "title": "CMS Summit",
     "date": "2018-09-15",
     "status": "speaking",
