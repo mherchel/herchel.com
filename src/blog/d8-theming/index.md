@@ -627,3 +627,7 @@ Thanks to Avi Schwab for [f]inding this solution](https://www.drupal.org/project
 ## Theming Menus
 
 Theming Drupal's menus can be a pain in the ass. Tamás Hajas has an article https://medium.com/integral-vision/drupal-8-twig-add-custom-css-classes-to-menus-based-on-menu-name-35b50142521a showing how to insert proper BEM classes into your markup effectively. The final iteration of the template can be found at https://gist.github.com/thamas/5c2764d65973721f5413b9540e765510
+
+## Template suggestions
+
+Casey Wright has an awesome article on this at https://www.chapterthree.com/blog/how-to-create-custom-theme-suggestions-drupal-8, which makes use of `HOOK_theme_suggestions_HOOK_alter` in preprocess.
