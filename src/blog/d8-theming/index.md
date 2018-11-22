@@ -631,3 +631,9 @@ Theming Drupal's menus can be a pain in the ass. Tamás Hajas has an article htt
 ## Template suggestions
 
 Casey Wright has an awesome article on this at https://www.chapterthree.com/blog/how-to-create-custom-theme-suggestions-drupal-8, which makes use of `HOOK_theme_suggestions_HOOK_alter` in preprocess.
+
+## Entity API cheatsheet
+
+Keith from Metal Toad created a valueable cheatsheet that helps when working with entities within THEMENAME.theme.
+
+https://www.metaltoad.com/blog/drupal-8-entity-api-cheat-sheet

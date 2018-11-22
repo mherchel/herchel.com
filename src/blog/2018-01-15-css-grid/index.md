@@ -190,7 +190,7 @@ The syntax below will automatically create as many 200px columns in the row as p
 
 ### Auto-fit + minmax + fr units = Awesome!
 
-Auto-FILL is different than auto-FIT. Auto-fill will automatically create as many grid tracks as possible. Auto-fit will only create as many grid tracks as the content dictates.
+Auto-FILL is different than auto-FIT. Auto-fill will automatically create as many grid tracks as possible (includeing empty grid tracks). Auto-fit will only create as many grid tracks as there us child items.
 
 So the following HTML with the following CSS will generate a 3 box layout (while the code above will generate as 5 columns for a 1000px container).
 
