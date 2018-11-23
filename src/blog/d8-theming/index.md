@@ -622,17 +622,37 @@ The temporary fix is straightforward, add the following line to the bottom of yo
 ```twig
 {% set catch_cache = content|render %}
 ```
-Thanks to Avi Schwab for [f]inding this solution](https://www.drupal.org/project/drupal/issues/2660002#comment-12361402) and Mark Conroy for putting it [somewhere I actually noticed it](https://mark.ie/blog/web-development/creating-card-component-patternlab-and-mapping-drupal-right-way).
+Thanks to Avi Schwab for [finding this solution](https://www.drupal.org/project/drupal/issues/2660002#comment-12361402) and Mark Conroy for putting it [somewhere I actually noticed it](https://mark.ie/blog/web-development/creating-card-component-patternlab-and-mapping-drupal-right-way).
 
-## Theming Menus
+## Check for permissions in Twig
+
+You can check for permissions in twig by using something like
+
+```twig
+{% if user.hasPermission('create prospect content') %}
+  <a class="button--add-team-member" href="/node/add/prospect">Add New Prospect</a>
+{% endif %}
+```
+
+But, how do we know what the value for the `hasPermission()` function should be?
+
+The easiest way is to navigate to the admin permissions page, and inspect the checkbox for the permission you'd like to check for. Within there, you'll see a `name` attribute that has the information you're looking for.
+
+
+![Inspecting permissions](inspect-permissions.png)
+
+
+## Awesome External Articles
+
+### Inserting BEM Classes into Menus
 
 Theming Drupal's menus can be a pain in the ass. Tamás Hajas has an article https://medium.com/integral-vision/drupal-8-twig-add-custom-css-classes-to-menus-based-on-menu-name-35b50142521a showing how to insert proper BEM classes into your markup effectively. The final iteration of the template can be found at https://gist.github.com/thamas/5c2764d65973721f5413b9540e765510
 
-## Template suggestions
+### Creating template suggestions
 
 Casey Wright has an awesome article on this at https://www.chapterthree.com/blog/how-to-create-custom-theme-suggestions-drupal-8, which makes use of `HOOK_theme_suggestions_HOOK_alter` in preprocess.
 
-## Entity API cheatsheet
+### Entity API cheatsheet
 
 Keith from Metal Toad created a valueable cheatsheet that helps when working with entities within THEMENAME.theme.
 
