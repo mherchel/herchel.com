@@ -1,5 +1,40 @@
 [
   {
+    "title": "Drupalcamp Asheville",
+    "date": "2019-07-13",
+    "status": "attending",
+    "location": "Asheville, NC",
+    "url": "https://www.drupalasheville.com/"
+  },
+  {
+    "title": "Drupalcon Seattle",
+    "date": "2019-04-10",
+    "status": "speaking",
+    "location": "Seattle, WA",
+    "url": "https://events.drupal.org/seattle2019"
+  },
+  {
+    "title": "#PerfMatters Conf",
+    "date": "2019-04-02",
+    "status": "attending",
+    "location": "San Francisco, CA",
+    "url": "https://perfmattersconf.com"
+  },
+  {
+    "title": "Drupalcamp London",
+    "date": "2019-03-02",
+    "status": "attending",
+    "location": "London, UK",
+    "url": "https://drupalcamp.london"
+  },
+  {
+    "title": "Florida Drupalcamp",
+    "date": "2019-02-16",
+    "status": "speaking",
+    "location": "Orlando, FL",
+    "url": "https://www.fldrupal.camp"
+  },
+  {
     "title": "DevFest Florida",
     "date": "2019-01-19",
     "status": "speaking",
