@@ -16,6 +16,8 @@ export default ({ data }) =>
     <p><em>Let opportunity happen. Never let fear of failure prevent you from trying.</em></p>
     <h2>Have fun</h2>
     <p><em>Enough said.</em></p>
+    <h2>Sharing makes you stronger</h2>
+    <p><em>...in so many ways.</em></p>
     <h2>Get shit done</h2>
     <p><em>Tackle stuff head on before it gets out of control</em></p>
     <h2>Be honest</h2>
