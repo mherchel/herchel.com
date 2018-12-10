@@ -650,7 +650,7 @@ Theming Drupal's menus can be a pain in the ass. Tamás Hajas has an article htt
 
 ### Creating template suggestions
 
-Casey Wright has an awesome article on this at https://www.chapterthree.com/blog/how-to-create-custom-theme-suggestions-drupal-8, which makes use of `HOOK_theme_suggestions_HOOK_alter` in preprocess.
+Casey Wright has an awesome article on this at https://www.chapterthree.com/blog/how-to-create-custom-theme-suggestions-drupal-8, which makes use of `HOOK_theme_suggestions_HOOK_alter(&$suggestions, &$vars)` in preprocess.
 
 ### Entity API cheatsheet
 
