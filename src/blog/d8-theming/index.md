@@ -657,3 +657,20 @@ Casey Wright has an awesome article on this at https://www.chapterthree.com/blog
 Keith from Metal Toad created a valueable cheatsheet that helps when working with entities within THEMENAME.theme.
 
 https://www.metaltoad.com/blog/drupal-8-entity-api-cheat-sheet
+
+## Setting active links (or breadcrumbs) within twig
+
+You can use [Drupal twig's path function](https://www.drupal.org/docs/8/theming/twig/functions-in-twig-templates#path) to do logic to check what page you're on (and set CSS clasess or breadcrumb text )
+
+The logic will look something like this:
+```twig
+{% if path('<current>') == path('view.my_interests.page_1') %}
+    {% set breadcrumb_text = 'For You' %}
+  {% elseif path('<current>') == path('view.topics.page_1') %}
+    {% set breadcrumb_text = 'Prospect Interests' %}
+  {% elseif path('<current>') == path('view.news_by_prospect.page_1') %}
+    {% set breadcrumb_text = 'People' %}
+  {% else %}
+    {% set breadcrumb_text = 'Back' %}
+{% endif %}
+```
