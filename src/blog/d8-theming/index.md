@@ -674,3 +674,26 @@ The logic will look something like this:
     {% set breadcrumb_text = 'Back' %}
 {% endif %}
 ```
+You can get a list of the site route machine names by using Drupal console and running `drupal debug:router`. This will create a list of routes that you can then search.
+
+```
+ Route name                                                          Path
+ <current>                                                           /<current>
+ <front>                                                             /
+ <nolink>                                                            /
+ <none>                                                              /
+ admin_toolbar.run.cron                                              /run-cron
+ admin_toolbar_tools.cssjs                                           /admin/flush/cssjs
+ admin_toolbar_tools.flush                                           /admin/flush
+ admin_toolbar_tools.flush_menu                                      /admin/flush/menu
+ admin_toolbar_tools.flush_rendercache                               /admin/flush/rendercache
+ admin_toolbar_tools.flush_static                                    /admin/flush/static-caches
+ admin_toolbar_tools.flush_twig                                      /admin/flush/twig
+ admin_toolbar_tools.flush_views                                     /admin/flush/views
+ admin_toolbar_tools.plugin                                          /admin/flush/plugin
+ anonymous_login.settings                                            /admin/config/user-interface/anonymous-login
+ auto_entitylabel.settings                                           /admin/structure/auto-label
+ ban.admin_page                                                      /admin/config/people/ban/{default_ip}
+ ban.delete                                                          /admin/config/people/ban/delete/{ban_id}
+ ...
+ ```
