@@ -697,3 +697,19 @@ You can get a list of the site route machine names by using Drupal console and r
  ban.delete                                                          /admin/config/people/ban/delete/{ban_id}
  ...
  ```
+## Get properly formatted URL from link field within twig
+
+If your link field has an internal path (eg `/path/foo`), if you output `node.field_link.uri` in your twig template, it'll output `internal:/path/foo` into your markup. We need to convert this into a proper URL.
+
+Within preprocess, you can get this with
+```php
+$variables['node']->field_link->first()->getUrl()->toString()
+```
+
+Within twig, you can simply output
+
+```twig
+{{ node.field_link.0.url }}
+```
+
+According to [this StackOverflow post](https://drupal.stackexchange.com/a/199263/9047) we do not need to include `toString` within twig because "twig will cast this object as a string this will call the magic method toString() and will output the url as a string value."
