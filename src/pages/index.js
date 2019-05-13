@@ -19,13 +19,13 @@ class BlogIndex extends React.Component {
           <meta name="twitter:title" content={siteTitle} />
 
         </Helmet>
-        
+
         {posts.map(post => {
           const title = get(post, 'node.frontmatter.title')
           const subtitle = get(post, 'node.frontmatter.subtitle')
 
           if (get(post, 'node.frontmatter.display') === 'false') return
-          
+
           return (
             <Link to={post.node.fields.slug} key={post.node.fields.slug} className={articleStyles}>
               <h2>
@@ -47,7 +47,7 @@ const articleStyles = css`
   position: relative;
   display: block;
   background: var(--white);
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding: 20px;
   color: var(--gray);
   text-decoration: none;
@@ -55,7 +55,7 @@ const articleStyles = css`
   opacity: 0.98;
 
   @media (min-width: 1000px) {
-    padding: 30px 40px;
+    padding: 20px 40px;
   }
 
   &:hover,

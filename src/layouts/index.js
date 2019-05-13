@@ -257,7 +257,7 @@ injectGlobal`
 
 const layoutStyles = css`
   width: 94%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 10px auto;
   --header-width: 220px;
 
