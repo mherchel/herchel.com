@@ -50,9 +50,9 @@ class Template extends React.Component {
       <div className={layoutStyles}>
         <Helmet>
           <link rel="icon" type="image/png" href="/favicon.png" />
-          <meta property="og:image" content="https://herchel.com/herchelshead.jpg" />
+          <meta property="og:image" content="https://herchel.com/herchelshead1.jpg" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:image" content="https://herchel.com/herchelshead.jpg" />
+          <meta name="twitter:image" content="https://herchel.com/herchelshead1.jpg" />
           <meta name="twitter:site" content="@mikeherchel" />
           <meta name="twitter:creator" content="@mikeherchel" />
           <style>{`
@@ -95,9 +95,9 @@ injectGlobal`
   }
 
   :root {
-    --primary: hsla(var(--primary-hue), 
-                    var(--primary-saturation), 
-                    var(--primary-lightness), 
+    --primary: hsla(var(--primary-hue),
+                    var(--primary-saturation),
+                    var(--primary-lightness),
                     var(--primary-alpha));
     --primary-hue: 195;
     --primary-saturation: 100%;
@@ -110,7 +110,7 @@ injectGlobal`
   }
 
   ::selection {
-    color: var(--primary); 
+    color: var(--primary);
     background: black;
   }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { css } from 'emotion'
 import vars from '../layouts/variables'
-import profilePic from './herchelshead.jpg'
+import profilePic from './herchelshead1.jpg'
 
 class Bio extends React.Component {
   render() {

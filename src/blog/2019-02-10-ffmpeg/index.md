@@ -1,6 +1,6 @@
 ---
 title: Common uses for FFMPEG
-date: "2019-02-105T00:00:00.000Z"
+date: "2019-05-13T00:00:00.000Z"
 subtitle: "Convert and compress videos"
 ---
 
