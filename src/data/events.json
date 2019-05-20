@@ -2,9 +2,23 @@
   {
     "title": "Drupalcamp Asheville",
     "date": "2019-07-13",
-    "status": "attending",
+    "status": "speaking",
     "location": "Asheville, NC",
     "url": "https://www.drupalasheville.com/"
+  },
+  {
+    "title": "Drupalcamp Chattanooga",
+    "date": "2019-06-08",
+    "status": "speaking",
+    "location": "Chattanooga, TN",
+    "url": "https://www.drupalcampchattanooga.com/"
+  },
+  {
+    "title": "Frontend Design Conference",
+    "date": "2019-04-26",
+    "status": "attending",
+    "location": "St Petersburg, FL",
+    "url": "http://frontenddesignconference.com/"
   },
   {
     "title": "Drupalcon Seattle",
