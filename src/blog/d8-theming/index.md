@@ -713,3 +713,13 @@ Within twig, you can simply output
 ```
 
 According to [this StackOverflow post](https://drupal.stackexchange.com/a/199263/9047) we do not need to include `toString` within twig because "twig will cast this object as a string this will call the magic method toString() and will output the url as a string value."
+
+## Create or alter global template variables
+
+Looks like this needs to be invoked from a module. See https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_template_preprocess_default_variables_alter/8.2.x
+
+```php
+function MODULE_template_preprocess_default_variables_alter(&$variables) {
+  ...
+}
+```
