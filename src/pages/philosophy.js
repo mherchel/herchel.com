@@ -14,8 +14,10 @@ export default ({ data }) =>
     <p><em>Learning new skills keeps a person more excited and fulfilled. Don't be afraid to share what you learn.</em></p>
     <h2>Put yourself out there</h2>
     <p><em>Let opportunity happen. Never let fear of failure prevent you from trying.</em></p>
+    <h2>Build up others around you</h2>
+    <p><em>Use your privilege to encourage and create opportunities for others. A rising tide lifts all boats.</em></p>
     <h2>Have fun</h2>
-    <p><em>Enough said.</em></p>
+    <p><em>Life is short &mdash; Make the most of it.</em></p>
     <h2>Sharing makes you stronger</h2>
     <p><em>...in so many ways.</em></p>
     <h2>Get shit done</h2>
