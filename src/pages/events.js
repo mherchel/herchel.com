@@ -10,6 +10,9 @@ class EventIndex extends React.Component {
   render() {
     const siteTitle = `${get(this, 'props.data.site.siteMetadata.title')} | ${pageName}`
     const events = get(this, 'props.data.allEventsJson.edges')
+    events.sort((a,b) => {
+      return new Date(b.node.date) - new Date(a.node.date);
+    })
     const now = new Date(Date(now)).getTime()
     const prevEvents = events.filter(event => {
       const eventDate = new Date(event.node.date).getTime()
@@ -92,7 +95,7 @@ const eventStyles = css`
   position: relative;
   float: left;
   clear: both;
-  margin: 20px 0;  
+  margin: 20px 0;
   background: #eee;
   border-left: solid 4px var(--primary);
   padding: var(--offset);
@@ -124,7 +127,7 @@ const eventStyles = css`
     top: 50%;
     transform: translatey(-50%);
     width: var(--width);
-    height: var(--width); 
+    height: var(--width);
     border-radius: 50%;
     background: var(--primary);
   }
