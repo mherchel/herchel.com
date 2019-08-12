@@ -723,3 +723,13 @@ function MODULE_template_preprocess_default_variables_alter(&$variables) {
   ...
 }
 ```
+
+## Tips from Evan Lovely's Drupalcon preso
+
+[https://www.youtube.com/watch?v=jNqXZ4Jb2No](https://www.youtube.com/watch?v=jNqXZ4Jb2No)
+
+1. When you have a lot of data to set, add it into an object using one twig `{% set %}` function, instead of multiple!
+
+![Twig object](DrupalCon_Seattle_2019__Pattern_Lab__The_Definitive_How-to_-_YouTube.png)
+
+2. Use the `only` keyword when passing in variables to a twig include to prevent data from leaking in.
